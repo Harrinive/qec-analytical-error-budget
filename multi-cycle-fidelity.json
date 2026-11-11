@@ -1,0 +1,563 @@
+{
+ "settings": {
+  "displacement_squared_at_window_end": 1.0,
+  "fit_offset": 0.25,
+  "fit_amplitude": 0.75,
+  "dynamics_resonator_dimension": 10,
+  "dynamics_ancilla_dimension": 3,
+  "diagonalization_ancilla_dimension": 10,
+  "diagonalization_resonator_dimension": 14
+ },
+ "parameter_sets": {
+  "Ofek et al.": {
+   "parameter_overrides": {},
+   "kappa_a_phi": 6.95e-05,
+   "window": {
+    "photon_lifetime_us": 255.14937953692643,
+    "t_end_us": 176.85607304764,
+    "n_cycles": 9
+   },
+   "t_cycle_us": 19.020359039087122,
+   "t_us": [
+    0.0,
+    19.020359039087122,
+    38.040718078174244,
+    57.06107711726136,
+    76.08143615634849,
+    95.10179519543561,
+    114.12215423452272,
+    133.14251327360986,
+    152.16287231269698,
+    171.1832313517841
+   ],
+   "F_T": [
+    0.9999999999999986,
+    0.9431172654919131,
+    0.8983662286978056,
+    0.8566936662260458,
+    0.8175627162689998,
+    0.780653661665261,
+    0.7456896081971242,
+    0.7124510620731851,
+    0.6808376969129761,
+    0.6507683890307165
+   ],
+   "failure_rate_per_ms": 2.9906235939706516,
+   "fit": {
+    "offset": 0.25,
+    "amplitude": 0.75,
+    "t_L_us": 273.44984736612736,
+    "t_L_err_us": 1.4057865357984207,
+    "fitted_rate_per_ms": 2.742733291768162,
+    "fitted_rate_err_per_ms": 0.01410019998179518,
+    "max_residual": 0.006487935429883351
+   }
+  },
+  "optimized": {
+   "parameter_overrides": {
+    "E_osc_GHz": 5.853205175978728,
+    "g_GHz": 0.2508374908823372,
+    "EJ_GHz": 52.1547721048105,
+    "T_W": 50000.0
+   },
+   "kappa_a_phi": 4.307904177399449e-05,
+   "window": {
+    "photon_lifetime_us": 320.8929787666832,
+    "t_end_us": 222.42606349360892,
+    "n_cycles": 4
+   },
+   "t_cycle_us": 51.18281720735448,
+   "t_us": [
+    0.0,
+    51.18281720735448,
+    102.36563441470896,
+    153.54845162206348,
+    204.73126882941793
+   ],
+   "F_T": [
+    0.9999999999999986,
+    0.893888741574507,
+    0.8165658207507578,
+    0.7500907672925221,
+    0.691308891534382
+   ],
+   "failure_rate_per_ms": 2.0731812787015906,
+   "fit": {
+    "offset": 0.25,
+    "amplitude": 0.75,
+    "t_L_us": 376.31154924988954,
+    "t_L_err_us": 6.943108525718171,
+    "fitted_rate_per_ms": 1.9930294499198662,
+    "fitted_rate_err_per_ms": 0.036772243087753384,
+    "max_residual": 0.010735497685267159
+   }
+  }
+ },
+ "comparison": {
+  "one_cycle": {
+   "rate_per_ms": {
+    "Ofek et al.": 2.9906235939706516,
+    "optimized": 2.0731812787015906
+   },
+   "reduction": 0.30677291422387687
+  },
+  "fitted": {
+   "rate_per_ms": {
+    "Ofek et al.": 2.742733291768162,
+    "optimized": 1.9930294499198662
+   },
+   "reduction": 0.27334186816428774
+  }
+ },
+ "single_cycle_against_fitted": {
+  "Ofek et al.": {
+   "one_cycle_over_fitted_minus_1": 0.09038075373441856,
+   "fitted_over_one_cycle_minus_1": -0.08288916823309267,
+   "decay_per_cycle_rate_per_ms": [
+    3.9874981252941084,
+    3.394514542907388,
+    3.379178317525269,
+    3.391034587266731,
+    3.4190098505766673,
+    3.4641117984086436,
+    3.5254413513673453,
+    3.5940675549723844,
+    3.6693659412010433
+   ],
+   "first_over_second": 1.174688773576098,
+   "first_over_later_maximum": 1.0866994977309172
+  },
+  "optimized": {
+   "one_cycle_over_fitted_minus_1": 0.04021607848541686,
+   "fitted_over_one_cycle_minus_1": -0.03866127366919048,
+   "decay_per_cycle_rate_per_ms": [
+    2.7642417049354213,
+    2.346244311586993,
+    2.292366944158956,
+    2.29652097942999
+   ],
+   "first_over_second": 1.178155953872381,
+   "first_over_later_maximum": 1.178155953872381
+  }
+ },
+ "late_error_return": {
+  "description": "Second-cycle return of first-cycle late photon-loss errors from two-cycle evolution trees with deferred recovery.",
+  "settings": {
+   "n_cycles": 2,
+   "read_steps": {
+    "after_measurement_of_cycle_2": 12,
+    "end_of_cycle_2": 14
+   },
+   "components": {
+    "error_spaces": [
+     "L",
+     "L"
+    ],
+    "leakage": [
+     "p",
+     "p"
+    ],
+    "error_leakage_coherence": [
+     "L",
+     "p"
+    ]
+   },
+   "switched_off_builds": [
+    "build_qubit_measurement_process",
+    "build_feedback_latency_process"
+   ]
+  },
+  "environment": {
+   "cpu_model": "arm",
+   "cores_available_to_process": 8,
+   "worker_processes": 1,
+   "thread_settings": {
+    "OMP_NUM_THREADS": null,
+    "MKL_NUM_THREADS": null,
+    "OPENBLAS_NUM_THREADS": null,
+    "NUMEXPR_NUM_THREADS": null
+   },
+   "versions": {
+    "python": "3.12.2",
+    "numpy": "1.26.4",
+    "scipy": "1.13.1",
+    "qutip": "5.3.0.dev0+nogit",
+    "scqubits": "4.3.1+gc04b8db76",
+    "chencrafts": "3.15.post0"
+   }
+  },
+  "parameter_sets": {
+   "Ofek et al.": {
+    "full_noise_model": {
+     "t_cycle_us": 19.020359039087122,
+     "F_T_by_step": [
+      0.9999999999999986,
+      0.9651497898753199,
+      0.9648233483391111,
+      0.9528118889365038,
+      0.9526054044598771,
+      0.9477842314010418,
+      0.9441929557078482,
+      0.9431172654910657,
+      0.918745992728074,
+      0.9184562218193157,
+      0.9071313324588295,
+      0.9069155857054562,
+      0.9025236535528497,
+      0.8992569812704191,
+      0.8983662286963418
+     ],
+     "one_cycle_infidelity": 0.05688273450893433,
+     "outside_error_spaces_after_first_cycle": 0.042765465853558976,
+     "components": {
+      "after_measurement_of_cycle_2": {
+       "error_spaces": {
+        "F": 0.8944473512594451,
+        "X": 0.010817472249847925,
+        "Y": 0.009280888548748461,
+        "Z": 0.007216304455758937,
+        "population": 0.9217620165138004
+       },
+       "leakage": {
+        "F": 0.007970979888406237,
+        "X": 0.0030773308246926294,
+        "Y": 0.008573134837818693,
+        "Z": 0.006738409439776965,
+        "population": 0.026359854990694525
+       },
+       "error_leakage_coherence": {
+        "F": 0.00010532240499850194,
+        "X": 7.540710943523634e-05,
+        "Y": -5.4562104857301434e-05,
+        "Z": 1.939192433807657e-05,
+        "population": 0.0001455593339145134
+       },
+       "sum_minus_F_T": 1.1102230246251565e-16
+      },
+      "end_of_cycle_2": {
+       "error_spaces": {
+        "F": 0.8903997871657883,
+        "X": 0.01085545061950295,
+        "Y": 0.009206973734038724,
+        "Z": 0.00718379981736636,
+        "population": 0.9176460113366963
+       },
+       "leakage": {
+        "F": 0.007835297212022595,
+        "X": 0.0030457088621008107,
+        "Y": 0.00844187707935557,
+        "Z": 0.006637732945118521,
+        "population": 0.025960616098597497
+       },
+       "error_leakage_coherence": {
+        "F": 0.00013114431853087488,
+        "X": 8.523008433386323e-05,
+        "Y": -4.749605057983285e-05,
+        "Z": 2.3858154184347826e-05,
+        "population": 0.00019273650646925308
+       },
+       "sum_minus_F_T": 0.0
+      }
+     }
+    },
+    "without_late_photon_loss": {
+     "t_cycle_us": 19.020359039087122,
+     "F_T_by_step": [
+      0.9999999999999986,
+      0.9651497898753199,
+      0.9648233483391111,
+      0.9528118889365038,
+      0.9526054044598771,
+      0.9503858632345279,
+      0.9489350688496427,
+      0.9478508321620811,
+      0.9196236270316042,
+      0.9193318754662471,
+      0.9079975757783876,
+      0.9077836519410919,
+      0.9057389111743763,
+      0.9044041444526849,
+      0.9035285465352456
+     ],
+     "one_cycle_infidelity": 0.0521491678379189,
+     "outside_error_spaces_after_first_cycle": 0.03806663999603159,
+     "components": {
+      "after_measurement_of_cycle_2": {
+       "error_spaces": {
+        "F": 0.9012492430712812,
+        "X": 0.010768112311013437,
+        "Y": 0.009328676466146865,
+        "Z": 0.007259529112506935,
+        "population": 0.9286055609609485
+       },
+       "leakage": {
+        "F": 0.004408746551144617,
+        "X": 0.0028595925638377814,
+        "Y": 0.008192001490394918,
+        "Z": 0.006674923741291385,
+        "population": 0.022135264346668702
+       },
+       "error_leakage_coherence": {
+        "F": 8.092155195041673e-05,
+        "X": 3.180761313513834e-05,
+        "Y": -2.4488950330460416e-05,
+        "Z": 2.0417761937743887e-05,
+        "population": 0.00010865797669283854
+       },
+       "sum_minus_F_T": -1.1102230246251565e-16
+      },
+      "end_of_cycle_2": {
+       "error_spaces": {
+        "F": 0.8990798171136686,
+        "X": 0.01077889969688741,
+        "Y": 0.009264359895479364,
+        "Z": 0.0072405358397854,
+        "population": 0.9263636125458208
+       },
+       "leakage": {
+        "F": 0.00435744256029689,
+        "X": 0.0028319931550343192,
+        "Y": 0.008074496279293157,
+        "Z": 0.00658452221357423,
+        "population": 0.021848454208198597
+       },
+       "error_leakage_coherence": {
+        "F": 9.128686127991812e-05,
+        "X": 3.945949508719907e-05,
+        "Y": -1.8809478125089754e-05,
+        "Z": 2.3974331338925953e-05,
+        "population": 0.00013591120958095337
+       },
+       "sum_minus_F_T": -2.220446049250313e-16
+      }
+     }
+    },
+    "numbers": {
+     "one_cycle_infidelity": 0.05688273450893433,
+     "outside_error_spaces_after_first_cycle_over_infidelity": 0.751818037982017,
+     "returned_fidelity_after_measurement_of_cycle_2": 0.007970979888406237,
+     "returned_fidelity_over_infidelity": 0.14013004046340755,
+     "returned_population_after_measurement_of_cycle_2": 0.026359854990694525,
+     "returned_population_over_infidelity": 0.4634069585131196,
+     "returned_fidelity_at_end_of_cycle_2_over_infidelity": 0.1377447353694281,
+     "late_photon_loss": {
+      "infidelity": 0.004733566671015432,
+      "infidelity_over_infidelity": 0.0832162291753388,
+      "returned_fidelity": 0.0035622333372616203,
+      "returned_fidelity_over_infidelity": 0.06262415771699786,
+      "returned_fidelity_over_its_infidelity": 0.7525474097732439,
+      "share_of_the_returned_fidelity": 0.44690030424526306
+     },
+     "rates": {
+      "single_cycle_rate_per_ms": 2.9906235940152057,
+      "stored_single_cycle_rate_per_ms": 2.9906235939706516,
+      "fitted_rate_per_ms": 2.742733291768162,
+      "one_cycle_over_fitted_minus_1": 0.09038075373441856,
+      "net_of_return_rate_per_ms": 2.578680938468013,
+      "net_of_return_over_fitted_minus_1": -0.05981345462663967
+     },
+     "decay_of_the_first_two_cycles": {
+      "first_rate_per_ms": 3.987498125353514,
+      "second_rate_per_ms": 3.394514542958295,
+      "second_with_return_counted_as_lost_rate_per_ms": 3.988847819673506,
+      "first_over_second": 1.174688773575982,
+      "first_over_second_with_return_counted_as_lost": 0.9996616330376569
+     },
+     "F_T_after_two_cycles_minus_stored": -1.4638290579682689e-12
+    }
+   },
+   "optimized": {
+    "full_noise_model": {
+     "t_cycle_us": 51.18281720735448,
+     "F_T_by_step": [
+      0.9999999999999986,
+      0.9268637544895096,
+      0.926648053119442,
+      0.9078868931445258,
+      0.9076329488805828,
+      0.9004975157232822,
+      0.8950088260551257,
+      0.893888741574507,
+      0.8448048193420498,
+      0.8446158318400424,
+      0.8279468244742704,
+      0.8277166610623135,
+      0.8218342828736047,
+      0.8173142307278456,
+      0.8165658207507578
+     ],
+     "one_cycle_infidelity": 0.10611125842549296,
+     "outside_error_spaces_after_first_cycle": 0.05329331050356931,
+     "components": {
+      "after_measurement_of_cycle_2": {
+       "error_spaces": {
+        "F": 0.8099038238438465,
+        "X": 0.03130153958552191,
+        "Y": 0.02770433387357601,
+        "Z": 0.03813736155883923,
+        "population": 0.9070470588617836
+       },
+       "leakage": {
+        "F": 0.011508784103057359,
+        "X": 0.007378133696607015,
+        "Y": 0.0073312442684462,
+        "Z": 0.00773557900015761,
+        "population": 0.033953741068268185
+       },
+       "error_leakage_coherence": {
+        "F": 0.00042167492670050054,
+        "X": 0.0003706844538012633,
+        "Y": -0.00016380561185899025,
+        "Z": 0.00012201878100518264,
+        "population": 0.0007505725496479562
+       },
+       "sum_minus_F_T": -3.3306690738754696e-16
+      },
+      "end_of_cycle_2": {
+       "error_spaces": {
+        "F": 0.8048119918725012,
+        "X": 0.03119299763248097,
+        "Y": 0.027367100884393182,
+        "Z": 0.037842606804327716,
+        "population": 0.9012146971937031
+       },
+       "leakage": {
+        "F": 0.01128658394232502,
+        "X": 0.007258605724859788,
+        "Y": 0.00719039599996254,
+        "Z": 0.007580843395569404,
+        "population": 0.03331642906271676
+       },
+       "error_leakage_coherence": {
+        "F": 0.0004672449359315133,
+        "X": 0.00039628844932171917,
+        "Y": -0.00013352781990555804,
+        "Z": 0.00012846298900536413,
+        "population": 0.0008584685543530386
+       },
+       "sum_minus_F_T": -1.1102230246251565e-16
+      }
+     }
+    },
+    "without_late_photon_loss": {
+     "t_cycle_us": 51.18281720735448,
+     "F_T_by_step": [
+      0.9999999999999986,
+      0.9268637544895096,
+      0.926648053119442,
+      0.9078868931445258,
+      0.9076329488805828,
+      0.9023245326770295,
+      0.8983284475512802,
+      0.8972017081492925,
+      0.8455701538952096,
+      0.8453806378103202,
+      0.8286956249747188,
+      0.8284660813538797,
+      0.8240806898973854,
+      0.8207856088142211,
+      0.8200381438190227
+     ],
+     "one_cycle_infidelity": 0.10279829185070755,
+     "outside_error_spaces_after_first_cycle": 0.04989933567227756,
+     "components": {
+      "after_measurement_of_cycle_2": {
+       "error_spaces": {
+        "F": 0.8143500577499201,
+        "X": 0.03128809002486388,
+        "Y": 0.027845430562626894,
+        "Z": 0.038346591742013186,
+        "population": 0.911830170079424
+       },
+       "leakage": {
+        "F": 0.009348539421624984,
+        "X": 0.007197019643104407,
+        "Y": 0.006951751074036596,
+        "Z": 0.007439288309749673,
+        "population": 0.030936598448515658
+       },
+       "error_leakage_coherence": {
+        "F": 0.00038209272584029596,
+        "X": 0.00028323925706658304,
+        "Y": -0.00011733270736454116,
+        "Z": 0.00012950411085955722,
+        "population": 0.0006775033864018952
+       },
+       "sum_minus_F_T": 0.0
+      },
+      "end_of_cycle_2": {
+       "error_spaces": {
+        "F": 0.8104243630760064,
+        "X": 0.031145896466770073,
+        "Y": 0.02754463556801906,
+        "Z": 0.038108625464950335,
+        "population": 0.907223520575746
+       },
+       "leakage": {
+        "F": 0.009201395647357315,
+        "X": 0.007091355858247874,
+        "Y": 0.0068202090738064235,
+        "Z": 0.007296428992752223,
+        "population": 0.03040938957216384
+       },
+       "error_leakage_coherence": {
+        "F": 0.00041238509565916665,
+        "X": 0.0003062393917290094,
+        "Y": -9.049896356386211e-05,
+        "Z": 0.0001340816292460906,
+        "population": 0.0007622071530704044
+       },
+       "sum_minus_F_T": 1.1102230246251565e-16
+      }
+     }
+    },
+    "numbers": {
+     "one_cycle_infidelity": 0.10611125842549296,
+     "outside_error_spaces_after_first_cycle_over_infidelity": 0.5022399252854938,
+     "returned_fidelity_after_measurement_of_cycle_2": 0.011508784103057359,
+     "returned_fidelity_over_infidelity": 0.10845959489904987,
+     "returned_population_after_measurement_of_cycle_2": 0.033953741068268185,
+     "returned_population_over_infidelity": 0.31998245588717744,
+     "returned_fidelity_at_end_of_cycle_2_over_infidelity": 0.1063655648778306,
+     "late_photon_loss": {
+      "infidelity": 0.0033129665747854142,
+      "infidelity_over_infidelity": 0.03122163118168696,
+      "returned_fidelity": 0.0021602446814323745,
+      "returned_fidelity_over_infidelity": 0.02035829857723543,
+      "returned_fidelity_over_its_infidelity": 0.6520574936897142,
+      "share_of_the_returned_fidelity": 0.18770398871749588
+     },
+     "rates": {
+      "single_cycle_rate_per_ms": 2.0731812787015906,
+      "stored_single_cycle_rate_per_ms": 2.0731812787015906,
+      "fitted_rate_per_ms": 1.9930294499198662,
+      "one_cycle_over_fitted_minus_1": 0.04021607848541686,
+      "net_of_return_rate_per_ms": 1.8526661808983533,
+      "net_of_return_over_fitted_minus_1": -0.07042709229768607
+     },
+     "decay_of_the_first_two_cycles": {
+      "first_rate_per_ms": 2.7642417049354226,
+      "second_rate_per_ms": 2.3462443115869935,
+      "second_with_return_counted_as_lost_rate_per_ms": 2.6887182260462064,
+      "first_over_second": 1.178155953872381,
+      "first_over_second_with_return_counted_as_lost": 1.0280890270157743
+     },
+     "F_T_after_two_cycles_minus_stored": 0.0
+    }
+   }
+  },
+  "quoted_for_comparison": {
+   "source": "formula-terms.json, cycle_contributions, term photon_loss (Ofek et al.)",
+   "numerical": {
+    "measurement": 0.002706586255905968,
+    "feedback_latency": 0.0022437120541425565
+   },
+   "formula": {
+    "measurement": 0.0027150872382748197,
+    "feedback_latency": 0.0022535224077681
+   },
+   "numerical_sum_over_infidelity": 0.08702637720890513,
+   "formula_sum_over_infidelity": 0.08734829098735612
+  }
+ }
+}

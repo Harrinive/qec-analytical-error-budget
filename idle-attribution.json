@@ -1,0 +1,238 @@
+{
+ "description": "Failure rate of one QEC cycle (1/ms) from the analytical formula when optimizing subsets of the four free parameters with the others held at the values of Ofek et al.",
+ "environment": {
+  "cpu_model": "arm",
+  "cores_available_to_process": 8,
+  "worker_processes": 1,
+  "thread_settings": {
+   "OMP_NUM_THREADS": "1",
+   "MKL_NUM_THREADS": "1",
+   "OPENBLAS_NUM_THREADS": "1",
+   "NUMEXPR_NUM_THREADS": null
+  },
+  "versions": {
+   "python": "3.12.2",
+   "numpy": "1.26.4",
+   "scipy": "1.13.1",
+   "qutip": "5.3.0.dev0+nogit",
+   "scqubits": "4.3.1+gc04b8db76"
+  }
+ },
+ "settings": {
+  "seed": 1,
+  "random_starts": 3,
+  "search_ranges": {
+   "E_osc_GHz": [
+    4,
+    10
+   ],
+   "g_GHz": [
+    0.05,
+    0.3
+   ],
+   "EJ_GHz": [
+    15,
+    60
+   ],
+   "T_W": [
+    2000.0,
+    50000.0
+   ]
+  }
+ },
+ "device": {
+  "free_parameters": {
+   "E_osc_GHz": 8.3005,
+   "g_GHz": 0.1276,
+   "EJ_GHz": 20.0948,
+   "T_W": 18000.0
+  },
+  "failure_rate_per_ms": 3.2040337471391194
+ },
+ "optimized": {
+  "free_parameters": {
+   "E_osc_GHz": 5.853205175978728,
+   "g_GHz": 0.25083749088233726,
+   "EJ_GHz": 52.1547721048105,
+   "T_W": 50000.0
+  },
+  "failure_rate_per_ms": 2.337693746043576
+ },
+ "searches": {
+  "idle_only": {
+   "held_fixed": {
+    "E_osc_GHz": 8.3005,
+    "g_GHz": 0.1276,
+    "EJ_GHz": 20.0948
+   },
+   "free_parameters": {
+    "T_W": 22061.956079913474,
+    "E_osc_GHz": 8.3005,
+    "g_GHz": 0.1276,
+    "EJ_GHz": 20.0948
+   },
+   "failure_rate_per_ms": 3.1699945347064333,
+   "ends": [
+    3.1699945347064333,
+    3.169994534708706
+   ]
+  },
+  "coupling_idle": {
+   "held_fixed": {
+    "E_osc_GHz": 8.3005,
+    "EJ_GHz": 20.0948
+   },
+   "free_parameters": {
+    "g_GHz": 0.11094526519530196,
+    "T_W": 29944.613816178186,
+    "E_osc_GHz": 8.3005,
+    "EJ_GHz": 20.0948
+   },
+   "failure_rate_per_ms": 3.1190083412237364,
+   "ends": [
+    3.1190083412237364,
+    5.683888136204629
+   ]
+  },
+  "circuit_at_device_idle": {
+   "held_fixed": {
+    "T_W": 18000.0
+   },
+   "free_parameters": {
+    "E_osc_GHz": 7.188433926276534,
+    "g_GHz": 0.15916868214234092,
+    "EJ_GHz": 45.90032842501053,
+    "T_W": 18000.0
+   },
+   "failure_rate_per_ms": 2.5346498411577927,
+   "ends": [
+    2.5346498411577927,
+    2.534649848554014,
+    2.9809870071320734,
+    2.9809925332534757,
+    2.5346503302329046
+   ]
+  }
+ },
+ "ancilla_transition_GHz": {
+  "device": 6.287923182737853,
+  "optimized": 10.306670591548155,
+  "idle_only": 6.287923182737853,
+  "coupling_idle": 6.287923182737853,
+  "circuit_at_device_idle": 9.651368482360411
+ },
+ "quoted": {
+  "reduction_idle_only": 0.010623862018644403,
+  "reduction_coupling_and_idle": 0.02653698825466555,
+  "reduction_circuit_parameters_at_device_idle": 0.208919118464036,
+  "reduction_full_optimization": 0.2703904107967333,
+  "idle_duration_of_the_idle_only_optimum_us": 22.061956079913475,
+  "idle_duration_ratio_optimized_over_device": 2.7777777777777777
+ },
+ "idle_limit": {
+  "description": "Optimum EA idling duration, failure-rate derivatives, and counterfactual optima on t_ea_grid_us from the analytical formula.",
+  "environment": {
+   "cpu_model": "arm",
+   "cores_available_to_process": 8,
+   "worker_processes": 1,
+   "thread_settings": {
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1"
+   },
+   "versions": {
+    "python": "3.12.2",
+    "numpy": "1.26.4",
+    "scipy": "1.13.1",
+    "qutip": "5.3.0.dev0+nogit",
+    "scqubits": "4.3.1+gc04b8db76"
+   }
+  },
+  "t_ea_grid_us": {
+   "first": 5.0,
+   "last": 120.0,
+   "step": 0.25
+  },
+  "circuit_parameters": {
+   "Ofek et al.": {
+    "E_osc_GHz": 8.3005,
+    "g_GHz": 0.1276,
+    "EJ_GHz": 20.0948
+   },
+   "Delta<0 minimum": {
+    "E_osc_GHz": 5.853205175978728,
+    "g_GHz": 0.25083749088233726,
+    "EJ_GHz": 52.1547721048105
+   }
+  },
+  "dressed": {
+   "Ofek et al.": {
+    "K_rad_per_ns": -1.2506276561617806e-05,
+    "K_over_2pi_kHz": 1.9904357344557866,
+    "photon_loss_rate_per_ms": 3.919272709245508
+   },
+   "Delta<0 minimum": {
+    "K_rad_per_ns": -3.6016118073025904e-06,
+    "K_over_2pi_kHz": 0.5732143222303421,
+    "photon_loss_rate_per_ms": 3.116303771567013
+   }
+  },
+  "optimum": {
+   "Ofek et al.": {
+    "t_ea_us": 22.0,
+    "failure_rate_per_ms": 3.1700011047749705,
+    "on_grid_edge": false
+   },
+   "Delta<0 minimum": {
+    "t_ea_us": 52.5,
+    "failure_rate_per_ms": 2.336768404461647,
+    "on_grid_edge": false
+   }
+  },
+  "derivatives_at_device_optimum": {
+   "t_ea_us": 22.0,
+   "per_ms_per_us": {
+    "ancilla_excitation": 0.002235849136347399,
+    "resonator_dephasing": 0.0,
+    "photon_gain": -0.0010777593364457523,
+    "two_or_more_photon_losses": 0.024386420821113534,
+    "kerr_term": 0.01755868802871284,
+    "steps_2_to_7": -0.04331954809413781,
+    "total": -0.0002163494444111791
+   }
+  },
+  "counterfactual_optima": {
+   "device_without_kerr_term": {
+    "t_ea_us": 32.75,
+    "failure_rate_per_ms": 2.8689310151163547,
+    "on_grid_edge": false
+   },
+   "device_without_two_or_more_photon_losses": {
+    "t_ea_us": 34.5,
+    "failure_rate_per_ms": 2.4737948997358146,
+    "on_grid_edge": false
+   },
+   "device_with_minimum_K": {
+    "t_ea_us": 30.25,
+    "failure_rate_per_ms": 2.914555402419733,
+    "on_grid_edge": false
+   },
+   "device_with_minimum_K_and_photon_loss_rate": {
+    "t_ea_us": 36.0,
+    "failure_rate_per_ms": 2.570953221230483,
+    "on_grid_edge": false
+   },
+   "device_with_minimum_K_photon_loss_rate_and_steps_2_to_7": {
+    "t_ea_us": 48.0,
+    "failure_rate_per_ms": 2.9027005530031547,
+    "on_grid_edge": false
+   },
+   "minimum_with_device_K": {
+    "t_ea_us": 31.75,
+    "failure_rate_per_ms": 2.7586614327290504,
+    "on_grid_edge": false
+   }
+  }
+ }
+}

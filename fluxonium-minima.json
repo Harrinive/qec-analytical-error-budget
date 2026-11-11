@@ -1,0 +1,580 @@
+{
+  "description": "Local minima of the analytical formula's one-cycle failure rate for the zero-flux fluxonium ancilla from multi-start L-BFGS-B optimization.",
+  "source": "Multi-start L-BFGS-B minimization of the analytical formula from 50 random starts without inductive loss (49 valid runs grouped into 44 distinct minima).",
+  "grouping": "Two final points belong to one minimum if every free parameter, scaled to its search range, differs by less than 0.02. A minimum is represented by its run with the smallest failure rate. The minima are ordered from the smallest failure rate of the analytical formula at the end of the search to the largest.",
+  "units": "circuit energies, resonator frequency, and coupling in GHz; idle duration T_W in ns",
+  "run_count": 49,
+  "free_parameters": [
+    "E_osc_GHz",
+    "g_GHz",
+    "EJ_GHz",
+    "EC_GHz",
+    "EL_GHz",
+    "T_W"
+  ],
+  "search_ranges": {
+    "E_osc_GHz": [
+      4,
+      10
+    ],
+    "g_GHz": [
+      0.05,
+      0.2
+    ],
+    "EJ_GHz": [
+      3,
+      10
+    ],
+    "EC_GHz": [
+      0.5,
+      2.0
+    ],
+    "EL_GHz": [
+      0.15,
+      1.0
+    ],
+    "T_W": [
+      2000.0,
+      50000.0
+    ]
+  },
+  "reference_fluxonium": {
+    "E_osc_GHz": 6.0,
+    "g_GHz": 0.21035,
+    "EJ_GHz": 2.5,
+    "EC_GHz": 1.0,
+    "EL_GHz": 0.5,
+    "T_W": 18000.0,
+    "flux": 0.0
+  },
+  "minima": [
+    {
+      "run": "31",
+      "run_count": 1,
+      "free_parameters": {
+        "E_osc_GHz": 5.94553649267841,
+        "g_GHz": 0.2,
+        "EJ_GHz": 8.028363222164437,
+        "EC_GHz": 1.790778968675113,
+        "EL_GHz": 0.4677669413375087,
+        "T_W": 50000.0
+      }
+    },
+    {
+      "run": "43",
+      "run_count": 1,
+      "free_parameters": {
+        "E_osc_GHz": 6.2216691340937125,
+        "g_GHz": 0.0972918233641942,
+        "EJ_GHz": 3.6740615500418734,
+        "EC_GHz": 1.2253153084619397,
+        "EL_GHz": 0.15,
+        "T_W": 50000.0
+      }
+    },
+    {
+      "run": "3",
+      "run_count": 1,
+      "free_parameters": {
+        "E_osc_GHz": 6.3866751697387,
+        "g_GHz": 0.0993748968867805,
+        "EJ_GHz": 3.7464719488583658,
+        "EC_GHz": 1.2574836696427565,
+        "EL_GHz": 0.15,
+        "T_W": 50000.0
+      }
+    },
+    {
+      "run": "17",
+      "run_count": 1,
+      "free_parameters": {
+        "E_osc_GHz": 6.351281202261825,
+        "g_GHz": 0.1013979793995704,
+        "EJ_GHz": 3.877363778246074,
+        "EC_GHz": 1.2489784991121915,
+        "EL_GHz": 0.1753213201791404,
+        "T_W": 44094.5566818402
+      }
+    },
+    {
+      "run": "8",
+      "run_count": 1,
+      "free_parameters": {
+        "E_osc_GHz": 6.189811216337798,
+        "g_GHz": 0.2,
+        "EJ_GHz": 5.782783320046346,
+        "EC_GHz": 1.86338803397655,
+        "EL_GHz": 0.3497090870619149,
+        "T_W": 27900.02559992617
+      }
+    },
+    {
+      "run": "13",
+      "run_count": 3,
+      "free_parameters": {
+        "E_osc_GHz": 5.599095041728942,
+        "g_GHz": 0.2,
+        "EJ_GHz": 9.56427846002353,
+        "EC_GHz": 2.0,
+        "EL_GHz": 0.9622472045778688,
+        "T_W": 50000.0
+      }
+    },
+    {
+      "run": "45",
+      "run_count": 1,
+      "free_parameters": {
+        "E_osc_GHz": 6.577482331788732,
+        "g_GHz": 0.1048649265720875,
+        "EJ_GHz": 9.964732839847311,
+        "EC_GHz": 1.6355437991835973,
+        "EL_GHz": 0.9995053092099256,
+        "T_W": 43390.334612811
+      }
+    },
+    {
+      "run": "9",
+      "run_count": 2,
+      "free_parameters": {
+        "E_osc_GHz": 6.51709681192405,
+        "g_GHz": 0.1196849951172413,
+        "EJ_GHz": 10.0,
+        "EC_GHz": 1.5260333593065236,
+        "EL_GHz": 0.9988782048229268,
+        "T_W": 40412.86324205109
+      }
+    },
+    {
+      "run": "5",
+      "run_count": 1,
+      "free_parameters": {
+        "E_osc_GHz": 6.380391478473538,
+        "g_GHz": 0.1412953147931838,
+        "EJ_GHz": 10.0,
+        "EC_GHz": 1.451862598413706,
+        "EL_GHz": 0.973356078426572,
+        "T_W": 48548.364534638305
+      }
+    },
+    {
+      "run": "39",
+      "run_count": 2,
+      "free_parameters": {
+        "E_osc_GHz": 5.32136670570158,
+        "g_GHz": 0.2,
+        "EJ_GHz": 10.0,
+        "EC_GHz": 1.909482583378036,
+        "EL_GHz": 1.0,
+        "T_W": 50000.0
+      }
+    },
+    {
+      "run": "15",
+      "run_count": 1,
+      "free_parameters": {
+        "E_osc_GHz": 6.919944010347727,
+        "g_GHz": 0.1262900631734037,
+        "EJ_GHz": 9.086546521197478,
+        "EC_GHz": 1.5766717945231146,
+        "EL_GHz": 0.5171970657780857,
+        "T_W": 42004.12596253539
+      }
+    },
+    {
+      "run": "42",
+      "run_count": 1,
+      "free_parameters": {
+        "E_osc_GHz": 6.658350738487018,
+        "g_GHz": 0.0920487485908676,
+        "EJ_GHz": 10.0,
+        "EC_GHz": 1.2701343970075143,
+        "EL_GHz": 0.5856017861475132,
+        "T_W": 48131.80581683296
+      }
+    },
+    {
+      "run": "23",
+      "run_count": 1,
+      "free_parameters": {
+        "E_osc_GHz": 5.7126170260942555,
+        "g_GHz": 0.1449033703138832,
+        "EJ_GHz": 6.511960615157589,
+        "EC_GHz": 2.0,
+        "EL_GHz": 1.0,
+        "T_W": 50000.0
+      }
+    },
+    {
+      "run": "35",
+      "run_count": 1,
+      "free_parameters": {
+        "E_osc_GHz": 7.443297443551288,
+        "g_GHz": 0.1019051934191245,
+        "EJ_GHz": 9.125230204437273,
+        "EC_GHz": 1.740147813804052,
+        "EL_GHz": 0.6669643383286296,
+        "T_W": 38685.554357747846
+      }
+    },
+    {
+      "run": "2",
+      "run_count": 1,
+      "free_parameters": {
+        "E_osc_GHz": 5.873186648296969,
+        "g_GHz": 0.098582781990207,
+        "EJ_GHz": 7.648068610131495,
+        "EC_GHz": 1.340319486421507,
+        "EL_GHz": 1.0,
+        "T_W": 47600.686064205154
+      }
+    },
+    {
+      "run": "14",
+      "run_count": 1,
+      "free_parameters": {
+        "E_osc_GHz": 5.592429752080631,
+        "g_GHz": 0.1955552972777524,
+        "EJ_GHz": 10.0,
+        "EC_GHz": 1.0144313438056944,
+        "EL_GHz": 1.0,
+        "T_W": 47797.21770820766
+      }
+    },
+    {
+      "run": "0",
+      "run_count": 1,
+      "free_parameters": {
+        "E_osc_GHz": 5.634114328418649,
+        "g_GHz": 0.1904717106167827,
+        "EJ_GHz": 10.0,
+        "EC_GHz": 1.0144293573095076,
+        "EL_GHz": 1.0,
+        "T_W": 47667.0369223697
+      }
+    },
+    {
+      "run": "38",
+      "run_count": 1,
+      "free_parameters": {
+        "E_osc_GHz": 5.079404192481801,
+        "g_GHz": 0.2,
+        "EJ_GHz": 7.502944565788653,
+        "EC_GHz": 1.189491902355427,
+        "EL_GHz": 0.9996744090712288,
+        "T_W": 50000.0
+      }
+    },
+    {
+      "run": "25",
+      "run_count": 1,
+      "free_parameters": {
+        "E_osc_GHz": 5.2544458261708105,
+        "g_GHz": 0.1328600232427054,
+        "EJ_GHz": 8.42300872226237,
+        "EC_GHz": 1.1611322400364772,
+        "EL_GHz": 0.7643561079591212,
+        "T_W": 20871.685289063327
+      }
+    },
+    {
+      "run": "33",
+      "run_count": 1,
+      "free_parameters": {
+        "E_osc_GHz": 4.906246294890133,
+        "g_GHz": 0.1228231838393111,
+        "EJ_GHz": 3.7517332013906057,
+        "EC_GHz": 2.0,
+        "EL_GHz": 1.0,
+        "T_W": 50000.0
+      }
+    },
+    {
+      "run": "27",
+      "run_count": 1,
+      "free_parameters": {
+        "E_osc_GHz": 9.005093725790847,
+        "g_GHz": 0.1320974090165242,
+        "EJ_GHz": 8.32136007220982,
+        "EC_GHz": 1.2337577944778777,
+        "EL_GHz": 0.5457910689077489,
+        "T_W": 26840.141761108654
+      }
+    },
+    {
+      "run": "41",
+      "run_count": 1,
+      "free_parameters": {
+        "E_osc_GHz": 8.551485604995541,
+        "g_GHz": 0.1302950689964631,
+        "EJ_GHz": 7.875413439151543,
+        "EC_GHz": 1.1700027969202715,
+        "EL_GHz": 0.5196605005605638,
+        "T_W": 26900.50253018048
+      }
+    },
+    {
+      "run": "40",
+      "run_count": 1,
+      "free_parameters": {
+        "E_osc_GHz": 7.643720598646581,
+        "g_GHz": 0.126425937917379,
+        "EJ_GHz": 6.060127527396119,
+        "EC_GHz": 1.1468847805024502,
+        "EL_GHz": 0.9295023218285684,
+        "T_W": 27123.291765740425
+      }
+    },
+    {
+      "run": "29",
+      "run_count": 1,
+      "free_parameters": {
+        "E_osc_GHz": 7.747278263648203,
+        "g_GHz": 0.0879135605147911,
+        "EJ_GHz": 5.054359291049973,
+        "EC_GHz": 1.8934999155405772,
+        "EL_GHz": 0.8114309019792515,
+        "T_W": 41072.33156928544
+      }
+    },
+    {
+      "run": "48",
+      "run_count": 1,
+      "free_parameters": {
+        "E_osc_GHz": 7.008447520090922,
+        "g_GHz": 0.0639708533747139,
+        "EJ_GHz": 8.070580536664018,
+        "EC_GHz": 0.8286394190179099,
+        "EL_GHz": 0.4164446346183167,
+        "T_W": 46712.864558421075
+      }
+    },
+    {
+      "run": "16",
+      "run_count": 1,
+      "free_parameters": {
+        "E_osc_GHz": 8.868096320240289,
+        "g_GHz": 0.1238960392975425,
+        "EJ_GHz": 5.777495582034135,
+        "EC_GHz": 1.3346201915371163,
+        "EL_GHz": 1.0,
+        "T_W": 25543.02703558067
+      }
+    },
+    {
+      "run": "32",
+      "run_count": 1,
+      "free_parameters": {
+        "E_osc_GHz": 8.79345204620027,
+        "g_GHz": 0.1232083521950677,
+        "EJ_GHz": 5.665450680806991,
+        "EC_GHz": 1.3224541508668852,
+        "EL_GHz": 0.9917993787271856,
+        "T_W": 31865.139528425967
+      }
+    },
+    {
+      "run": "6",
+      "run_count": 1,
+      "free_parameters": {
+        "E_osc_GHz": 7.787829096315356,
+        "g_GHz": 0.1816761454508142,
+        "EJ_GHz": 4.893745985546856,
+        "EC_GHz": 1.3482215985457304,
+        "EL_GHz": 0.9581547293889946,
+        "T_W": 49095.592239678954
+      }
+    },
+    {
+      "run": "26",
+      "run_count": 1,
+      "free_parameters": {
+        "E_osc_GHz": 8.878976749082398,
+        "g_GHz": 0.2,
+        "EJ_GHz": 8.991087534838307,
+        "EC_GHz": 0.6561932099744324,
+        "EL_GHz": 0.3753638330626268,
+        "T_W": 32056.23549552532
+      }
+    },
+    {
+      "run": "19",
+      "run_count": 1,
+      "free_parameters": {
+        "E_osc_GHz": 8.72784220280337,
+        "g_GHz": 0.2,
+        "EJ_GHz": 8.848978629972555,
+        "EC_GHz": 0.6432488617201175,
+        "EL_GHz": 0.3691037013515097,
+        "T_W": 31000.03385695819
+      }
+    },
+    {
+      "run": "18",
+      "run_count": 1,
+      "free_parameters": {
+        "E_osc_GHz": 9.011059472018488,
+        "g_GHz": 0.2,
+        "EJ_GHz": 8.909111202928486,
+        "EC_GHz": 0.6900065249644486,
+        "EL_GHz": 0.3845176494641993,
+        "T_W": 33490.6227490093
+      }
+    },
+    {
+      "run": "10",
+      "run_count": 1,
+      "free_parameters": {
+        "E_osc_GHz": 8.07763605992422,
+        "g_GHz": 0.192000867164691,
+        "EJ_GHz": 8.819981306650396,
+        "EC_GHz": 0.5271034340562808,
+        "EL_GHz": 0.330839302373645,
+        "T_W": 38918.90065863865
+      }
+    },
+    {
+      "run": "44",
+      "run_count": 1,
+      "free_parameters": {
+        "E_osc_GHz": 7.277204850717902,
+        "g_GHz": 0.0909572699966665,
+        "EJ_GHz": 6.257970092918496,
+        "EC_GHz": 2.0,
+        "EL_GHz": 0.9646415251056852,
+        "T_W": 50000.0
+      }
+    },
+    {
+      "run": "37",
+      "run_count": 1,
+      "free_parameters": {
+        "E_osc_GHz": 8.691019638536119,
+        "g_GHz": 0.0955814667931704,
+        "EJ_GHz": 10.0,
+        "EC_GHz": 0.7661334988063689,
+        "EL_GHz": 0.8570365444266955,
+        "T_W": 33162.65269379625
+      }
+    },
+    {
+      "run": "7",
+      "run_count": 1,
+      "free_parameters": {
+        "E_osc_GHz": 6.8451120712758255,
+        "g_GHz": 0.2,
+        "EJ_GHz": 6.3757870936428525,
+        "EC_GHz": 0.500096834597191,
+        "EL_GHz": 0.5643574803334724,
+        "T_W": 37386.45065530395
+      }
+    },
+    {
+      "run": "47",
+      "run_count": 1,
+      "free_parameters": {
+        "E_osc_GHz": 8.648961315478635,
+        "g_GHz": 0.2,
+        "EJ_GHz": 5.875316929868091,
+        "EC_GHz": 0.959580632098624,
+        "EL_GHz": 0.7392104873800576,
+        "T_W": 49903.74142888441
+      }
+    },
+    {
+      "run": "36",
+      "run_count": 1,
+      "free_parameters": {
+        "E_osc_GHz": 8.969111074985358,
+        "g_GHz": 0.122118787020883,
+        "EJ_GHz": 6.639061031353456,
+        "EC_GHz": 1.100684400696769,
+        "EL_GHz": 0.508335139968951,
+        "T_W": 46421.07957079052
+      }
+    },
+    {
+      "run": "4",
+      "run_count": 1,
+      "free_parameters": {
+        "E_osc_GHz": 7.9561187411809025,
+        "g_GHz": 0.2,
+        "EJ_GHz": 6.704040587149693,
+        "EC_GHz": 0.5,
+        "EL_GHz": 0.5704545376519865,
+        "T_W": 41311.00609282574
+      }
+    },
+    {
+      "run": "28",
+      "run_count": 1,
+      "free_parameters": {
+        "E_osc_GHz": 6.744702467936952,
+        "g_GHz": 0.1418809656401365,
+        "EJ_GHz": 3.160898240571359,
+        "EC_GHz": 0.5302054341496025,
+        "EL_GHz": 0.2480936445711527,
+        "T_W": 50000.0
+      }
+    },
+    {
+      "run": "11",
+      "run_count": 1,
+      "free_parameters": {
+        "E_osc_GHz": 8.37624771044455,
+        "g_GHz": 0.2,
+        "EJ_GHz": 3.0,
+        "EC_GHz": 0.5,
+        "EL_GHz": 0.4218911224598952,
+        "T_W": 48860.9079518138
+      }
+    },
+    {
+      "run": "12",
+      "run_count": 1,
+      "free_parameters": {
+        "E_osc_GHz": 6.3512793688662725,
+        "g_GHz": 0.0979070065102961,
+        "EJ_GHz": 6.514270019196049,
+        "EC_GHz": 1.5163019291695448,
+        "EL_GHz": 0.3718547837775083,
+        "T_W": 34496.55260156897
+      }
+    },
+    {
+      "run": "1",
+      "run_count": 1,
+      "free_parameters": {
+        "E_osc_GHz": 4.602352408603221,
+        "g_GHz": 0.1377241659809749,
+        "EJ_GHz": 4.937533439309772,
+        "EC_GHz": 1.2219185762668414,
+        "EL_GHz": 0.2940701813802828,
+        "T_W": 43289.67311322837
+      }
+    },
+    {
+      "run": "21",
+      "run_count": 1,
+      "free_parameters": {
+        "E_osc_GHz": 4.0,
+        "g_GHz": 0.145124430312386,
+        "EJ_GHz": 3.256915391059924,
+        "EC_GHz": 0.5,
+        "EL_GHz": 1.0,
+        "T_W": 50000.0
+      }
+    },
+    {
+      "run": "34",
+      "run_count": 2,
+      "free_parameters": {
+        "E_osc_GHz": 10.0,
+        "g_GHz": 0.2,
+        "EJ_GHz": 3.0,
+        "EC_GHz": 0.5,
+        "EL_GHz": 0.1537703453438456,
+        "T_W": 50000.0
+      }
+    }
+  ]
+}

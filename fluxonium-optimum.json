@@ -1,0 +1,110 @@
+{
+  "description": "Optimized circuit parameters and EA idling duration of the zero-flux fluxonium ancilla.",
+  "source": "Multi-start L-BFGS-B minimization of the analytical formula with inductive loss: 44 runs from the minima of fluxonium-minima.json and 50 runs from random starts.",
+  "units": "circuit energies, resonator frequency, and coupling in GHz; idle duration T_W in ns; failure rates in 1/ms",
+  "search_ranges": {
+    "E_osc_GHz": [
+      4,
+      10
+    ],
+    "g_GHz": [
+      0.05,
+      0.2
+    ],
+    "EJ_GHz": [
+      3,
+      10
+    ],
+    "EC_GHz": [
+      0.5,
+      2.0
+    ],
+    "EL_GHz": [
+      0.15,
+      1.0
+    ],
+    "T_W": [
+      2000.0,
+      50000.0
+    ]
+  },
+  "run_count": 94,
+  "free_parameters": {
+    "E_osc_GHz": 5.840122388657525,
+    "g_GHz": 0.2,
+    "EJ_GHz": 7.88230940647305,
+    "EC_GHz": 1.7618883444675149,
+    "EL_GHz": 0.4599553328400946,
+    "T_W": 50000.0
+  },
+  "failure_rate_per_ms_in_the_search": {
+    "analytical_formula": 1.860474043035208,
+    "actual_QEC_dynamics": 1.7598429304565129,
+    "failure_Markov_chain": 1.7731704866153628
+  },
+  "runs_ending_at_this_minimum": [
+    {
+      "started_from": "random start",
+      "free_parameters": {
+        "E_osc_GHz": 5.840122388657525,
+        "g_GHz": 0.2,
+        "EJ_GHz": 7.88230940647305,
+        "EC_GHz": 1.7618883444675149,
+        "EL_GHz": 0.4599553328400946,
+        "T_W": 50000.0
+      },
+      "failure_rate_per_ms": {
+        "analytical_formula": 1.860474043035208,
+        "actual_QEC_dynamics": 1.7598429304565129,
+        "failure_Markov_chain": 1.7731704866153628
+      }
+    },
+    {
+      "started_from": "31",
+      "free_parameters": {
+        "E_osc_GHz": 5.94553649267841,
+        "g_GHz": 0.2,
+        "EJ_GHz": 8.028363222164437,
+        "EC_GHz": 1.790778968675113,
+        "EL_GHz": 0.46776694133750873,
+        "T_W": 50000.0
+      },
+      "failure_rate_per_ms": {
+        "analytical_formula": 1.860723296684472,
+        "actual_QEC_dynamics": 1.765354542652211,
+        "failure_Markov_chain": 1.7794293186695982
+      }
+    },
+    {
+      "started_from": "random start",
+      "free_parameters": {
+        "E_osc_GHz": 5.756609190202457,
+        "g_GHz": 0.2,
+        "EJ_GHz": 7.830340734549937,
+        "EC_GHz": 1.7445143748591583,
+        "EL_GHz": 0.4558332278330064,
+        "T_W": 50000.0
+      },
+      "failure_rate_per_ms": {
+        "analytical_formula": 1.8610422575163412,
+        "actual_QEC_dynamics": 1.7595101997899625,
+        "failure_Markov_chain": 1.772666664334023
+      }
+    }
+  ],
+  "lower_end_not_kept": {
+    "free_parameters": {
+      "E_osc_GHz": 6.14732134909598,
+      "g_GHz": 0.09883131709587889,
+      "EJ_GHz": 6.66345054393685,
+      "EC_GHz": 1.713261663349296,
+      "EL_GHz": 0.368326737057101,
+      "T_W": 49997.884436844026
+    },
+    "failure_rate_per_ms": {
+      "analytical_formula": 1.809231043132432,
+      "actual_QEC_dynamics": 1.7232929129361885,
+      "failure_Markov_chain": 1.7387171695444927
+    }
+  }
+}

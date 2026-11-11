@@ -1,0 +1,52 @@
+{
+ "description": "assignment error M_ge = M_eg = M for which the measurement step of the cat-code model has the ancilla measurement fidelity F_q = [P(g|g)+P(e|e)]/2 of Ofek et al.",
+ "ofek_measurement_fidelity": 0.993,
+ "ofek_rounding": 0.0005,
+ "tau_m_ns": 400.0,
+ "value_in_device_model": 0.00058,
+ "feedback_latency_ns": 332.0,
+ "by_resonator_fock_state": {
+  "0": {
+   "end_populations": [
+    [
+     0.9995383275702352,
+     0.0004614406883012966,
+     2.317414767200109e-07
+    ],
+    [
+     0.011397832420657984,
+     0.9876061273783044,
+     0.0009960402010439592
+    ]
+   ],
+   "infidelity_without_assignment_error": 0.006427772525730235,
+   "M_fit": 0.0005793871989024453,
+   "M_range": [
+    7.31311862548987e-05,
+    0.0010856432115499918
+   ]
+  },
+  "2": {
+   "end_populations": [
+    [
+     0.9995383275702217,
+     0.00046144068830128985,
+     2.3174147672000833e-07
+    ],
+    [
+     0.01139783242065782,
+     0.9876061273782882,
+     0.0009960402010439485
+    ]
+   ],
+   "infidelity_without_assignment_error": 0.006427772525745112,
+   "M_fit": 0.0005793871988873908,
+   "M_range": [
+    7.313118623983666e-05,
+    0.001085643211534945
+   ]
+  }
+ },
+ "fidelity_of_measurement_maps_at_M_fit": 0.993,
+ "fidelity_of_measurement_maps_at_value_in_device_model": 0.9929993947715363
+}

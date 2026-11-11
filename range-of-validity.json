@@ -1,0 +1,229 @@
+{
+ "description": "(F_T - F_M)/(1 - F_T) after one QEC cycle for every case of the example: three parameter sets, twelve idle durations, nine dispersive shifts, nine incoherent-error scales, and the optimized fluxonium.",
+ "quantity": "(F_T - F_M)/(1 - F_T); positive when the failure Markov chain overestimates the infidelity",
+ "cases": [
+  {
+   "group": "parameter sets",
+   "label": "Ofek et al.",
+   "value": 0.02044608633715761
+  },
+  {
+   "group": "parameter sets",
+   "label": "Delta>0 minimum",
+   "value": 0.018125741346217694
+  },
+  {
+   "group": "parameter sets",
+   "label": "Delta<0 minimum",
+   "value": 0.011635328119302013
+  },
+  {
+   "group": "idle duration",
+   "label": "10 us",
+   "value": 0.03558138925276366
+  },
+  {
+   "group": "idle duration",
+   "label": "20 us",
+   "value": 0.024848259487972202
+  },
+  {
+   "group": "idle duration",
+   "label": "30 us",
+   "value": 0.018428510962152034
+  },
+  {
+   "group": "idle duration",
+   "label": "40 us",
+   "value": 0.014348368971940584
+  },
+  {
+   "group": "idle duration",
+   "label": "50 us",
+   "value": 0.011635328100158437
+  },
+  {
+   "group": "idle duration",
+   "label": "60 us",
+   "value": 0.009765417738323734
+  },
+  {
+   "group": "idle duration",
+   "label": "70 us",
+   "value": 0.008437472059679818
+  },
+  {
+   "group": "idle duration",
+   "label": "80 us",
+   "value": 0.007469955962800645
+  },
+  {
+   "group": "idle duration",
+   "label": "90 us",
+   "value": 0.006749680831424687
+  },
+  {
+   "group": "idle duration",
+   "label": "100 us",
+   "value": 0.006203971226163674
+  },
+  {
+   "group": "idle duration",
+   "label": "120 us",
+   "value": 0.005457118519934578
+  },
+  {
+   "group": "idle duration",
+   "label": "150 us",
+   "value": 0.004812951892327222
+  },
+  {
+   "group": "dispersive shift",
+   "label": "0.486 MHz",
+   "value": 0.020356724043930186
+  },
+  {
+   "group": "dispersive shift",
+   "label": "0.726 MHz",
+   "value": 0.01570732969242261
+  },
+  {
+   "group": "dispersive shift",
+   "label": "0.965 MHz",
+   "value": 0.013123206728999248
+  },
+  {
+   "group": "dispersive shift",
+   "label": "1.2 MHz",
+   "value": 0.011635328119302013
+  },
+  {
+   "group": "dispersive shift",
+   "label": "1.44 MHz",
+   "value": 0.010621037410950773
+  },
+  {
+   "group": "dispersive shift",
+   "label": "1.67 MHz",
+   "value": 0.009865148880731534
+  },
+  {
+   "group": "dispersive shift",
+   "label": "1.91 MHz",
+   "value": 0.00943708145520672
+  },
+  {
+   "group": "dispersive shift",
+   "label": "2.14 MHz",
+   "value": 0.009292087394604964
+  },
+  {
+   "group": "dispersive shift",
+   "label": "2.37 MHz",
+   "value": 0.009311640139188393
+  },
+  {
+   "group": "incoherent-error scale",
+   "label": "xi = 0.03125",
+   "scale": 0.03125,
+   "value": 0.1365911120969282
+  },
+  {
+   "group": "incoherent-error scale",
+   "label": "xi = 0.0625",
+   "scale": 0.0625,
+   "value": 0.07687584159511464
+  },
+  {
+   "group": "incoherent-error scale",
+   "label": "xi = 0.125",
+   "scale": 0.125,
+   "value": 0.046638484522346965
+  },
+  {
+   "group": "incoherent-error scale",
+   "label": "xi = 0.25",
+   "scale": 0.25,
+   "value": 0.03150080246305247
+  },
+  {
+   "group": "incoherent-error scale",
+   "label": "xi = 0.5",
+   "scale": 0.5,
+   "value": 0.024037136318459534
+  },
+  {
+   "group": "incoherent-error scale",
+   "label": "xi = 1",
+   "scale": 1.0,
+   "value": 0.020446086178248522
+  },
+  {
+   "group": "incoherent-error scale",
+   "label": "xi = 2",
+   "scale": 2.0,
+   "value": 0.018816296652427913
+  },
+  {
+   "group": "incoherent-error scale",
+   "label": "xi = 4",
+   "scale": 4.0,
+   "value": 0.018685845080453355
+  },
+  {
+   "group": "incoherent-error scale",
+   "label": "xi = 8",
+   "scale": 8.0,
+   "value": 0.021434122525796843
+  },
+  {
+   "group": "fluxonium",
+   "label": "fluxonium, optimized",
+   "value": 0.00757315079434262
+  }
+ ],
+ "quoted": {
+  "number_of_cases_away_from_the_small_end": 30,
+  "largest_away_from_the_small_end": 0.03558138925276366,
+  "largest_away_group": "idle duration",
+  "largest_away_label": "10 us",
+  "smallest_scale_counted_as_away": 0.25,
+  "at_scale_1": 0.020446086178248522,
+  "at_smallest_scale": 0.1365911120969282,
+  "smallest_scale": 0.03125,
+  "by_scale": {
+   "0.03125": 0.1365911120969282,
+   "0.0625": 0.07687584159511464,
+   "0.125": 0.046638484522346965,
+   "0.25": 0.03150080246305247,
+   "0.5": 0.024037136318459534,
+   "1.0": 0.020446086178248522,
+   "2.0": 0.018816296652427913,
+   "4.0": 0.018685845080453355,
+   "8.0": 0.021434122525796843
+  },
+  "fluxonium_optimized": 0.00757315079434262,
+  "group_ranges": {
+   "parameter sets": [
+    0.011635328119302013,
+    0.02044608633715761
+   ],
+   "idle duration": [
+    0.004812951892327222,
+    0.03558138925276366
+   ],
+   "dispersive shift": [
+    0.009292087394604964,
+    0.020356724043930186
+   ],
+   "incoherent-error scale": [
+    0.018685845080453355,
+    0.1365911120969282
+   ],
+   "fluxonium": [
+    0.00757315079434262,
+    0.00757315079434262
+   ]
+  }
+ }
+}

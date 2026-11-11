@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qec-aeb"
+version = "0.1.0"
+description = "Analytical error budgeting and numerical QEC evolution trees for quantum error correction protocols."
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [
+    { name = "Danyang Chen", email = "DanyangChen2026@u.northwestern.edu" }
+]
+dependencies = [
+    "chencrafts>=4.0.0",
+    "networkx>=2.4",
+    "cvxpy",
+]
+requires-python = ">= 3.10"
+
+[project.urls]
+Homepage = "https://github.com/Harrinive/qec-analytical-error-budget"
+Repository = "https://github.com/Harrinive/qec-analytical-error-budget"
+
+[project.optional-dependencies]
+test = [
+    "pytest>=7",
+    "pytest-cov>=4",
+    "qutip>=5,<5.3.1",
+]
+
+[tool.setuptools.packages.find]
+include = ["qec_aeb*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "unit: fast pure-function tests",
+    "integration: slow tests",
+]
+addopts = "-m 'not integration'"

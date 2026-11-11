@@ -1,0 +1,10 @@
+{
+ "source": "Delta<0 minimum of the multi-start minimization of the analytical formula (run 29 of optimization.json).",
+ "units": "E_osc_GHz, g_GHz, EJ_GHz in GHz; T_W in ns",
+ "free_parameters": {
+  "E_osc_GHz": 5.853205175978728,
+  "g_GHz": 0.2508374908823372,
+  "EJ_GHz": 52.1547721048105,
+  "T_W": 50000.0
+ }
+}

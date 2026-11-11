@@ -1,0 +1,1155 @@
+{
+ "description": "Term-by-term comparison of the analytical formula with single-mechanism numerical simulations on each parity error space at the parameters of Ofek et al.",
+ "settings": {
+  "dynamics_resonator_dimension": 10,
+  "dynamics_ancilla_dimension": 3,
+  "diagonalization_ancilla_dimension": 10,
+  "diagonalization_resonator_dimension": 14,
+  "truncation_check_resonator_dimension": 14,
+  "orthonormalization": "symm",
+  "pulse_model": "rotating-wave model of gate_model.py, one ancilla mechanism at a time",
+  "mechanisms_of_the_pulses": {
+   "ancilla_dephasing": [
+    "ancilla_dephasing"
+   ],
+   "ancilla_relaxation": [
+    "ancilla_relaxation"
+   ],
+   "ancilla_excitation": [
+    "ancilla_excitation",
+    "ancilla_jump_to_second_excited_level"
+   ]
+  },
+  "mechanisms_of_the_idlings": {
+   "ancilla_dephasing": [
+    "ancilla_dephasing"
+   ],
+   "ancilla_relaxation": [
+    "ancilla_relaxation"
+   ],
+   "ancilla_excitation": [
+    "ancilla_excitation",
+    "ancilla_jump_to_second_excited_level"
+   ],
+   "photon_loss": [
+    "photon_loss",
+    "photon_loss_with_excited_ancilla"
+   ],
+   "photon_gain": [
+    "photon_gain"
+   ],
+   "resonator_dephasing": [
+    "resonator_dephasing"
+   ]
+  }
+ },
+ "environment": {
+  "cpu_model": "arm",
+  "cores_available_to_process": 8,
+  "worker_processes": 1,
+  "thread_settings": {
+   "OMP_NUM_THREADS": null,
+   "MKL_NUM_THREADS": null,
+   "OPENBLAS_NUM_THREADS": null,
+   "NUMEXPR_NUM_THREADS": null
+  },
+  "versions": {
+   "python": "3.12.2",
+   "numpy": "1.26.4",
+   "scipy": "1.13.1",
+   "qutip": "5.3.0.dev0+nogit",
+   "scqubits": "4.3.1+gc04b8db76"
+  }
+ },
+ "durations_ns": {
+  "t_idle": 18000.0,
+  "t_pulse": 11.917916026989229,
+  "t_parity_mapping": 240.6873749791622,
+  "t_measurement": 400.0,
+  "t_feedback_latency": 332.0,
+  "t_conditional_pulse": 23.835832053978457
+ },
+ "rates_per_ns": {
+  "photon_loss": 3.919272709245508e-06,
+  "photon_gain": 7.829143018642726e-08,
+  "resonator_dephasing": 0.0,
+  "ancilla_relaxation": 2.867931826943263e-05,
+  "ancilla_excitation": 1.1610807979834265e-06,
+  "ancilla_dephasing": 0.00013814401555530963,
+  "ancilla_jump_to_second_excited_level": 2.5056613128966804e-06,
+  "photon_loss_with_excited_ancilla": 1.0978214763736117e-08
+ },
+ "readout_assignment_errors": {
+  "M_ge": 0.00058,
+  "M_eg": 0.00058
+ },
+ "error_space_probabilities": {
+  "formula": {
+   "even_parity": 0.8495877028638594,
+   "odd_parity": 0.113746521372356
+  },
+  "numerical": {
+   "even_parity": 0.8600884958804947,
+   "odd_parity": 0.10506129399482508
+  }
+ },
+ "largest_difference_from_cat_code_budget": 1.0842021724855044e-19,
+ "steps": {
+  "idle": {
+   "logical_subspace": {
+    "terms": {
+     "photon_loss": {
+      "formula": 0.012093140166854945,
+      "numerical": 0.012711901011567384,
+      "formula_minus_numerical": -0.0006187608447124383,
+      "formula_over_numerical_minus_1": -0.04867571295193285
+     },
+     "resonator_dephasing": {
+      "formula": 0.0,
+      "numerical": 0.0,
+      "formula_minus_numerical": 0.0,
+      "formula_over_numerical_minus_1": null
+     },
+     "photon_gain": {
+      "formula": 0.0036731812332278526,
+      "numerical": 0.003454740317012872,
+      "formula_minus_numerical": 0.0002184409162149805,
+      "formula_over_numerical_minus_1": 0.06322933018706722
+     },
+     "ancilla_excitation": {
+      "formula": 0.020899454363701678,
+      "numerical": 0.018749708381072927,
+      "formula_minus_numerical": 0.0021497459826287507,
+      "formula_over_numerical_minus_1": 0.11465490230231157
+     }
+    },
+    "formula_parts_of_photon_loss": {
+     "two_or_more_photon_losses": 0.0090651872488835,
+     "kerr_term": 0.0030279529179714462
+    },
+    "formula_sum": 0.03666577576378448,
+    "numerical_sum": 0.03491634970965318,
+    "numerical_all_mechanisms": 0.03485021012468015
+   }
+  },
+  "X_plus_half_pi": {
+   "even_parity": {
+    "terms": {
+     "ancilla_dephasing": {
+      "formula": 0.00020579859712740903,
+      "numerical": 0.00020717605820974594,
+      "formula_minus_numerical": -1.3774610823369133e-06,
+      "formula_over_numerical_minus_1": -0.006648746453812526
+     },
+     "ancilla_relaxation": {
+      "formula": 2.7142145408158003e-05,
+      "numerical": 2.7698415799526366e-05,
+      "formula_minus_numerical": -5.562703913683627e-07,
+      "formula_over_numerical_minus_1": -0.020083112167659567
+     },
+     "ancilla_excitation": {
+      "formula": 1.5383543036997576e-05,
+      "numerical": 1.5378183770065057e-05,
+      "formula_minus_numerical": 5.359266932519139e-09,
+      "formula_over_numerical_minus_1": 0.00034849804194370115
+     },
+     "coherent_error": {
+      "formula": 0.0,
+      "numerical": 9.248224819491391e-05,
+      "formula_minus_numerical": -9.248224819491391e-05,
+      "formula_over_numerical_minus_1": -1.0
+     }
+    },
+    "terms_that_add_up": [
+     "ancilla_relaxation",
+     "ancilla_excitation",
+     "ancilla_dephasing",
+     "coherent_error"
+    ],
+    "formula_sum": 0.0002483242855725646,
+    "numerical_sum": 0.00034273490597425127,
+    "numerical_unitary_dynamics": 9.248224819491391e-05,
+    "numerical_all_mechanisms": 0.00034271221635040483,
+    "pulse_of_the_tree": {
+     "unitary_dynamics": 9.253899725569781e-05,
+     "all_mechanisms": 0.0003428039858400789
+    }
+   },
+   "odd_parity": {
+    "terms": {
+     "ancilla_dephasing": {
+      "formula": 0.00020579859712740903,
+      "numerical": 0.0002074150794260099,
+      "formula_minus_numerical": -1.6164822986008704e-06,
+      "formula_over_numerical_minus_1": -0.007793465658689103
+     },
+     "ancilla_relaxation": {
+      "formula": 2.7142145408158003e-05,
+      "numerical": 2.7815504143546832e-05,
+      "formula_minus_numerical": -6.733587353888289e-07,
+      "formula_over_numerical_minus_1": -0.024208036349578355
+     },
+     "ancilla_excitation": {
+      "formula": 1.5383543036997576e-05,
+      "numerical": 1.5362315378575353e-05,
+      "formula_minus_numerical": 2.122765842222312e-08,
+      "formula_over_numerical_minus_1": 0.001381800718127879
+     },
+     "coherent_error": {
+      "formula": 0.0,
+      "numerical": 8.737829971616762e-05,
+      "formula_minus_numerical": -8.737829971616762e-05,
+      "formula_over_numerical_minus_1": -1.0
+     }
+    },
+    "terms_that_add_up": [
+     "ancilla_relaxation",
+     "ancilla_excitation",
+     "ancilla_dephasing",
+     "coherent_error"
+    ],
+    "formula_sum": 0.0002483242855725646,
+    "numerical_sum": 0.0003379711986642997,
+    "numerical_unitary_dynamics": 8.737829971616762e-05,
+    "numerical_all_mechanisms": 0.0003379484452397108,
+    "pulse_of_the_tree": {
+     "unitary_dynamics": 8.728145465242143e-05,
+     "all_mechanisms": 0.00033788770876375107
+    }
+   }
+  },
+  "parity_mapping_idling": {
+   "even_parity": {
+    "terms": {
+     "ancilla_dephasing": {
+      "formula": 0.008312380118272006,
+      "numerical": 0.008243573812551586,
+      "formula_minus_numerical": 6.880630572042058e-05,
+      "formula_over_numerical_minus_1": 0.008346659747942908
+     },
+     "ancilla_relaxation": {
+      "formula": 0.0034513749152308344,
+      "numerical": 0.0028644515024842665,
+      "formula_minus_numerical": 0.0005869234127465679,
+      "formula_over_numerical_minus_1": 0.20489905737190672
+     },
+     "ancilla_excitation": {
+      "formula": 0.00044126926669664246,
+      "numerical": 0.00041769099381938624,
+      "formula_minus_numerical": 2.357827287725623e-05,
+      "formula_over_numerical_minus_1": 0.05644908132123083
+     },
+     "photon_loss": {
+      "formula": 0.0016435210234803325,
+      "numerical": 0.0016436401505053322,
+      "formula_minus_numerical": -1.1912702499970729e-07,
+      "formula_over_numerical_minus_1": -7.247755840178449e-05
+     },
+     "photon_gain": {
+      "formula": 5.1674750944214174e-05,
+      "numerical": 5.1666370294078945e-05,
+      "formula_minus_numerical": 8.380650135229341e-09,
+      "formula_over_numerical_minus_1": 0.00016220706210878788
+     },
+     "resonator_dephasing": {
+      "formula": 0.0,
+      "numerical": 0.0,
+      "formula_minus_numerical": 0.0,
+      "formula_over_numerical_minus_1": null
+     },
+     "chi_1_prime": {
+      "formula": 1.1554282011488623e-05,
+      "numerical": 1.1154551326386652e-05,
+      "formula_minus_numerical": 3.9973068510197005e-07,
+      "formula_over_numerical_minus_1": 0.03583565787683329
+     }
+    },
+    "terms_that_add_up": [
+     "ancilla_dephasing",
+     "ancilla_relaxation",
+     "ancilla_excitation",
+     "photon_loss",
+     "photon_gain",
+     "resonator_dephasing",
+     "chi_1_prime"
+    ],
+    "formula_sum": 0.013911774356635518,
+    "numerical_sum": 0.013232177380981036,
+    "numerical_unitary_dynamics": 1.1154551326386652e-05,
+    "numerical_all_mechanisms": 0.013178726783090844
+   },
+   "odd_parity": {
+    "terms": {
+     "ancilla_dephasing": {
+      "formula": 0.008312380118272006,
+      "numerical": 0.008243579449877858,
+      "formula_minus_numerical": 6.880066839414813e-05,
+      "formula_over_numerical_minus_1": 0.008345970195649421
+     },
+     "ancilla_relaxation": {
+      "formula": 0.0034513749152308344,
+      "numerical": 0.002721239517603613,
+      "formula_minus_numerical": 0.0007301353976272213,
+      "formula_over_numerical_minus_1": 0.26830986133488
+     },
+     "ancilla_excitation": {
+      "formula": 0.00044126926669664246,
+      "numerical": 0.0004118760468576621,
+      "formula_minus_numerical": 2.939321983898036e-05,
+      "formula_over_numerical_minus_1": 0.07136423703983485
+     },
+     "photon_loss": {
+      "formula": 0.0020871214058951868,
+      "numerical": 0.0020861021460325535,
+      "formula_minus_numerical": 1.0192598626332545e-06,
+      "formula_over_numerical_minus_1": 0.0004885953761044615
+     },
+     "photon_gain": {
+      "formula": 6.0536116546198735e-05,
+      "numerical": 6.050542861502084e-05,
+      "formula_minus_numerical": 3.068793117789548e-08,
+      "formula_over_numerical_minus_1": 0.0005071930218552012
+     },
+     "resonator_dephasing": {
+      "formula": 0.0,
+      "numerical": 0.0,
+      "formula_minus_numerical": 0.0,
+      "formula_over_numerical_minus_1": null
+     },
+     "chi_1_prime": {
+      "formula": 1.0476227118261077e-05,
+      "numerical": 9.65946715481003e-06,
+      "formula_minus_numerical": 8.16759963451046e-07,
+      "formula_over_numerical_minus_1": 0.0845553849255889
+     }
+    },
+    "terms_that_add_up": [
+     "ancilla_dephasing",
+     "ancilla_relaxation",
+     "ancilla_excitation",
+     "photon_loss",
+     "photon_gain",
+     "resonator_dephasing",
+     "chi_1_prime"
+    ],
+    "formula_sum": 0.01436315804975913,
+    "numerical_sum": 0.013532962056141518,
+    "numerical_unitary_dynamics": 9.65946715481003e-06,
+    "numerical_all_mechanisms": 0.013474653775432888
+   }
+  },
+  "X_minus_half_pi": {
+   "even_parity": {
+    "terms": {
+     "ancilla_dephasing": {
+      "formula": 0.00020579859712740903,
+      "numerical": 0.0002071760582085247,
+      "formula_minus_numerical": -1.377461081115668e-06,
+      "formula_over_numerical_minus_1": -0.006648746447956988
+     },
+     "ancilla_relaxation": {
+      "formula": 2.7142145408158003e-05,
+      "numerical": 2.7300842408539694e-05,
+      "formula_minus_numerical": -1.5869700038169082e-07,
+      "formula_over_numerical_minus_1": -0.005812897565829367
+     },
+     "ancilla_excitation": {
+      "formula": 1.5383543036997576e-05,
+      "numerical": 1.5394154988301878e-05,
+      "formula_minus_numerical": -1.0611951304301877e-08,
+      "formula_over_numerical_minus_1": -0.0006893493869826184
+     },
+     "coherent_error": {
+      "formula": 0.0,
+      "numerical": 9.248224819713435e-05,
+      "formula_minus_numerical": -9.248224819713435e-05,
+      "formula_over_numerical_minus_1": -1.0
+     }
+    },
+    "terms_that_add_up": [
+     "ancilla_relaxation",
+     "ancilla_excitation",
+     "ancilla_dephasing",
+     "coherent_error"
+    ],
+    "formula_sum": 0.0002483242855725646,
+    "numerical_sum": 0.0003423533038025006,
+    "numerical_unitary_dynamics": 9.248224819713435e-05,
+    "numerical_all_mechanisms": 0.00034228840840566654,
+    "pulse_of_the_tree": {
+     "unitary_dynamics": 9.248846292431168e-05,
+     "all_mechanisms": 0.00034226675123261163
+    }
+   },
+   "odd_parity": {
+    "terms": {
+     "ancilla_dephasing": {
+      "formula": 0.00020579859712740886,
+      "numerical": 0.0002109016264846275,
+      "formula_minus_numerical": -5.10302935721865e-06,
+      "formula_over_numerical_minus_1": -0.024196254160185893
+     },
+     "ancilla_relaxation": {
+      "formula": 0.0002292061347266392,
+      "numerical": 0.00022804575378765346,
+      "formula_minus_numerical": 1.1603809389857278e-06,
+      "formula_over_numerical_minus_1": 0.005088368977333557
+     },
+     "ancilla_excitation": {
+      "formula": 2.4856965670367743e-05,
+      "numerical": 2.4657746516387746e-05,
+      "formula_minus_numerical": 1.9921915397999685e-07,
+      "formula_over_numerical_minus_1": 0.008079373913897347
+     },
+     "coherent_error": {
+      "formula": 0.0,
+      "numerical": 8.682313035857092e-05,
+      "formula_minus_numerical": -8.682313035857092e-05,
+      "formula_over_numerical_minus_1": -1.0
+     }
+    },
+    "terms_that_add_up": [
+     "ancilla_relaxation",
+     "ancilla_excitation",
+     "ancilla_dephasing",
+     "coherent_error"
+    ],
+    "formula_sum": 0.00045986169752441577,
+    "numerical_sum": 0.0005504282571472396,
+    "numerical_unitary_dynamics": 8.682313035857092e-05,
+    "numerical_all_mechanisms": 0.0005503735331969795,
+    "pulse_of_the_tree": {
+     "unitary_dynamics": 8.673205032594389e-05,
+     "all_mechanisms": 0.0005502795472640543
+    }
+   }
+  },
+  "measurement": {
+   "even_parity": {
+    "terms": {
+     "ancilla_dephasing": {
+      "formula": 0.0,
+      "numerical": 0.0,
+      "formula_minus_numerical": 0.0,
+      "formula_over_numerical_minus_1": null
+     },
+     "ancilla_relaxation": {
+      "formula": 0.0,
+      "numerical": 0.0,
+      "formula_minus_numerical": 0.0,
+      "formula_over_numerical_minus_1": null
+     },
+     "ancilla_excitation": {
+      "formula": 0.0004644323191933706,
+      "numerical": 0.00046432389434225563,
+      "formula_minus_numerical": 1.084248511149747e-07,
+      "formula_over_numerical_minus_1": 0.0002335112459990185
+     },
+     "photon_loss": {
+      "formula": 0.0027313788662535745,
+      "numerical": 0.002723236439641341,
+      "formula_minus_numerical": 8.142426612233432e-06,
+      "formula_over_numerical_minus_1": 0.0029899815137997
+     },
+     "photon_gain": {
+      "formula": 8.587862317030626e-05,
+      "numerical": 8.58132646880394e-05,
+      "formula_minus_numerical": 6.535848226685455e-08,
+      "formula_over_numerical_minus_1": 0.0007616361235580626
+     },
+     "resonator_dephasing": {
+      "formula": 0.0,
+      "numerical": 0.0,
+      "formula_minus_numerical": 0.0,
+      "formula_over_numerical_minus_1": null
+     },
+     "readout_assignment_error": {
+      "formula": 0.00058,
+      "numerical": 0.0005799992594480718,
+      "formula_minus_numerical": 7.405519281567657e-10,
+      "formula_over_numerical_minus_1": 1.276815299489087e-06
+     }
+    },
+    "terms_that_add_up": [
+     "ancilla_dephasing",
+     "ancilla_relaxation",
+     "ancilla_excitation",
+     "photon_loss",
+     "photon_gain",
+     "resonator_dephasing",
+     "readout_assignment_error"
+    ],
+    "formula_sum": 0.0038616898086172515,
+    "numerical_sum": 0.003853372858119708,
+    "numerical_unitary_dynamics": 1.2768139089347486e-06,
+    "numerical_all_mechanisms": 0.003849866142804803
+   },
+   "odd_parity": {
+    "terms": {
+     "ancilla_dephasing": {
+      "formula": 0.0,
+      "numerical": -3.3306690738754696e-16,
+      "formula_minus_numerical": 3.3306690738754696e-16,
+      "formula_over_numerical_minus_1": -1.0
+     },
+     "ancilla_relaxation": {
+      "formula": 0.011471727307773051,
+      "numerical": 0.011406172515478374,
+      "formula_minus_numerical": 6.55547922946767e-05,
+      "formula_over_numerical_minus_1": 0.00574730850385774
+     },
+     "ancilla_excitation": {
+      "formula": 0.001002264525158672,
+      "numerical": 0.0010017619495603647,
+      "formula_minus_numerical": 5.025755983073966e-07,
+      "formula_over_numerical_minus_1": 0.0005016916429376739
+     },
+     "photon_loss": {
+      "formula": 0.003468601385637085,
+      "numerical": 0.0034680890435809797,
+      "formula_minus_numerical": 5.123420561054838e-07,
+      "formula_over_numerical_minus_1": 0.00014773036380177906
+     },
+     "photon_gain": {
+      "formula": 0.00010060538746818727,
+      "numerical": 0.00010053460974668305,
+      "formula_minus_numerical": 7.077772150422621e-08,
+      "formula_over_numerical_minus_1": 0.0007040134903051332
+     },
+     "resonator_dephasing": {
+      "formula": 0.0,
+      "numerical": 0.0,
+      "formula_minus_numerical": 0.0,
+      "formula_over_numerical_minus_1": null
+     },
+     "readout_assignment_error": {
+      "formula": 0.00058,
+      "numerical": 0.0005799997242501576,
+      "formula_minus_numerical": 2.757498424477839e-10,
+      "formula_over_numerical_minus_1": 4.7543098879998524e-07
+     }
+    },
+    "terms_that_add_up": [
+     "ancilla_dephasing",
+     "ancilla_relaxation",
+     "ancilla_excitation",
+     "photon_loss",
+     "photon_gain",
+     "resonator_dephasing",
+     "readout_assignment_error"
+    ],
+    "formula_sum": 0.016623198606036997,
+    "numerical_sum": 0.016556557842616226,
+    "numerical_unitary_dynamics": 4.754309563814729e-07,
+    "numerical_all_mechanisms": 0.01649014759492795
+   }
+  },
+  "feedback_latency": {
+   "even_parity": {
+    "terms": {
+     "ancilla_dephasing": {
+      "formula": 0.0,
+      "numerical": 0.0,
+      "formula_minus_numerical": 0.0,
+      "formula_over_numerical_minus_1": null
+     },
+     "ancilla_relaxation": {
+      "formula": 0.0,
+      "numerical": 0.0,
+      "formula_minus_numerical": 0.0,
+      "formula_over_numerical_minus_1": null
+     },
+     "ancilla_excitation": {
+      "formula": 0.00038547882493049763,
+      "numerical": 0.00038540419934729453,
+      "formula_minus_numerical": 7.46255832031052e-08,
+      "formula_over_numerical_minus_1": 0.00019362939825118275
+     },
+     "photon_loss": {
+      "formula": 0.002267044458990467,
+      "numerical": 0.0022571398301287626,
+      "formula_minus_numerical": 9.90462886170428e-06,
+      "formula_over_numerical_minus_1": 0.0043881325957282336
+     },
+     "photon_gain": {
+      "formula": 7.12792572313542e-05,
+      "numerical": 7.114825360676758e-05,
+      "formula_minus_numerical": 1.3100362458662253e-07,
+      "formula_over_numerical_minus_1": 0.0018412767418112264
+     },
+     "resonator_dephasing": {
+      "formula": 0.0,
+      "numerical": 0.0,
+      "formula_minus_numerical": 0.0,
+      "formula_over_numerical_minus_1": null
+     }
+    },
+    "terms_that_add_up": [
+     "ancilla_dephasing",
+     "ancilla_relaxation",
+     "ancilla_excitation",
+     "photon_loss",
+     "photon_gain",
+     "resonator_dephasing"
+    ],
+    "formula_sum": 0.0027238025411523187,
+    "numerical_sum": 0.0027136922830828247,
+    "numerical_unitary_dynamics": 8.774327641125623e-07,
+    "numerical_all_mechanisms": 0.0027125784332814318
+   },
+   "odd_parity": {
+    "terms": {
+     "ancilla_dephasing": {
+      "formula": 0.0,
+      "numerical": 0.0,
+      "formula_minus_numerical": 0.0,
+      "formula_over_numerical_minus_1": null
+     },
+     "ancilla_relaxation": {
+      "formula": 0.009521533665451633,
+      "numerical": 0.00947634430290567,
+      "formula_minus_numerical": 4.5189362545963035e-05,
+      "formula_over_numerical_minus_1": 0.004768649291489568
+     },
+     "ancilla_excitation": {
+      "formula": 0.0008318795558816979,
+      "numerical": 0.0008315333689732363,
+      "formula_minus_numerical": 3.461869084616081e-07,
+      "formula_over_numerical_minus_1": 0.0004163235311760438
+     },
+     "photon_loss": {
+      "formula": 0.0028789391500787806,
+      "numerical": 0.0028780537642154602,
+      "formula_minus_numerical": 8.853858633204106e-07,
+      "formula_over_numerical_minus_1": 0.0003076335384448736
+     },
+     "photon_gain": {
+      "formula": 8.350247159859544e-05,
+      "numerical": 8.341572363035343e-05,
+      "formula_minus_numerical": 8.674796824200228e-08,
+      "formula_over_numerical_minus_1": 0.0010399474399624964
+     },
+     "resonator_dephasing": {
+      "formula": 0.0,
+      "numerical": 0.0,
+      "formula_minus_numerical": 0.0,
+      "formula_over_numerical_minus_1": null
+     }
+    },
+    "terms_that_add_up": [
+     "ancilla_dephasing",
+     "ancilla_relaxation",
+     "ancilla_excitation",
+     "photon_loss",
+     "photon_gain",
+     "resonator_dephasing"
+    ],
+    "formula_sum": 0.013315854843010707,
+    "numerical_sum": 0.01326934715972472,
+    "numerical_unitary_dynamics": 3.2594890997383885e-07,
+    "numerical_all_mechanisms": 0.013229916199398506
+   }
+  },
+  "conditional_X_pi": {
+   "odd_parity": {
+    "terms": {
+     "ancilla_dephasing": {
+      "formula": 0.0002484420461136531,
+      "numerical": 0.00024404446835535332,
+      "formula_minus_numerical": 4.397577758299758e-06,
+      "formula_over_numerical_minus_1": 0.018019575645109143
+     },
+     "ancilla_relaxation": {
+      "formula": 0.0002902200218966653,
+      "numerical": 0.00028433880877110074,
+      "formula_minus_numerical": 5.881213125564567e-06,
+      "formula_over_numerical_minus_1": 0.020683821357284637
+     },
+     "ancilla_excitation": {
+      "formula": 4.16118045165783e-05,
+      "numerical": 4.096408879539215e-05,
+      "formula_minus_numerical": 6.477157211861502e-07,
+      "formula_over_numerical_minus_1": 0.015811793701096866
+     },
+     "coherent_error": {
+      "formula": 0.011025778517468315,
+      "numerical": 0.010979281182472489,
+      "formula_minus_numerical": 4.649733499582573e-05,
+      "formula_over_numerical_minus_1": 0.004235007212499031
+     }
+    },
+    "terms_that_add_up": [
+     "ancilla_relaxation",
+     "ancilla_excitation",
+     "ancilla_dephasing",
+     "coherent_error"
+    ],
+    "formula_sum": 0.011606052389995212,
+    "numerical_sum": 0.011548628548394335,
+    "numerical_unitary_dynamics": 0.010979281182472489,
+    "numerical_all_mechanisms": 0.011548386051575377,
+    "pulse_of_the_tree": {
+     "unitary_dynamics": 0.010967077382193824,
+     "all_mechanisms": 0.011536203741661866
+    }
+   }
+  }
+ },
+ "cycle_contributions": [
+  {
+   "step": "idle",
+   "term": "ancilla_excitation",
+   "formula": 0.020899454363701678,
+   "numerical": 0.018749708381072927,
+   "formula_minus_numerical": 0.0021497459826287507,
+   "formula_over_numerical_minus_1": 0.11465490230231157
+  },
+  {
+   "step": "idle",
+   "term": "photon_loss",
+   "formula": 0.012093140166854945,
+   "numerical": 0.012711901011567384,
+   "formula_minus_numerical": -0.0006187608447124383,
+   "formula_over_numerical_minus_1": -0.04867571295193285
+  },
+  {
+   "step": "idle",
+   "term": "photon_gain",
+   "formula": 0.0036731812332278526,
+   "numerical": 0.003454740317012872,
+   "formula_minus_numerical": 0.0002184409162149805,
+   "formula_over_numerical_minus_1": 0.06322933018706722
+  },
+  {
+   "step": "X_plus_half_pi",
+   "term": "ancilla_relaxation",
+   "formula": 2.6146957590874447e-05,
+   "numerical": 2.6745421641726612e-05,
+   "formula_minus_numerical": -5.984640508521644e-07,
+   "formula_over_numerical_minus_1": -0.022376317669207224
+  },
+  {
+   "step": "X_plus_half_pi",
+   "term": "ancilla_excitation",
+   "formula": 1.4819493497550492e-05,
+   "numerical": 1.4840583680598818e-05,
+   "formula_minus_numerical": -2.1090183048325944e-08,
+   "formula_over_numerical_minus_1": -0.0014211154697303385
+  },
+  {
+   "step": "X_plus_half_pi",
+   "term": "ancilla_dephasing",
+   "formula": 0.000198252831912634,
+   "numerical": 0.00019998104092660624,
+   "formula_minus_numerical": -1.7282090139722484e-06,
+   "formula_over_numerical_minus_1": -0.008641864278556843
+  },
+  {
+   "step": "X_plus_half_pi",
+   "term": "coherent_error",
+   "formula": 0.0,
+   "numerical": 8.872299498085833e-05,
+   "formula_minus_numerical": -8.872299498085833e-05,
+   "formula_over_numerical_minus_1": -1.0
+  },
+  {
+   "step": "parity_mapping_idling",
+   "term": "ancilla_relaxation",
+   "formula": 0.0033248275765122297,
+   "numerical": 0.0027495787292836048,
+   "formula_minus_numerical": 0.0005752488472286249,
+   "formula_over_numerical_minus_1": 0.20921344826467458
+  },
+  {
+   "step": "parity_mapping_idling",
+   "term": "ancilla_excitation",
+   "formula": 0.00042508978671249373,
+   "numerical": 0.0004025234490652841,
+   "formula_minus_numerical": 2.256633764720963e-05,
+   "formula_over_numerical_minus_1": 0.05606216904782024
+  },
+  {
+   "step": "parity_mapping_idling",
+   "term": "ancilla_dephasing",
+   "formula": 0.008007600252792103,
+   "numerical": 0.007956284125270646,
+   "formula_minus_numerical": 5.131612752145784e-05,
+   "formula_over_numerical_minus_1": 0.006449760555743422
+  },
+  {
+   "step": "parity_mapping_idling",
+   "term": "photon_loss",
+   "formula": 0.0016337180505494734,
+   "numerical": 0.0016328445756844828,
+   "formula_minus_numerical": 8.734748649906216e-07,
+   "formula_over_numerical_minus_1": 0.0005349406048793526
+  },
+  {
+   "step": "parity_mapping_idling",
+   "term": "photon_gain",
+   "formula": 5.07880056252786e-05,
+   "numerical": 5.079442933784464e-05,
+   "formula_minus_numerical": -6.423712566043418e-09,
+   "formula_over_numerical_minus_1": -0.00012646490274192956
+  },
+  {
+   "step": "parity_mapping_idling",
+   "term": "chi_1_prime",
+   "formula": 1.1008010304190771e-05,
+   "numerical": 1.0608737391118527e-05,
+   "formula_minus_numerical": 3.9927291307224347e-07,
+   "formula_over_numerical_minus_1": 0.03763623307392905
+  },
+  {
+   "step": "X_minus_half_pi",
+   "term": "ancilla_relaxation",
+   "formula": 4.913103347047258e-05,
+   "numerical": 4.743992246638749e-05,
+   "formula_minus_numerical": 1.6911110040850958e-06,
+   "formula_over_numerical_minus_1": 0.03564742343926253
+  },
+  {
+   "step": "X_minus_half_pi",
+   "term": "ancilla_excitation",
+   "formula": 1.5897062367586492e-05,
+   "numerical": 1.5830910365247863e-05,
+   "formula_minus_numerical": 6.6152002338629e-08,
+   "formula_over_numerical_minus_1": 0.004178660658950228
+  },
+  {
+   "step": "X_minus_half_pi",
+   "term": "ancilla_dephasing",
+   "formula": 0.000198252831912634,
+   "numerical": 0.00020034734207110806,
+   "formula_minus_numerical": -2.0945101584740698e-06,
+   "formula_over_numerical_minus_1": -0.010454394537116829
+  },
+  {
+   "step": "X_minus_half_pi",
+   "term": "coherent_error",
+   "formula": 0.0,
+   "numerical": 8.866466817167273e-05,
+   "formula_minus_numerical": -8.866466817167273e-05,
+   "formula_over_numerical_minus_1": -1.0
+  },
+  {
+   "step": "measurement",
+   "term": "ancilla_relaxation",
+   "formula": 0.0013048690753914474,
+   "numerical": 0.001198347244004367,
+   "formula_minus_numerical": 0.00010652183138708032,
+   "formula_over_numerical_minus_1": 0.08889062157904215
+  },
+  {
+   "step": "measurement",
+   "term": "ancilla_excitation",
+   "formula": 0.0005085800904309455,
+   "numerical": 0.0005046060465817951,
+   "formula_minus_numerical": 3.974043849150452e-06,
+   "formula_over_numerical_minus_1": 0.007875537513017727
+  },
+  {
+   "step": "measurement",
+   "term": "photon_loss",
+   "formula": 0.0027150872382748197,
+   "numerical": 0.002706586255905968,
+   "formula_minus_numerical": 8.50098236885189e-06,
+   "formula_over_numerical_minus_1": 0.003140850342494117
+  },
+  {
+   "step": "measurement",
+   "term": "photon_gain",
+   "formula": 8.440493504019582e-05,
+   "numerical": 8.436929794338186e-05,
+   "formula_minus_numerical": 3.5637096813966496e-08,
+   "formula_over_numerical_minus_1": 0.0004223941372356599
+  },
+  {
+   "step": "measurement",
+   "term": "readout_assignment_error",
+   "formula": 0.000558733850057005,
+   "numerical": 0.0005597862122168562,
+   "formula_minus_numerical": -1.0523621598512375e-06,
+   "formula_over_numerical_minus_1": -0.001879935834224411
+  },
+  {
+   "step": "feedback_latency",
+   "term": "ancilla_relaxation",
+   "formula": 0.0010830413325749013,
+   "numerical": 0.0009955969948037583,
+   "formula_minus_numerical": 8.744433777114298e-05,
+   "formula_over_numerical_minus_1": 0.08783105837757077
+  },
+  {
+   "step": "feedback_latency",
+   "term": "ancilla_excitation",
+   "formula": 0.0004221214750576849,
+   "numerical": 0.0004188436898668454,
+   "formula_minus_numerical": 3.277785190839474e-06,
+   "formula_over_numerical_minus_1": 0.007825795804352387
+  },
+  {
+   "step": "feedback_latency",
+   "term": "photon_loss",
+   "formula": 0.0022535224077681,
+   "numerical": 0.0022437120541425565,
+   "formula_minus_numerical": 9.810353625543632e-06,
+   "formula_over_numerical_minus_1": 0.004372376396262867
+  },
+  {
+   "step": "feedback_latency",
+   "term": "photon_gain",
+   "formula": 7.005609608336253e-05,
+   "numerical": 6.995755829328836e-05,
+   "formula_minus_numerical": 9.853779007417643e-08,
+   "formula_over_numerical_minus_1": 0.0014085367253824366
+  },
+  {
+   "step": "conditional_X_pi",
+   "term": "ancilla_relaxation",
+   "formula": 3.301151792335467e-05,
+   "numerical": 2.9873003182438962e-05,
+   "formula_minus_numerical": 3.1385147409157064e-06,
+   "formula_over_numerical_minus_1": 0.10506190896671219
+  },
+  {
+   "step": "conditional_X_pi",
+   "term": "ancilla_excitation",
+   "formula": 4.7331980117872734e-06,
+   "numerical": 4.303740176162815e-06,
+   "formula_minus_numerical": 4.2945783562445843e-07,
+   "formula_over_numerical_minus_1": 0.09978711958568098
+  },
+  {
+   "step": "conditional_X_pi",
+   "term": "ancilla_dephasing",
+   "formula": 2.8259418508058495e-05,
+   "numerical": 2.563962763769256e-05,
+   "formula_minus_numerical": 2.6197908703659343e-06,
+   "formula_over_numerical_minus_1": 0.10217741487456733
+  },
+  {
+   "step": "conditional_X_pi",
+   "term": "coherent_error",
+   "formula": 0.0012541439517840733,
+   "numerical": 0.001153497488163593,
+   "formula_minus_numerical": 0.00010064646362048036,
+   "formula_over_numerical_minus_1": 0.08725330107195384
+  }
+ ],
+ "cycle_entries": {
+  "formula_by_step": {
+   "idle": 0.03666577576378448,
+   "X_plus_half_pi": 0.00023921928300105894,
+   "parity_mapping_idling": 0.013453031682495769,
+   "X_minus_half_pi": 0.00026328092775069307,
+   "measurement": 0.005171675189194413,
+   "feedback_latency": 0.0038287413114840487,
+   "conditional_X_pi": 0.0013201480862272737
+  },
+  "numerical_all_mechanisms_by_step": {
+   "idle": 0.03485021012468015,
+   "X_plus_half_pi": 0.00033026813564111373,
+   "parity_mapping_idling": 0.01275053585826783,
+   "X_minus_half_pi": 0.00035222127792113673,
+   "measurement": 0.005043701824595008,
+   "feedback_latency": 0.003723009619990801,
+   "conditional_X_pi": 0.001213288382130298
+  }
+ },
+ "least_accurate": {
+  "by_relative_difference_on_an_error_space": [
+   {
+    "step": "parity_mapping_idling",
+    "error_space": "odd_parity",
+    "term": "ancilla_relaxation",
+    "formula_over_numerical_minus_1": 0.26830986133488
+   },
+   {
+    "step": "parity_mapping_idling",
+    "error_space": "even_parity",
+    "term": "ancilla_relaxation",
+    "formula_over_numerical_minus_1": 0.20489905737190672
+   },
+   {
+    "step": "idle",
+    "error_space": "logical_subspace",
+    "term": "ancilla_excitation",
+    "formula_over_numerical_minus_1": 0.11465490230231157
+   },
+   {
+    "step": "parity_mapping_idling",
+    "error_space": "odd_parity",
+    "term": "chi_1_prime",
+    "formula_over_numerical_minus_1": 0.0845553849255889
+   },
+   {
+    "step": "parity_mapping_idling",
+    "error_space": "odd_parity",
+    "term": "ancilla_excitation",
+    "formula_over_numerical_minus_1": 0.07136423703983485
+   },
+   {
+    "step": "idle",
+    "error_space": "logical_subspace",
+    "term": "photon_gain",
+    "formula_over_numerical_minus_1": 0.06322933018706722
+   },
+   {
+    "step": "parity_mapping_idling",
+    "error_space": "even_parity",
+    "term": "ancilla_excitation",
+    "formula_over_numerical_minus_1": 0.05644908132123083
+   },
+   {
+    "step": "idle",
+    "error_space": "logical_subspace",
+    "term": "photon_loss",
+    "formula_over_numerical_minus_1": -0.04867571295193285
+   }
+  ],
+  "by_absolute_difference_over_the_cycle": [
+   {
+    "step": "idle",
+    "term": "ancilla_excitation",
+    "formula": 0.020899454363701678,
+    "numerical": 0.018749708381072927,
+    "formula_minus_numerical": 0.0021497459826287507
+   },
+   {
+    "step": "idle",
+    "term": "photon_loss",
+    "formula": 0.012093140166854945,
+    "numerical": 0.012711901011567384,
+    "formula_minus_numerical": -0.0006187608447124383
+   },
+   {
+    "step": "parity_mapping_idling",
+    "term": "ancilla_relaxation",
+    "formula": 0.0033248275765122297,
+    "numerical": 0.0027495787292836048,
+    "formula_minus_numerical": 0.0005752488472286249
+   },
+   {
+    "step": "idle",
+    "term": "photon_gain",
+    "formula": 0.0036731812332278526,
+    "numerical": 0.003454740317012872,
+    "formula_minus_numerical": 0.0002184409162149805
+   },
+   {
+    "step": "measurement",
+    "term": "ancilla_relaxation",
+    "formula": 0.0013048690753914474,
+    "numerical": 0.001198347244004367,
+    "formula_minus_numerical": 0.00010652183138708032
+   },
+   {
+    "step": "conditional_X_pi",
+    "term": "coherent_error",
+    "formula": 0.0012541439517840733,
+    "numerical": 0.001153497488163593,
+    "formula_minus_numerical": 0.00010064646362048036
+   },
+   {
+    "step": "X_plus_half_pi",
+    "term": "coherent_error",
+    "formula": 0.0,
+    "numerical": 8.872299498085833e-05,
+    "formula_minus_numerical": -8.872299498085833e-05
+   },
+   {
+    "step": "X_minus_half_pi",
+    "term": "coherent_error",
+    "formula": 0.0,
+    "numerical": 8.866466817167273e-05,
+    "formula_minus_numerical": -8.866466817167273e-05
+   }
+  ]
+ },
+ "truncation_check_absolute_change": {
+  "idle": {
+   "photon_loss": 2.735293458711041e-05,
+   "resonator_dephasing": 0.0,
+   "photon_gain": 4.1820892981991875e-07,
+   "ancilla_excitation": 3.063862494823155e-07
+  },
+  "parity_mapping_idling": {
+   "even_parity": {
+    "ancilla_dephasing": 1.7052855794119637e-09,
+    "ancilla_relaxation": 6.672578045652244e-08,
+    "ancilla_excitation": 2.64711419450947e-09,
+    "photon_loss": 2.9856210304046726e-07,
+    "photon_gain": 5.97326665907616e-09,
+    "resonator_dephasing": 0.0,
+    "chi_1_prime": 2.069633725509945e-07
+   },
+   "odd_parity": {
+    "ancilla_dephasing": 4.822710786278606e-09,
+    "ancilla_relaxation": 2.943863230964183e-07,
+    "ancilla_excitation": 1.1771824959261323e-08,
+    "photon_loss": 1.386862024999047e-06,
+    "photon_gain": 2.7748509157099477e-08,
+    "resonator_dephasing": 0.0,
+    "chi_1_prime": 6.044318676678984e-07
+   }
+  },
+  "measurement": {
+   "even_parity": {
+    "ancilla_dephasing": 0.0,
+    "ancilla_relaxation": 0.0,
+    "ancilla_excitation": 7.138734048339757e-13,
+    "photon_loss": 4.931407197039661e-07,
+    "photon_gain": 9.909748688308184e-09,
+    "resonator_dephasing": 0.0,
+    "readout_assignment_error": 8.918421556813882e-13
+   },
+   "odd_parity": {
+    "ancilla_dephasing": 3.3306690738754696e-16,
+    "ancilla_relaxation": 7.702216642258009e-11,
+    "ancilla_excitation": 6.765144000553391e-12,
+    "photon_loss": 2.2946272882906626e-06,
+    "photon_gain": 4.596967484449266e-08,
+    "resonator_dephasing": 0.0,
+    "readout_assignment_error": 3.916977853180015e-12
+   }
+  },
+  "feedback_latency": {
+   "even_parity": {
+    "ancilla_dephasing": 0.0,
+    "ancilla_relaxation": 0.0,
+    "ancilla_excitation": 4.036770917537069e-13,
+    "photon_loss": 4.0511205101623204e-07,
+    "photon_gain": 8.132561291063212e-09,
+    "resonator_dephasing": 0.0
+   },
+   "odd_parity": {
+    "ancilla_dephasing": 0.0,
+    "ancilla_relaxation": 4.362776806488e-11,
+    "ancilla_excitation": 3.82804898890754e-12,
+    "photon_loss": 1.8860703815404278e-06,
+    "photon_gain": 3.774835366510132e-08,
+    "resonator_dephasing": 0.0
+   }
+  }
+ },
+ "idle_excitation_excess_estimate": {
+  "return_fidelity": 0.37233413963398115,
+  "relaxation_probability_in_idle": 0.5162277288497873,
+  "fraction_relaxed_before_the_end": 0.21888635298518633,
+  "predicted": 0.0887302786433104,
+  "measured": 0.11465490230231157
+ },
+ "parity_mapping_chi_prime_removal": {
+  "with_chi_prime": [
+   1.1154551326386652e-05,
+   9.65946715481003e-06
+  ],
+  "chi_prime_removed": [
+   1.7640852112421612e-09,
+   1.8672740020875267e-09
+  ],
+  "chi_prime_rad_per_ns": 9.651449253744284e-06,
+  "constant_phase_rad": 0.00464596397125755
+ }
+}

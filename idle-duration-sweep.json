@@ -1,0 +1,692 @@
+{
+ "description": "Failure rate of one QEC cycle (infidelity over cycle duration, 1/ms) against the idle duration, every other parameter fixed at its optimized value; computed from the analytical formula, the failure Markov chain, and the actual QEC dynamics.",
+ "environment": {
+  "cpu_model": "Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz",
+  "cores_available_to_process": 4,
+  "worker_processes": 4,
+  "thread_settings": {
+   "OMP_NUM_THREADS": "1",
+   "MKL_NUM_THREADS": "1",
+   "OPENBLAS_NUM_THREADS": "1",
+   "NUMEXPR_NUM_THREADS": "1"
+  },
+  "versions": {
+   "python": "3.12.2",
+   "numpy": "2.2.5",
+   "scipy": "1.15.2",
+   "qutip": "5.1.1",
+   "scqubits": "4.3.1+gc856d8600"
+  }
+ },
+ "settings": {
+  "optimized_parameters": {
+   "E_osc_GHz": 5.853205175978728,
+   "g_GHz": 0.2508374908823372,
+   "EJ_GHz": 52.1547721048105,
+   "T_W": 50000.0
+  },
+  "optimized_parameters_units": "E_osc_GHz, g_GHz, EJ_GHz in GHz; T_W (idle duration) in ns",
+  "t_idle_optimized_us": 50.0,
+  "t_idle_upper_bound_of_the_optimization_us": 50.0,
+  "t_idle_upper_bound_source": "upper end of the search range of T_W in search_ranges.py; recorded here, not produced by this script",
+  "dynamics_resonator_dimension": 10,
+  "dynamics_ancilla_dimension": 3,
+  "diagonalization_ancilla_dimension": 10,
+  "diagonalization_resonator_dimension": 14
+ },
+ "points": [
+  {
+   "t_idle_us": 10.0,
+   "t_cycle_us": 11.182817207295557,
+   "failure_rate_per_ms": {
+    "analytical_formula": 3.8883506345308394,
+    "actual_QEC_dynamics": 3.48940245584065,
+    "failure_Markov_chain": 3.6135602428814657
+   },
+   "formula_over_markov_chain_minus_1": 0.07604422596543037,
+   "formula_over_actual_minus_1": 0.11433137442269525,
+   "mean_number_of_lost_photons": 0.06232607543134051,
+   "probability_of_two_or_more_photon_losses": 0.0018634223945199757
+  },
+  {
+   "t_idle_us": 20.0,
+   "t_cycle_us": 21.182817207295557,
+   "failure_rate_per_ms": {
+    "analytical_formula": 2.797890981257016,
+    "actual_QEC_dynamics": 2.532373184216478,
+    "failure_Markov_chain": 2.595298250218271
+   },
+   "formula_over_markov_chain_minus_1": 0.07806144477680221,
+   "formula_over_actual_minus_1": 0.10484939530059423,
+   "mean_number_of_lost_photons": 0.12465215086268101,
+   "probability_of_two_or_more_photon_losses": 0.007152659347460122
+  },
+  {
+   "t_idle_us": 30.0,
+   "t_cycle_us": 31.182817207295557,
+   "failure_rate_per_ms": {
+    "analytical_formula": 2.480756911721128,
+    "actual_QEC_dynamics": 2.2398879808098098,
+    "failure_Markov_chain": 2.281165781018156
+   },
+   "formula_over_markov_chain_minus_1": 0.08749523264104386,
+   "formula_over_actual_minus_1": 0.10753615045705733,
+   "mean_number_of_lost_photons": 0.18697822629402153,
+   "probability_of_two_or_more_photon_losses": 0.01544690783840208
+  },
+  {
+   "t_idle_us": 40.0,
+   "t_cycle_us": 41.18281720729556,
+   "failure_rate_per_ms": {
+    "analytical_formula": 2.3688328638854292,
+    "actual_QEC_dynamics": 2.1225229749943137,
+    "failure_Markov_chain": 2.1529777177909533
+   },
+   "formula_over_markov_chain_minus_1": 0.10025888531533544,
+   "formula_over_actual_minus_1": 0.11604580576649615,
+   "mean_number_of_lost_photons": 0.24930430172536203,
+   "probability_of_two_or_more_photon_losses": 0.026363709998182494
+  },
+  {
+   "t_idle_us": 50.0,
+   "t_cycle_us": 51.18281720729556,
+   "failure_rate_per_ms": {
+    "analytical_formula": 2.337693752122582,
+    "actual_QEC_dynamics": 2.073181279842037,
+    "failure_Markov_chain": 2.0973034242441053
+   },
+   "formula_over_markov_chain_minus_1": 0.11461876479084854,
+   "formula_over_actual_minus_1": 0.12758771982578332,
+   "mean_number_of_lost_photons": 0.31163037715670255,
+   "probability_of_two_or_more_photon_losses": 0.03955585556302277
+  },
+  {
+   "t_idle_us": 60.0,
+   "t_cycle_us": 61.18281720729556,
+   "failure_rate_per_ms": {
+    "analytical_formula": 2.344193351157714,
+    "actual_QEC_dynamics": 2.0548675978518527,
+    "failure_Markov_chain": 2.0749342383418217
+   },
+   "formula_over_markov_chain_minus_1": 0.1297675405033898,
+   "formula_over_actual_minus_1": 0.14080019248360376,
+   "mean_number_of_lost_photons": 0.37395645258804305,
+   "probability_of_two_or_more_photon_losses": 0.054708518659722816
+  },
+  {
+   "t_idle_us": 70.0,
+   "t_cycle_us": 71.18281720729557,
+   "failure_rate_per_ms": {
+    "analytical_formula": 2.3694822959890893,
+    "actual_QEC_dynamics": 2.0515364763889536,
+    "failure_Markov_chain": 2.0688462580878992
+   },
+   "formula_over_markov_chain_minus_1": 0.14531579460092336,
+   "formula_over_actual_minus_1": 0.1549793646173785,
+   "mean_number_of_lost_photons": 0.43628252801938355,
+   "probability_of_two_or_more_photon_losses": 0.07153661191283855
+  },
+  {
+   "t_idle_us": 80.0,
+   "t_cycle_us": 81.18281720729557,
+   "failure_rate_per_ms": {
+    "analytical_formula": 2.404106898438341,
+    "actual_QEC_dynamics": 2.0552304202329776,
+    "failure_Markov_chain": 2.070582900965526
+   },
+   "formula_over_markov_chain_minus_1": 0.16107734557128373,
+   "formula_over_actual_minus_1": 0.16975054221210661,
+   "mean_number_of_lost_photons": 0.49860860345072405,
+   "probability_of_two_or_more_photon_losses": 0.08978234206473323
+  },
+  {
+   "t_idle_us": 90.0,
+   "t_cycle_us": 91.18281720729557,
+   "failure_rate_per_ms": {
+    "analytical_formula": 2.4428906576753775,
+    "actual_QEC_dynamics": 2.0616343695947372,
+    "failure_Markov_chain": 2.075549743580597
+   },
+   "formula_over_markov_chain_minus_1": 0.17698487604593316,
+   "formula_over_actual_minus_1": 0.18492914830265716,
+   "mean_number_of_lost_photons": 0.5609346788820646,
+   "probability_of_two_or_more_photon_losses": 0.10921295241642137
+  },
+  {
+   "t_idle_us": 100.0,
+   "t_cycle_us": 101.18281720729557,
+   "failure_rate_per_ms": {
+    "analytical_formula": 2.482836013471098,
+    "actual_QEC_dynamics": 2.068232543924988,
+    "failure_Markov_chain": 2.0810637991165137
+   },
+   "formula_over_markov_chain_minus_1": 0.1930609789690978,
+   "formula_over_actual_minus_1": 0.20046269495368074,
+   "mean_number_of_lost_photons": 0.6232607543134051,
+   "probability_of_two_or_more_photon_losses": 0.12961863843690136
+  },
+  {
+   "t_idle_us": 120.0,
+   "t_cycle_us": 121.18281720729557,
+   "failure_rate_per_ms": {
+    "analytical_formula": 2.5597405202787,
+    "actual_QEC_dynamics": 2.0764026665968234,
+    "failure_Markov_chain": 2.0877338420435505
+   },
+   "formula_over_markov_chain_minus_1": 0.22608565743856124,
+   "formula_over_actual_minus_1": 0.23277655218679527,
+   "mean_number_of_lost_photons": 0.7479129051760861,
+   "probability_of_two_or_more_photon_losses": 0.17261938545983624
+  },
+  {
+   "t_idle_us": 150.0,
+   "t_cycle_us": 151.18281720729553,
+   "failure_rate_per_ms": {
+    "analytical_formula": 2.6568851874848063,
+    "actual_QEC_dynamics": 2.067763316177033,
+    "failure_Markov_chain": 2.077715361542512
+   },
+   "formula_over_markov_chain_minus_1": 0.27875320973336515,
+   "formula_over_actual_minus_1": 0.28490778741397094,
+   "mean_number_of_lost_photons": 0.9348911314701076,
+   "probability_of_two_or_more_photon_losses": 0.24030638821778205
+  }
+ ],
+ "truncation_check_at_longest_idle": {
+  "t_idle_us": 150.0,
+  "dynamics_resonator_dimension": 10,
+  "dynamics_resonator_dimension_check": 14,
+  "failure_rate_per_ms": {
+   "analytical_formula": 2.6568852084787604,
+   "actual_QEC_dynamics": 2.0681077767318716,
+   "failure_Markov_chain": 2.0780616626752964
+  },
+  "relative_change_of_failure_rate": {
+   "analytical_formula": 7.901716836400396e-09,
+   "actual_QEC_dynamics": 0.00016658606531216869,
+   "failure_Markov_chain": 0.0001666740012584711
+  }
+ },
+ "photon_loss_count_during_idle": {
+  "description": "Probability of two or more photon losses during the EA idling from the binomial (decaying photon number) and Poisson (constant mean photon number) counts.",
+  "photon_loss_rate_per_ns": 3.116303771567025e-06,
+  "mean_photon_number_of_the_formula": 2.0000000000000004,
+  "mean_photon_number_of_the_logical_state": 1.8978064467695106,
+  "points": [
+   {
+    "t_idle_us": 10.0,
+    "surviving_fraction_of_photons": 0.9693175248774523,
+    "probability_of_two_or_more_photon_losses": {
+     "binomial_decaying_photon_number": 0.0018539579627379673,
+     "poisson_constant_photon_number": 0.0018634223945199757
+    }
+   },
+   {
+    "t_idle_us": 20.0,
+    "surviving_fraction_of_photons": 0.9395764640345503,
+    "probability_of_two_or_more_photon_losses": {
+     "binomial_decaying_photon_number": 0.006918700478033481,
+     "poisson_constant_photon_number": 0.007152659347460122
+    }
+   },
+   {
+    "t_idle_us": 30.0,
+    "surviving_fraction_of_photons": 0.9107479325510788,
+    "probability_of_two_or_more_photon_losses": {
+     "binomial_decaying_photon_number": 0.014546265450025967,
+     "poisson_constant_photon_number": 0.01544690783840208
+    }
+   },
+   {
+    "t_idle_us": 40.0,
+    "surviving_fraction_of_photons": 0.8828039317676685,
+    "probability_of_two_or_more_photon_losses": {
+     "binomial_decaying_photon_number": 0.024200913273252352,
+     "poisson_constant_photon_number": 0.026363709998182494
+    }
+   },
+   {
+    "t_idle_us": 50.0,
+    "surviving_fraction_of_photons": 0.8557173220931197,
+    "probability_of_two_or_more_photon_losses": {
+     "binomial_decaying_photon_number": 0.03543987913377831,
+     "poisson_constant_photon_number": 0.03955585556302277
+    }
+   },
+   {
+    "t_idle_us": 60.0,
+    "surviving_fraction_of_photons": 0.8294617966460643,
+    "probability_of_two_or_more_photon_losses": {
+     "binomial_decaying_photon_number": 0.047897518962743385,
+     "poisson_constant_photon_number": 0.054708518659722816
+    }
+   },
+   {
+    "t_idle_us": 70.0,
+    "surviving_fraction_of_photons": 0.8040118557053677,
+    "probability_of_two_or_more_photon_losses": {
+     "binomial_decaying_photon_number": 0.06127222481667135,
+     "poisson_constant_photon_number": 0.07153661191283855
+    }
+   },
+   {
+    "t_idle_us": 80.0,
+    "surviving_fraction_of_photons": 0.7793427819444544,
+    "probability_of_two_or_more_photon_losses": {
+     "binomial_decaying_photon_number": 0.07531560577778378,
+     "poisson_constant_photon_number": 0.08978234206473323
+    }
+   },
+   {
+    "t_idle_us": 90.0,
+    "surviving_fraction_of_photons": 0.7554306164255065,
+    "probability_of_two_or_more_photon_losses": {
+     "binomial_decaying_photon_number": 0.0898235265165981,
+     "poisson_constant_photon_number": 0.10921295241642137
+    }
+   },
+   {
+    "t_idle_us": 100.0,
+    "surviving_fraction_of_photons": 0.7322521353302199,
+    "probability_of_two_or_more_photon_losses": {
+     "binomial_decaying_photon_number": 0.1046286725419656,
+     "poisson_constant_photon_number": 0.12961863843690136
+    }
+   },
+   {
+    "t_idle_us": 120.0,
+    "surviving_fraction_of_photons": 0.6880068720953171,
+    "probability_of_two_or_more_photon_losses": {
+     "binomial_decaying_photon_number": 0.13460946049830502,
+     "poisson_constant_photon_number": 0.17261938545983624
+    }
+   },
+   {
+    "t_idle_us": 150.0,
+    "surviving_fraction_of_photons": 0.6266008363417445,
+    "probability_of_two_or_more_photon_losses": {
+     "binomial_decaying_photon_number": 0.17913688723504628,
+     "poisson_constant_photon_number": 0.24030638821778205
+    }
+   }
+  ],
+  "logarithmic_slope_between_neighbours": [
+   {
+    "t_idle_us": [
+     10.0,
+     20.0
+    ],
+    "binomial_decaying_photon_number": 1.8998925533710576,
+    "poisson_constant_photon_number": 1.940524996607241
+   },
+   {
+    "t_idle_us": [
+     20.0,
+     30.0
+    ],
+    "binomial_decaying_photon_number": 1.832725716487114,
+    "poisson_constant_photon_number": 1.898867753957594
+   },
+   {
+    "t_idle_us": [
+     30.0,
+     40.0
+    ],
+    "binomial_decaying_photon_number": 1.769509222821822,
+    "poisson_constant_photon_number": 1.8582304947018247
+   },
+   {
+    "t_idle_us": [
+     40.0,
+     50.0
+    ],
+    "binomial_decaying_photon_number": 1.7094258024638282,
+    "poisson_constant_photon_number": 1.8182254980849861
+   },
+   {
+    "t_idle_us": [
+     50.0,
+     60.0
+    ],
+    "binomial_decaying_photon_number": 1.652168821409833,
+    "poisson_constant_photon_number": 1.7787567155596704
+   },
+   {
+    "t_idle_us": [
+     60.0,
+     70.0
+    ],
+    "binomial_decaying_photon_number": 1.5975468362798542,
+    "poisson_constant_photon_number": 1.7397908474111008
+   },
+   {
+    "t_idle_us": [
+     70.0,
+     80.0
+    ],
+    "binomial_decaying_photon_number": 1.5454098063607824,
+    "poisson_constant_photon_number": 1.7013148884894649
+   },
+   {
+    "t_idle_us": [
+     80.0,
+     90.0
+    ],
+    "binomial_decaying_photon_number": 1.4956276731289604,
+    "poisson_constant_photon_number": 1.6633239866391551
+   },
+   {
+    "t_idle_us": [
+     90.0,
+     100.0
+    ],
+    "binomial_decaying_photon_number": 1.448082332025098,
+    "poisson_constant_photon_number": 1.6258170288827156
+   },
+   {
+    "t_idle_us": [
+     100.0,
+     120.0
+    ],
+    "binomial_decaying_photon_number": 1.3819543615331866,
+    "poisson_constant_photon_number": 1.571358335627439
+   },
+   {
+    "t_idle_us": [
+     120.0,
+     150.0
+    ],
+    "binomial_decaying_photon_number": 1.2806668366358214,
+    "poisson_constant_photon_number": 1.4825686786566263
+   }
+  ]
+ },
+ "formula_curve": {
+  "t_idle_us": [
+   10.0,
+   11.0,
+   12.0,
+   13.0,
+   14.0,
+   15.0,
+   16.0,
+   17.0,
+   18.0,
+   19.0,
+   20.0,
+   21.0,
+   22.0,
+   23.0,
+   24.0,
+   25.0,
+   26.0,
+   27.0,
+   28.0,
+   29.0,
+   30.0,
+   31.0,
+   32.0,
+   33.0,
+   34.0,
+   35.0,
+   36.0,
+   37.0,
+   38.0,
+   39.0,
+   40.0,
+   41.0,
+   42.0,
+   43.0,
+   44.0,
+   45.0,
+   46.0,
+   47.0,
+   48.0,
+   49.0,
+   50.0,
+   51.0,
+   52.0,
+   53.0,
+   54.0,
+   55.0,
+   56.0,
+   57.0,
+   58.0,
+   59.0,
+   60.0,
+   61.0,
+   62.0,
+   63.0,
+   64.0,
+   65.0,
+   66.0,
+   67.0,
+   68.0,
+   69.0,
+   70.0,
+   71.0,
+   72.0,
+   73.0,
+   74.0,
+   75.0,
+   76.0,
+   77.0,
+   78.0,
+   79.0,
+   80.0,
+   81.0,
+   82.0,
+   83.0,
+   84.0,
+   85.0,
+   86.0,
+   87.0,
+   88.0,
+   89.0,
+   90.0,
+   91.0,
+   92.0,
+   93.0,
+   94.0,
+   95.0,
+   96.0,
+   97.0,
+   98.0,
+   99.0,
+   100.0,
+   101.0,
+   102.0,
+   103.0,
+   104.0,
+   105.0,
+   106.0,
+   107.0,
+   108.0,
+   109.0,
+   110.0,
+   111.0,
+   112.0,
+   113.0,
+   114.0,
+   115.0,
+   116.0,
+   117.0,
+   118.0,
+   119.0,
+   120.0,
+   121.0,
+   122.0,
+   123.0,
+   124.0,
+   125.0,
+   126.0,
+   127.0,
+   128.0,
+   129.0,
+   130.0,
+   131.0,
+   132.0,
+   133.0,
+   134.0,
+   135.0,
+   136.0,
+   137.0,
+   138.0,
+   139.0,
+   140.0,
+   141.0,
+   142.0,
+   143.0,
+   144.0,
+   145.0,
+   146.0,
+   147.0,
+   148.0,
+   149.0,
+   150.0
+  ],
+  "failure_rate_per_ms": [
+   3.8883506352107804,
+   3.6898168984063857,
+   3.5232699079715517,
+   3.3819328628134806,
+   3.260814051444429,
+   3.156155326401789,
+   3.0650731634076145,
+   2.9853181642195237,
+   2.9151097818997806,
+   2.853020179137928,
+   2.7978909832921937,
+   2.7487725572781025,
+   2.704878987696939,
+   2.665554240667238,
+   2.6302463811053727,
+   2.5984876996872006,
+   2.5698792261728185,
+   2.544078539619575,
+   2.5207900846700997,
+   2.499757412708653,
+   2.480756915788422,
+   2.463592728643228,
+   2.4480925523753005,
+   2.434104211079078,
+   2.4214927955776053,
+   2.410138280689398,
+   2.3999335268812723,
+   2.390782595840103,
+   2.382599323883713,
+   2.3753061082961695,
+   2.368832870397479,
+   2.363116166021447,
+   2.3580984195080927,
+   2.353727261643621,
+   2.3499549554451393,
+   2.3467378964770114,
+   2.344036176642829,
+   2.34181320223266,
+   2.3400353585051237,
+   2.3386717143144073,
+   2.3376937613069333,
+   2.3370751830515823,
+   2.336791650164912,
+   2.336820638074149,
+   2.3371412645476877,
+   2.337734144531153,
+   2.3385812601719005,
+   2.3396658442056277,
+   2.3409722751257216,
+   2.3424859827660023,
+   2.3441933631063376,
+   2.3460817012639854,
+   2.348139101764671,
+   2.3503544253003983,
+   2.352717231278278,
+   2.3552177255487416,
+   2.3578467127743172,
+   2.3605955529634177,
+   2.3634561217484613,
+   2.3664207740356624,
+   2.3694823106956995,
+   2.372633948001064,
+   2.375869289548075,
+   2.3791823004298323,
+   2.3825672834511002,
+   2.386018857198254,
+   2.389531935796568,
+   2.3931017102044208,
+   2.396723630909131,
+   2.4003933919025764,
+   2.4041069158268638,
+   2.4078603401908345,
+   2.4116500045678477,
+   2.415472438693723,
+   2.419324351391322,
+   2.423202620255149,
+   2.4271042820352626,
+   2.4310265236655626,
+   2.434966673886171,
+   2.4389221954142313,
+   2.442890677621394,
+   2.4468698296799176,
+   2.4508574741424503,
+   2.4548515409237077,
+   2.45885006165471,
+   2.462851164382877,
+   2.466853068593301,
+   2.470854080528614,
+   2.4748525887866766,
+   2.4788470601769133,
+   2.4828360358176687,
+   2.486818127458345,
+   2.4907920140112814,
+   2.4947564382795093,
+   2.49871020386761,
+   2.502652172263755,
+   2.5065812600820045,
+   2.510496436454642,
+   2.5143967205651556,
+   2.5182811793130653,
+   2.5221489251025058,
+   2.5259991137469604,
+   2.5298309424831658,
+   2.533643648087602,
+   2.5374365050894894,
+   2.5412088240746393,
+   2.5449599500748015,
+   2.5486892610376195,
+   2.552396166372577,
+   2.556080105568548,
+   2.5597405468790275,
+   2.5633769860711992,
+   2.5669889452352903,
+   2.5705759716509897,
+   2.574137636707719,
+   2.57767353487595,
+   2.5811832827267613,
+   2.5846665179971158,
+   2.588122898698427,
+   2.5915521022661743,
+   2.5949538247484227,
+   2.598327780031247,
+   2.6016736990991713,
+   2.6049913293288696,
+   2.608280433814427,
+   2.6115407907226,
+   2.614772192676589,
+   2.617974446166899,
+   2.6211473709879987,
+   2.624290799699485,
+   2.627404577110598,
+   2.6304885597869485,
+   2.6335426155784245,
+   2.6365666231672433,
+   2.639560471635205,
+   2.642524060049296,
+   2.6454572970647243,
+   2.6483601005445996,
+   2.6512323971955465,
+   2.6540741222184443,
+   2.656885218973648
+  ]
+ }
+}

@@ -1,0 +1,116 @@
+{
+ "description": "Failure rate of one QEC cycle (1/ms) from the analytical formula against the coupling g at fixed g/Delta around the Delta>0 minimum.",
+ "environment": {
+  "cpu_model": "arm",
+  "cores_available_to_process": 8,
+  "worker_processes": 1,
+  "thread_settings": {
+   "OMP_NUM_THREADS": null,
+   "MKL_NUM_THREADS": null,
+   "OPENBLAS_NUM_THREADS": null,
+   "NUMEXPR_NUM_THREADS": null
+  },
+  "versions": {
+   "python": "3.12.2",
+   "numpy": "1.26.4",
+   "scipy": "1.13.1",
+   "qutip": "5.3.0.dev0+nogit",
+   "scqubits": "4.3.1+gc04b8db76",
+   "chencrafts": "3.15.post0"
+  }
+ },
+ "settings": {
+  "start_point": "Delta>0 minimum",
+  "start_source": "budget-at-three-points.json",
+  "free_parameters_at_start": {
+   "E_osc_GHz": 8.906535626463409,
+   "g_GHz": 0.05,
+   "EJ_GHz": 31.90797270424593,
+   "T_W": 28926.975930786015
+  },
+  "stored_failure_rate_per_ms_at_start": 2.902287267847908,
+  "failure_rate_per_ms_at_start": 2.9022872901948276,
+  "omega_01_held_GHz": 7.999300131589571,
+  "g_over_Delta": 0.05511248213117269,
+  "couplings_GHz": [
+   0.02,
+   0.03,
+   0.05,
+   0.08,
+   0.12
+  ],
+  "search_range_g_GHz": [
+   0.05,
+   0.3
+  ],
+  "units": "frequencies in GHz, chi_1/2pi in MHz, failure rate in 1/ms, relative change dimensionless"
+ },
+ "rows": [
+  {
+   "g_GHz": 0.02,
+   "E_osc_GHz": 8.362194329539106,
+   "detuning_GHz": 0.3628941979495348,
+   "inside_search_range": false,
+   "failure_rate_per_ms": 3.035299537846276,
+   "omega_01_GHz": 7.999300131589571,
+   "chi_1_MHz": -0.9436388879890956,
+   "t_parity_mapping_idling_ns": 515.4078291626099,
+   "relative_change_from_bound": 0.045830145106868336
+  },
+  {
+   "g_GHz": 0.03,
+   "E_osc_GHz": 8.543641428513874,
+   "detuning_GHz": 0.5443412969243031,
+   "inside_search_range": false,
+   "failure_rate_per_ms": 2.9372444723292546,
+   "omega_01_GHz": 7.999300131589571,
+   "chi_1_MHz": -1.1315952113193362,
+   "t_parity_mapping_idling_ns": 427.3982358158158,
+   "relative_change_from_bound": 0.012044700830454502
+  },
+  {
+   "g_GHz": 0.05,
+   "E_osc_GHz": 8.906535626463409,
+   "detuning_GHz": 0.9072354948738379,
+   "inside_search_range": true,
+   "failure_rate_per_ms": 2.9022872901948276,
+   "omega_01_GHz": 7.999300131589571,
+   "chi_1_MHz": -1.3686457759689574,
+   "t_parity_mapping_idling_ns": 350.86874282397343,
+   "relative_change_from_bound": 0.0
+  },
+  {
+   "g_GHz": 0.08,
+   "E_osc_GHz": 9.450876923387712,
+   "detuning_GHz": 1.451576791798141,
+   "inside_search_range": true,
+   "failure_rate_per_ms": 2.960822773418271,
+   "omega_01_GHz": 7.999300131589571,
+   "chi_1_MHz": -1.5920872761796547,
+   "t_parity_mapping_idling_ns": 299.59725620311974,
+   "relative_change_from_bound": 0.02016874188203266
+  },
+  {
+   "g_GHz": 0.12,
+   "E_osc_GHz": 10.176665319286782,
+   "detuning_GHz": 2.1773651876972107,
+   "inside_search_range": true,
+   "failure_rate_per_ms": 3.1123636534874186,
+   "omega_01_GHz": 7.999300131589571,
+   "chi_1_MHz": -1.8030079877036085,
+   "t_parity_mapping_idling_ns": 262.85847794729636,
+   "relative_change_from_bound": 0.07238303527094625
+  }
+ ],
+ "quoted": {
+  "relative_change_at_20_MHz": 0.045830145106868336,
+  "relative_change_at_30_MHz": 0.012044700830454502,
+  "relative_change_at_80_MHz": 0.02016874188203266,
+  "relative_change_at_120_MHz": 0.07238303527094625,
+  "largest_absolute_relative_change_30_to_80_MHz": 0.02016874188203266,
+  "chi_1_MHz_range": [
+   -1.8030079877036085,
+   -0.9436388879890956
+  ]
+ }
+}

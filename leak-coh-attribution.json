@@ -1,0 +1,433 @@
+{
+ "description": "Exact pair-of-steps decomposition of delta_leak-coh for one cat-code QEC cycle at the parameters of Ofek et al., with the full noise model and without decoherence.",
+ "steps": [
+  "idle",
+  "X_pi/2 pulse",
+  "parity-mapping idling",
+  "X_-pi/2 pulse",
+  "measurement",
+  "feedback latency",
+  "conditional X_pi pulse"
+ ],
+ "numbers": {
+  "pulse_pair_steps": [
+   2,
+   4
+  ],
+  "pulse_pair_share_full_noise_model": 0.6634832090882679,
+  "pulse_pair_share_no_decoherence": 1.0512904849996263,
+  "pulse_pair_contribution_full_noise_model": 0.00013372804085021932,
+  "pulse_pair_contribution_no_decoherence": 0.00020635268713025605,
+  "delta_leak_coh_full_noise_model": 0.0002015545216795811,
+  "delta_leak_coh_no_decoherence": 0.00019628512773073314,
+  "delta_leak_coh_no_decoherence_over_full": 0.9738562354992715
+ },
+ "full_noise_model": {
+  "delta_leak_coh": 0.0002015545216795811,
+  "pairs": [
+   {
+    "created_at_step": 1,
+    "returned_at_step": 2,
+    "created_at": "idle",
+    "returned_at": "X_pi/2 pulse",
+    "contribution": 1.056888508098054e-06,
+    "share": 0.00524368542710359
+   },
+   {
+    "created_at_step": 1,
+    "returned_at_step": 3,
+    "created_at": "idle",
+    "returned_at": "parity-mapping idling",
+    "contribution": 4.827973150092557e-06,
+    "share": 0.0239536831516376
+   },
+   {
+    "created_at_step": 1,
+    "returned_at_step": 4,
+    "created_at": "idle",
+    "returned_at": "X_-pi/2 pulse",
+    "contribution": 5.790826005909023e-07,
+    "share": 0.002873081664282839
+   },
+   {
+    "created_at_step": 1,
+    "returned_at_step": 5,
+    "created_at": "idle",
+    "returned_at": "measurement",
+    "contribution": 9.091330917887073e-06,
+    "share": 0.04510606282671201
+   },
+   {
+    "created_at_step": 1,
+    "returned_at_step": 6,
+    "created_at": "idle",
+    "returned_at": "feedback latency",
+    "contribution": 7.498302330569228e-06,
+    "share": 0.037202352336652436
+   },
+   {
+    "created_at_step": 1,
+    "returned_at_step": 7,
+    "created_at": "idle",
+    "returned_at": "conditional X_pi pulse",
+    "contribution": 3.029917688960823e-05,
+    "share": 0.15032744806279258
+   },
+   {
+    "created_at_step": 2,
+    "returned_at_step": 3,
+    "created_at": "X_pi/2 pulse",
+    "returned_at": "parity-mapping idling",
+    "contribution": 5.886412159613785e-06,
+    "share": 0.02920506129339851
+   },
+   {
+    "created_at_step": 2,
+    "returned_at_step": 4,
+    "created_at": "X_pi/2 pulse",
+    "returned_at": "X_-pi/2 pulse",
+    "contribution": 0.00013372804085021932,
+    "share": 0.6634832090882679
+   },
+   {
+    "created_at_step": 2,
+    "returned_at_step": 5,
+    "created_at": "X_pi/2 pulse",
+    "returned_at": "measurement",
+    "contribution": -1.7909019507019591e-07,
+    "share": -0.0008885446656210591
+   },
+   {
+    "created_at_step": 2,
+    "returned_at_step": 6,
+    "created_at": "X_pi/2 pulse",
+    "returned_at": "feedback latency",
+    "contribution": -1.4759987114123473e-07,
+    "share": -0.0007323074169275144
+   },
+   {
+    "created_at_step": 2,
+    "returned_at_step": 7,
+    "created_at": "X_pi/2 pulse",
+    "returned_at": "conditional X_pi pulse",
+    "contribution": 3.636913372909263e-07,
+    "share": 0.001804431546661604
+   },
+   {
+    "created_at_step": 3,
+    "returned_at_step": 4,
+    "created_at": "parity-mapping idling",
+    "returned_at": "X_-pi/2 pulse",
+    "contribution": -5.592145187190608e-07,
+    "share": -0.0027745074338151807
+   },
+   {
+    "created_at_step": 3,
+    "returned_at_step": 5,
+    "created_at": "parity-mapping idling",
+    "returned_at": "measurement",
+    "contribution": 3.551402965052194e-06,
+    "share": 0.017620060991228936
+   },
+   {
+    "created_at_step": 3,
+    "returned_at_step": 6,
+    "created_at": "parity-mapping idling",
+    "returned_at": "feedback latency",
+    "contribution": 2.940864318151576e-06,
+    "share": 0.014590912144490513
+   },
+   {
+    "created_at_step": 3,
+    "returned_at_step": 7,
+    "created_at": "parity-mapping idling",
+    "returned_at": "conditional X_pi pulse",
+    "contribution": 1.5382577372328668e-06,
+    "share": 0.007631968384605599
+   },
+   {
+    "created_at_step": 4,
+    "returned_at_step": 5,
+    "created_at": "X_-pi/2 pulse",
+    "returned_at": "measurement",
+    "contribution": 2.6281601729156883e-07,
+    "share": 0.0013039450323490012
+   },
+   {
+    "created_at_step": 4,
+    "returned_at_step": 6,
+    "created_at": "X_-pi/2 pulse",
+    "returned_at": "feedback latency",
+    "contribution": 2.1653718691590818e-07,
+    "share": 0.001074335545099532
+   },
+   {
+    "created_at_step": 4,
+    "returned_at_step": 7,
+    "created_at": "X_-pi/2 pulse",
+    "returned_at": "conditional X_pi pulse",
+    "contribution": 1.804511008189045e-07,
+    "share": 0.0008952967133417849
+   },
+   {
+    "created_at_step": 5,
+    "returned_at_step": 6,
+    "created_at": "measurement",
+    "returned_at": "feedback latency",
+    "contribution": 1.7459920633288368e-07,
+    "share": 0.000866262909300793
+   },
+   {
+    "created_at_step": 5,
+    "returned_at_step": 7,
+    "created_at": "measurement",
+    "returned_at": "conditional X_pi pulse",
+    "contribution": 1.302273752460349e-07,
+    "share": 0.0006461148783010799
+   },
+   {
+    "created_at_step": 6,
+    "returned_at_step": 7,
+    "created_at": "feedback latency",
+    "returned_at": "conditional X_pi pulse",
+    "contribution": 1.0585171209575689e-07,
+    "share": 0.000525176568670751
+   }
+  ],
+  "sum_over_pairs": 0.00020154600177817728,
+  "remainder": 8.51990140381966e-09,
+  "remainder_share": 4.227095146674046e-05,
+  "created_at_step": {
+   "idle": 0.26470631346918105,
+   "X_pi/2 pulse": 0.6928718498457794,
+   "parity-mapping idling": 0.037068434086509866,
+   "X_-pi/2 pulse": 0.003273577290790318,
+   "measurement": 0.001512377787601873,
+   "feedback latency": 0.000525176568670751
+  },
+  "returned_at_step": {
+   "X_pi/2 pulse": 0.00524368542710359,
+   "parity-mapping idling": 0.05315874444503611,
+   "X_-pi/2 pulse": 0.6635817833187355,
+   "measurement": 0.06314152418466888,
+   "feedback latency": 0.05300155551861576,
+   "conditional X_pi pulse": 0.1618304361543734
+  },
+  "infidelity_actual_QEC_dynamics": 0.056882734508086785
+ },
+ "no_decoherence": {
+  "delta_leak_coh": 0.00019628512773073314,
+  "pairs": [
+   {
+    "created_at_step": 1,
+    "returned_at_step": 2,
+    "created_at": "idle",
+    "returned_at": "X_pi/2 pulse",
+    "contribution": -2.638308577954541e-16,
+    "share": -1.3441204682475035e-12
+   },
+   {
+    "created_at_step": 1,
+    "returned_at_step": 3,
+    "created_at": "idle",
+    "returned_at": "parity-mapping idling",
+    "contribution": 2.8458189445376356e-18,
+    "share": 1.4498393115353966e-14
+   },
+   {
+    "created_at_step": 1,
+    "returned_at_step": 4,
+    "created_at": "idle",
+    "returned_at": "X_-pi/2 pulse",
+    "contribution": -3.477070248478903e-19,
+    "share": -1.7714384623417824e-15
+   },
+   {
+    "created_at_step": 1,
+    "returned_at_step": 5,
+    "created_at": "idle",
+    "returned_at": "measurement",
+    "contribution": -7.68296599896172e-17,
+    "share": -3.9141865141720403e-13
+   },
+   {
+    "created_at_step": 1,
+    "returned_at_step": 6,
+    "created_at": "idle",
+    "returned_at": "feedback latency",
+    "contribution": -1.3587100033811611e-17,
+    "share": -6.922124050300234e-14
+   },
+   {
+    "created_at_step": 1,
+    "returned_at_step": 7,
+    "created_at": "idle",
+    "returned_at": "conditional X_pi pulse",
+    "contribution": -1.3711608798624804e-17,
+    "share": -6.985556652786549e-14
+   },
+   {
+    "created_at_step": 2,
+    "returned_at_step": 3,
+    "created_at": "X_pi/2 pulse",
+    "returned_at": "parity-mapping idling",
+    "contribution": -5.0202427467155765e-06,
+    "share": -0.025576276739633683
+   },
+   {
+    "created_at_step": 2,
+    "returned_at_step": 4,
+    "created_at": "X_pi/2 pulse",
+    "returned_at": "X_-pi/2 pulse",
+    "contribution": 0.00020635268713025605,
+    "share": 1.0512904849996263
+   },
+   {
+    "created_at_step": 2,
+    "returned_at_step": 5,
+    "created_at": "X_pi/2 pulse",
+    "returned_at": "measurement",
+    "contribution": -1.4564603403081491e-19,
+    "share": -7.420125799373568e-16
+   },
+   {
+    "created_at_step": 2,
+    "returned_at_step": 6,
+    "created_at": "X_pi/2 pulse",
+    "returned_at": "feedback latency",
+    "contribution": -1.3770219476209392e-20,
+    "share": -7.015416621426145e-17
+   },
+   {
+    "created_at_step": 2,
+    "returned_at_step": 7,
+    "created_at": "X_pi/2 pulse",
+    "returned_at": "conditional X_pi pulse",
+    "contribution": -1.1469022477908656e-20,
+    "share": -5.843042012659273e-17
+   },
+   {
+    "created_at_step": 3,
+    "returned_at_step": 4,
+    "created_at": "parity-mapping idling",
+    "returned_at": "X_-pi/2 pulse",
+    "contribution": -5.04731665152929e-06,
+    "share": -0.025714208253481505
+   },
+   {
+    "created_at_step": 3,
+    "returned_at_step": 5,
+    "created_at": "parity-mapping idling",
+    "returned_at": "measurement",
+    "contribution": -2.312061377086543e-20,
+    "share": -1.177909607221115e-16
+   },
+   {
+    "created_at_step": 3,
+    "returned_at_step": 6,
+    "created_at": "parity-mapping idling",
+    "returned_at": "feedback latency",
+    "contribution": -2.207367776755577e-21,
+    "share": -1.1245720968649631e-17
+   },
+   {
+    "created_at_step": 3,
+    "returned_at_step": 7,
+    "created_at": "parity-mapping idling",
+    "returned_at": "conditional X_pi pulse",
+    "contribution": 1.6076107056107815e-21,
+    "share": 8.190180907725855e-18
+   },
+   {
+    "created_at_step": 4,
+    "returned_at_step": 5,
+    "created_at": "X_-pi/2 pulse",
+    "returned_at": "measurement",
+    "contribution": -6.423454617462671e-16,
+    "share": -3.272512131573443e-12
+   },
+   {
+    "created_at_step": 4,
+    "returned_at_step": 6,
+    "created_at": "X_-pi/2 pulse",
+    "returned_at": "feedback latency",
+    "contribution": -1.3103860826041656e-20,
+    "share": -6.675931578482974e-17
+   },
+   {
+    "created_at_step": 4,
+    "returned_at_step": 7,
+    "created_at": "X_-pi/2 pulse",
+    "returned_at": "conditional X_pi pulse",
+    "contribution": -9.280344622971473e-21,
+    "share": -4.727991738478724e-17
+   },
+   {
+    "created_at_step": 5,
+    "returned_at_step": 6,
+    "created_at": "measurement",
+    "returned_at": "feedback latency",
+    "contribution": 6.490510940413655e-16,
+    "share": 3.306674843606814e-12
+   },
+   {
+    "created_at_step": 5,
+    "returned_at_step": 7,
+    "created_at": "measurement",
+    "returned_at": "conditional X_pi pulse",
+    "contribution": -8.49395073953282e-31,
+    "share": -4.327353191620788e-27
+   },
+   {
+    "created_at_step": 6,
+    "returned_at_step": 7,
+    "created_at": "feedback latency",
+    "returned_at": "conditional X_pi pulse",
+    "contribution": -1.3167063461074468e-15,
+    "share": -6.708130979305392e-12
+   }
+  ],
+  "sum_over_pairs": 0.0001962851277303355,
+  "remainder": 3.9763114675905875e-16,
+  "remainder_share": 2.0257833660456186e-12,
+  "created_at_step": {
+   "idle": -1.8618889720425632e-12,
+   "X_pi/2 pulse": 1.0257142082599917,
+   "parity-mapping idling": -0.025714208253481627,
+   "X_-pi/2 pulse": -3.2726261708066125e-12,
+   "measurement": 3.3066748436068096e-12,
+   "feedback latency": -6.708130979305392e-12
+  },
+  "returned_at_step": {
+   "X_pi/2 pulse": -1.3441204682475035e-12,
+   "parity-mapping idling": -0.025576276739619184,
+   "X_-pi/2 pulse": 1.025576276746143,
+   "measurement": -3.664790586531306e-12,
+   "feedback latency": 3.2373054439008438e-12,
+   "conditional X_pi pulse": -6.778084065989865e-12
+  },
+  "infidelity_actual_QEC_dynamics": 3.1130725529848746e-05
+ },
+ "settings": {
+  "dynamics_resonator_dimension": 10,
+  "dynamics_ancilla_dimension": 3
+ },
+ "environment": {
+  "cpu_model": "arm",
+  "cores_available_to_process": 8,
+  "worker_processes": 1,
+  "thread_settings": {
+   "OMP_NUM_THREADS": "1",
+   "MKL_NUM_THREADS": "1",
+   "OPENBLAS_NUM_THREADS": "1",
+   "NUMEXPR_NUM_THREADS": "1"
+  },
+  "versions": {
+   "python": "3.12.2",
+   "numpy": "1.26.4",
+   "scipy": "1.13.1",
+   "qutip": "5.3.0.dev0+nogit",
+   "scqubits": "4.3.1+gc04b8db76"
+  }
+ }
+}

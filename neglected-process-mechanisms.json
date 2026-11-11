@@ -1,0 +1,3650 @@
+{
+ "description": "Step-by-step magnitudes and coherence lower bounds of the neglected processes for the cat-code cycle at the parameters of Ofek et al. under the full noise model, no decoherence, and single decoherence mechanisms.",
+ "mechanisms": {
+  "photon_loss": {
+   "sweep_key": "jump_a",
+   "ancilla_labels": null
+  },
+  "photon_gain": {
+   "sweep_key": "jump_adag",
+   "ancilla_labels": null
+  },
+  "ancilla_relaxation": {
+   "sweep_key": "jump_ij",
+   "ancilla_labels": [
+    0,
+    1
+   ]
+  },
+  "ancilla_excitation": {
+   "sweep_key": "jump_ij",
+   "ancilla_labels": [
+    1,
+    0
+   ]
+  },
+  "ancilla_dephasing": {
+   "sweep_key": "jump_ij",
+   "ancilla_labels": [
+    1,
+    1
+   ]
+  },
+  "ancilla_jump_to_level_2": {
+   "sweep_key": "jump_ij",
+   "ancilla_labels": [
+    2,
+    1
+   ]
+  },
+  "excited_ancilla_photon_loss": {
+   "sweep_key": "jump_a_ij",
+   "ancilla_labels": [
+    1,
+    1
+   ]
+  },
+  "readout_assignment_error": {
+   "parameters": [
+    "M_ge",
+    "M_eg"
+   ]
+  }
+ },
+ "steps": [
+  "idle",
+  "X_pi/2 pulse",
+  "parity-mapping idling",
+  "X_-pi/2 pulse",
+  "measurement",
+  "feedback latency",
+  "conditional X_pi pulse"
+ ],
+ "quantities": [
+  "leak_probability_mixed",
+  "eps_leak",
+  "coherence_lower_bound",
+  "eps_err_traj",
+  "eps_unexp",
+  "eps_seep",
+  "returned_coherence_lower_bound"
+ ],
+ "tables": {
+  "leak_probability_mixed": {
+   "idle": {
+    "full_noise_model": 0.022339900679637054,
+    "no_decoherence": 2.9061812501838876e-17,
+    "photon_loss": 0.003706268399930332,
+    "photon_gain": 0.0016857408810741377,
+    "ancilla_relaxation": 2.9061812501838876e-17,
+    "ancilla_excitation": 0.02068257428683622,
+    "ancilla_dephasing": 2.9061812501838876e-17,
+    "ancilla_jump_to_level_2": 2.9061812501838876e-17,
+    "excited_ancilla_photon_loss": 2.9061812501838876e-17,
+    "readout_assignment_error": 2.9061812501838876e-17
+   },
+   "X_pi/2 pulse": {
+    "full_noise_model": 0.00034021876278024195,
+    "no_decoherence": 0.00010310354261448497,
+    "photon_loss": 8.984527292538931e-05,
+    "photon_gain": 0.00010310354261448497,
+    "ancilla_relaxation": 0.0001308964777708362,
+    "ancilla_excitation": 0.00011234035312554286,
+    "ancilla_dephasing": 0.00031048643874776534,
+    "ancilla_jump_to_level_2": 0.00010923268634184073,
+    "excited_ancilla_photon_loss": 0.00010310354261448497,
+    "readout_assignment_error": 0.00010310354261448497
+   },
+   "parity-mapping idling": {
+    "full_noise_model": 0.011799633781033084,
+    "no_decoherence": 1.2665294751170018e-05,
+    "photon_loss": 0.0011397212149290776,
+    "photon_gain": 5.58576574091805e-05,
+    "ancilla_relaxation": 0.002103753780320619,
+    "ancilla_excitation": 9.74879195309677e-05,
+    "ancilla_dephasing": 0.00825620776916829,
+    "ancilla_jump_to_level_2": 0.0003141337929239572,
+    "excited_ancilla_photon_loss": 1.4373195276358454e-05,
+    "readout_assignment_error": 1.2665294751170018e-05
+   },
+   "X_-pi/2 pulse": {
+    "full_noise_model": 0.0004462047950490399,
+    "no_decoherence": 0.00010279737857770927,
+    "photon_loss": 8.960276056056754e-05,
+    "photon_gain": 0.00010279737857770927,
+    "ancilla_relaxation": 0.00023040298447985316,
+    "ancilla_excitation": 0.00010797876975874199,
+    "ancilla_dephasing": 0.00031187536997724684,
+    "ancilla_jump_to_level_2": 0.00011764116686943147,
+    "excited_ancilla_photon_loss": 0.00010279737857770927,
+    "readout_assignment_error": 0.00010279737857770927
+   },
+   "measurement": {
+    "full_noise_model": 0.00965052297676768,
+    "no_decoherence": 1.3330214425669986e-17,
+    "photon_loss": 0.0030882522877864293,
+    "photon_gain": 9.660389406169288e-05,
+    "ancilla_relaxation": 0.00570308896916425,
+    "ancilla_excitation": 0.00023216224359902168,
+    "ancilla_dephasing": 1.3330214425669986e-17,
+    "ancilla_jump_to_level_2": 1.6959828689929193e-17,
+    "excited_ancilla_photon_loss": 4.9899421924458206e-06,
+    "readout_assignment_error": 0.0005800000000000226
+   },
+   "feedback latency, after outcome 0": {
+    "full_noise_model": 0.0027100915128624196,
+    "no_decoherence": 3.964121470598407e-16,
+    "photon_loss": 0.002256185687651136,
+    "photon_gain": 7.530349124318099e-05,
+    "ancilla_relaxation": 3.964121470598407e-16,
+    "ancilla_excitation": 0.0003854045375143821,
+    "ancilla_dephasing": 3.964121470598407e-16,
+    "ancilla_jump_to_level_2": 3.964121470598407e-16,
+    "excited_ancilla_photon_loss": 3.964121470598407e-16,
+    "readout_assignment_error": 3.964121470598407e-16
+   },
+   "feedback latency, after outcome 1": {
+    "full_noise_model": 0.013226153733951435,
+    "no_decoherence": 8.994796283092165e-17,
+    "photon_loss": 0.0028674012811621603,
+    "photon_gain": 8.506082167365998e-05,
+    "ancilla_relaxation": 0.009476347391710743,
+    "ancilla_excitation": 8.994796283092165e-17,
+    "ancilla_dephasing": 8.994796283092165e-17,
+    "ancilla_jump_to_level_2": 0.0008315336400108119,
+    "excited_ancilla_photon_loss": 8.283316898554278e-06,
+    "readout_assignment_error": 8.994796283092165e-17
+   },
+   "conditional X_pi pulse, after outcome 1": {
+    "full_noise_model": 0.011526476445363662,
+    "no_decoherence": 0.012045409551719358,
+    "photon_loss": 0.010959276128949091,
+    "photon_gain": 0.012045409551719358,
+    "ancilla_relaxation": 0.012328047501198766,
+    "ancilla_excitation": 0.012056991275266883,
+    "ancilla_dephasing": 0.012288173054845194,
+    "ancilla_jump_to_level_2": 0.012074746996680551,
+    "excited_ancilla_photon_loss": 0.012045409551719358,
+    "readout_assignment_error": 0.012045409551719358
+   }
+  },
+  "eps_leak": {
+   "idle": {
+    "full_noise_model": 0.023123822503431448,
+    "no_decoherence": 5.569270303164312e-17,
+    "photon_loss": 0.006277549985278817,
+    "photon_gain": 0.00281174052254185,
+    "ancilla_relaxation": 5.569270303164312e-17,
+    "ancilla_excitation": 0.02068257428683624,
+    "ancilla_dephasing": 5.569270303164312e-17,
+    "ancilla_jump_to_level_2": 5.569270303164312e-17,
+    "excited_ancilla_photon_loss": 5.569270303164312e-17,
+    "readout_assignment_error": 5.569270303164312e-17
+   },
+   "X_pi/2 pulse": {
+    "full_noise_model": 0.0003917055009771322,
+    "no_decoherence": 0.00015900132206755522,
+    "photon_loss": 0.00014155698436638656,
+    "photon_gain": 0.00015900132206755522,
+    "ancilla_relaxation": 0.00018692543058610204,
+    "ancilla_excitation": 0.00016825970880492646,
+    "ancilla_dephasing": 0.00036618382824402763,
+    "ancilla_jump_to_level_2": 0.00016512916428672086,
+    "excited_ancilla_photon_loss": 0.00015900132206755522,
+    "readout_assignment_error": 0.00015900132206755522
+   },
+   "parity-mapping idling": {
+    "full_noise_model": 0.01202031405172853,
+    "no_decoherence": 1.733438944940734e-05,
+    "photon_loss": 0.0016279821908641373,
+    "photon_gain": 7.660650481563641e-05,
+    "ancilla_relaxation": 0.0026121394625220834,
+    "ancilla_excitation": 0.00011506669928038774,
+    "ancilla_dephasing": 0.008260827818421919,
+    "ancilla_jump_to_level_2": 0.00031880147514787093,
+    "excited_ancilla_photon_loss": 1.8876512671603026e-05,
+    "readout_assignment_error": 1.733438944940734e-05
+   },
+   "X_-pi/2 pulse": {
+    "full_noise_model": 0.0005729280850516631,
+    "no_decoherence": 0.00015890904273891372,
+    "photon_loss": 0.00014147017424046045,
+    "photon_gain": 0.00015890904273891372,
+    "ancilla_relaxation": 0.00034519933855702424,
+    "ancilla_excitation": 0.00016818508930456028,
+    "ancilla_dephasing": 0.0003660439256970272,
+    "ancilla_jump_to_level_2": 0.00016503439170469116,
+    "excited_ancilla_photon_loss": 0.00015890904273891372,
+    "readout_assignment_error": 0.00015890904273891372
+   },
+   "measurement": {
+    "full_noise_model": 0.016769445104310964,
+    "no_decoherence": 1.8631861638121044e-16,
+    "photon_loss": 0.0047747114857713945,
+    "photon_gain": 0.00012759836873176125,
+    "ancilla_relaxation": 0.01140617793832845,
+    "ancilla_excitation": 0.0004643244871982143,
+    "ancilla_dephasing": 1.8631861638121044e-16,
+    "ancilla_jump_to_level_2": 1.8631861638121044e-16,
+    "excited_ancilla_photon_loss": 1.35020464994253e-05,
+    "readout_assignment_error": 0.0005800000000002456
+   },
+   "feedback latency, after outcome 0": {
+    "full_noise_model": 0.0032288945943015875,
+    "no_decoherence": 4.995013560291881e-16,
+    "photon_loss": 0.0027654566283147794,
+    "photon_gain": 8.239762455592315e-05,
+    "ancilla_relaxation": 4.995013560291881e-16,
+    "ancilla_excitation": 0.0003854045375144753,
+    "ancilla_dephasing": 4.995013560291881e-16,
+    "ancilla_jump_to_level_2": 4.995013560291881e-16,
+    "excited_ancilla_photon_loss": 4.995013560291881e-16,
+    "readout_assignment_error": 4.995013560291881e-16
+   },
+   "feedback latency, after outcome 1": {
+    "full_noise_model": 0.014336815333383763,
+    "no_decoherence": 2.0104182190882503e-16,
+    "photon_loss": 0.003964971278764138,
+    "photon_gain": 0.00010590796463733572,
+    "ancilla_relaxation": 0.009476347391710865,
+    "ancilla_excitation": 2.0104182190882503e-16,
+    "ancilla_dephasing": 2.0104182190882503e-16,
+    "ancilla_jump_to_level_2": 0.000831533640010917,
+    "excited_ancilla_photon_loss": 1.1206717099796553e-05,
+    "readout_assignment_error": 2.0104182190882503e-16
+   },
+   "conditional X_pi pulse, after outcome 1": {
+    "full_noise_model": 0.017032272539264297,
+    "no_decoherence": 0.017023677710043532,
+    "photon_loss": 0.01647536916276149,
+    "photon_gain": 0.017023677710043532,
+    "ancilla_relaxation": 0.01730145004814367,
+    "ancilla_excitation": 0.017035202785342835,
+    "ancilla_dephasing": 0.017261687341124345,
+    "ancilla_jump_to_level_2": 0.017052868975951298,
+    "excited_ancilla_photon_loss": 0.017023677710043532,
+    "readout_assignment_error": 0.017023677710043532
+   }
+  },
+  "coherence_lower_bound": {
+   "idle": {
+    "full_noise_model": 0.01738574621834692,
+    "no_decoherence": 3.2715149023341367e-16,
+    "photon_loss": 0.013485838121597166,
+    "photon_gain": 0.005931672182409539,
+    "ancilla_relaxation": 3.2715149023341367e-16,
+    "ancilla_excitation": 3.3772072500065733e-16,
+    "ancilla_dephasing": 3.2715149023341367e-16,
+    "ancilla_jump_to_level_2": 3.2715149023341367e-16,
+    "excited_ancilla_photon_loss": 3.2715149023341367e-16,
+    "readout_assignment_error": 3.2715149023341367e-16
+   },
+   "X_pi/2 pulse": {
+    "full_noise_model": 0.023794353168548783,
+    "no_decoherence": 0.025217140268994218,
+    "photon_loss": 0.023793860229385084,
+    "photon_gain": 0.025217140268994218,
+    "ancilla_relaxation": 0.02524097695476828,
+    "ancilla_excitation": 0.025215387160456005,
+    "ancilla_dephasing": 0.02523650621431549,
+    "ancilla_jump_to_level_2": 0.025218288956412316,
+    "excited_ancilla_photon_loss": 0.025217140268994218,
+    "readout_assignment_error": 0.025217140268994218
+   },
+   "parity-mapping idling": {
+    "full_noise_model": 0.011689171129471257,
+    "no_decoherence": 0.00832684549360023,
+    "photon_loss": 0.009122120431960661,
+    "photon_gain": 0.008369306946381574,
+    "ancilla_relaxation": 0.010637496575970903,
+    "ancilla_excitation": 0.008330225041550697,
+    "ancilla_dephasing": 0.008244106237505022,
+    "ancilla_jump_to_level_2": 0.008329785054962818,
+    "excited_ancilla_photon_loss": 0.008329674845017926,
+    "readout_assignment_error": 0.00832684549360023
+   },
+   "X_-pi/2 pulse": {
+    "full_noise_model": 0.023764942572958875,
+    "no_decoherence": 0.02520982275551542,
+    "photon_loss": 0.023786564324901484,
+    "photon_gain": 0.02520982275551542,
+    "ancilla_relaxation": 0.025181016283863978,
+    "ancilla_excitation": 0.025211113008852443,
+    "ancilla_dephasing": 0.025171082134821866,
+    "ancilla_jump_to_level_2": 0.025208151921815778,
+    "excited_ancilla_photon_loss": 0.02520982275551542,
+    "readout_assignment_error": 0.02520982275551542
+   },
+   "measurement": {
+    "full_noise_model": 6.361871470454168e-05,
+    "no_decoherence": 1.6851610168402206e-15,
+    "photon_loss": 7.3866316743400075e-06,
+    "photon_gain": 6.247498657427541e-05,
+    "ancilla_relaxation": 1.6612911686689976e-15,
+    "ancilla_excitation": 1.6851610168402206e-15,
+    "ancilla_dephasing": 1.6851610168402206e-15,
+    "ancilla_jump_to_level_2": 1.8083121016520625e-15,
+    "excited_ancilla_photon_loss": 5.6592596459905925e-06,
+    "readout_assignment_error": 1.6570368242310328e-15
+   },
+   "feedback latency, after outcome 0": {
+    "full_noise_model": 5.206361368274597e-05,
+    "no_decoherence": 9.978725142509073e-16,
+    "photon_loss": 2.906530000657937e-06,
+    "photon_gain": 5.185486171989912e-05,
+    "ancilla_relaxation": 9.978725142509073e-16,
+    "ancilla_excitation": 1.0089235802342297e-15,
+    "ancilla_dephasing": 9.978725142509073e-16,
+    "ancilla_jump_to_level_2": 9.978725142509073e-16,
+    "excited_ancilla_photon_loss": 9.978725142509073e-16,
+    "readout_assignment_error": 9.978725142509073e-16
+   },
+   "feedback latency, after outcome 1": {
+    "full_noise_model": 3.464550920974051e-05,
+    "no_decoherence": 5.491661589251059e-16,
+    "photon_loss": 5.077694917741646e-06,
+    "photon_gain": 3.349896201602304e-05,
+    "ancilla_relaxation": 5.158615766646655e-16,
+    "ancilla_excitation": 5.491661589251059e-16,
+    "ancilla_dephasing": 5.491661589251059e-16,
+    "ancilla_jump_to_level_2": 5.42239624292902e-16,
+    "excited_ancilla_photon_loss": 4.697192477272861e-06,
+    "readout_assignment_error": 5.491661589251059e-16
+   },
+   "conditional X_pi pulse, after outcome 1": {
+    "full_noise_model": 0.25414854382970187,
+    "no_decoherence": 0.25871893731439427,
+    "photon_loss": 0.2545893273250158,
+    "photon_gain": 0.25871893731439427,
+    "ancilla_relaxation": 0.25855705843715177,
+    "ancilla_excitation": 0.25871602138012606,
+    "ancilla_dephasing": 0.2584467873028371,
+    "ancilla_jump_to_level_2": 0.2587092082351713,
+    "excited_ancilla_photon_loss": 0.25871893731439427,
+    "readout_assignment_error": 0.25871893731439427
+   }
+  },
+  "eps_err_traj": {
+   "idle": {
+    "full_noise_model": 0.0,
+    "no_decoherence": 0.0,
+    "photon_loss": 0.0,
+    "photon_gain": 0.0,
+    "ancilla_relaxation": 0.0,
+    "ancilla_excitation": 0.0,
+    "ancilla_dephasing": 0.0,
+    "ancilla_jump_to_level_2": 0.0,
+    "excited_ancilla_photon_loss": 0.0,
+    "readout_assignment_error": 0.0
+   },
+   "X_pi/2 pulse": {
+    "full_noise_model": 0.0,
+    "no_decoherence": 0.0,
+    "photon_loss": 0.0,
+    "photon_gain": 0.0,
+    "ancilla_relaxation": 0.0,
+    "ancilla_excitation": 0.0,
+    "ancilla_dephasing": 0.0,
+    "ancilla_jump_to_level_2": 0.0,
+    "excited_ancilla_photon_loss": 0.0,
+    "readout_assignment_error": 0.0
+   },
+   "parity-mapping idling": {
+    "full_noise_model": 0.001276743110892636,
+    "no_decoherence": 0.0,
+    "photon_loss": 0.001262469228925407,
+    "photon_gain": 2.4584722549336227e-05,
+    "ancilla_relaxation": 0.0,
+    "ancilla_excitation": 0.0,
+    "ancilla_dephasing": 0.0,
+    "ancilla_jump_to_level_2": 0.0,
+    "excited_ancilla_photon_loss": 1.7182070584867885e-06,
+    "readout_assignment_error": 0.0
+   },
+   "X_-pi/2 pulse": {
+    "full_noise_model": 0.0,
+    "no_decoherence": 0.0,
+    "photon_loss": 0.0,
+    "photon_gain": 0.0,
+    "ancilla_relaxation": 0.0,
+    "ancilla_excitation": 0.0,
+    "ancilla_dephasing": 0.0,
+    "ancilla_jump_to_level_2": 0.0,
+    "excited_ancilla_photon_loss": 0.0,
+    "readout_assignment_error": 0.0
+   },
+   "measurement": {
+    "full_noise_model": 5.1373382684468306e-05,
+    "no_decoherence": 0.0,
+    "photon_loss": 0.0,
+    "photon_gain": 0.0,
+    "ancilla_relaxation": 0.0,
+    "ancilla_excitation": 0.0,
+    "ancilla_dephasing": 0.0,
+    "ancilla_jump_to_level_2": 0.0,
+    "excited_ancilla_photon_loss": 0.0,
+    "readout_assignment_error": 0.0
+   },
+   "feedback latency, after outcome 0": {
+    "full_noise_model": 0.0,
+    "no_decoherence": 0.0,
+    "photon_loss": 0.0,
+    "photon_gain": 0.0,
+    "ancilla_relaxation": 0.0,
+    "ancilla_excitation": 0.0,
+    "ancilla_dephasing": 0.0,
+    "ancilla_jump_to_level_2": 0.0,
+    "excited_ancilla_photon_loss": 0.0,
+    "readout_assignment_error": 0.0
+   },
+   "feedback latency, after outcome 1": {
+    "full_noise_model": 0.0,
+    "no_decoherence": 0.0,
+    "photon_loss": 0.0,
+    "photon_gain": 0.0,
+    "ancilla_relaxation": 0.0,
+    "ancilla_excitation": 0.0,
+    "ancilla_dephasing": 0.0,
+    "ancilla_jump_to_level_2": 0.0,
+    "excited_ancilla_photon_loss": 0.0,
+    "readout_assignment_error": 0.0
+   },
+   "conditional X_pi pulse, after outcome 1": {
+    "full_noise_model": 0.0,
+    "no_decoherence": 0.0,
+    "photon_loss": 0.0,
+    "photon_gain": 0.0,
+    "ancilla_relaxation": 0.0,
+    "ancilla_excitation": 0.0,
+    "ancilla_dephasing": 0.0,
+    "ancilla_jump_to_level_2": 0.0,
+    "excited_ancilla_photon_loss": 0.0,
+    "readout_assignment_error": 0.0
+   }
+  },
+  "eps_unexp": {
+   "measurement": {
+    "full_noise_model": 0.000996040201043964,
+    "no_decoherence": 0.0,
+    "photon_loss": 0.0,
+    "photon_gain": 0.0,
+    "ancilla_relaxation": 0.0,
+    "ancilla_excitation": 0.0,
+    "ancilla_dephasing": 0.0,
+    "ancilla_jump_to_level_2": 0.0010017624258289346,
+    "excited_ancilla_photon_loss": 0.0,
+    "readout_assignment_error": 0.0
+   }
+  },
+  "eps_seep": {
+   "X_pi/2 pulse": {
+    "full_noise_model": 0.0005293905056610838,
+    "no_decoherence": 0.00015900132025101256,
+    "photon_loss": 0.00014155698399396762,
+    "photon_gain": 0.00015900132025101256,
+    "ancilla_relaxation": 0.000328131871866849,
+    "ancilla_excitation": 0.000159045528441601,
+    "ancilla_dephasing": 0.0003095503084962386,
+    "ancilla_jump_to_level_2": 0.00015898146017713423,
+    "excited_ancilla_photon_loss": 0.00015900132025101256,
+    "readout_assignment_error": 0.00015900132025101256
+   },
+   "parity-mapping idling": {
+    "full_noise_model": 0.011266513532768144,
+    "no_decoherence": 1.73343894496425e-05,
+    "photon_loss": 0.002692090587072131,
+    "photon_gain": 4.255767447334669e-05,
+    "ancilla_relaxation": 0.0018055284376259947,
+    "ancilla_excitation": 7.81884696569665e-05,
+    "ancilla_dephasing": 0.008247991815177973,
+    "ancilla_jump_to_level_2": 1.7351861564569803e-05,
+    "excited_ancilla_photon_loss": 1.765380353555024e-05,
+    "readout_assignment_error": 1.73343894496425e-05
+   },
+   "X_-pi/2 pulse": {
+    "full_noise_model": 0.0004487686752210554,
+    "no_decoherence": 0.00015890904461460259,
+    "photon_loss": 0.00014147017460415333,
+    "photon_gain": 0.00015890904461460259,
+    "ancilla_relaxation": 0.00024559617366606937,
+    "ancilla_excitation": 0.0001589377376032503,
+    "ancilla_dephasing": 0.00030936676091635075,
+    "ancilla_jump_to_level_2": 0.00015892467863494675,
+    "excited_ancilla_photon_loss": 0.00015890904461460259,
+    "readout_assignment_error": 0.00015890904461460259
+   },
+   "measurement": {
+    "full_noise_model": 0.014093160282229733,
+    "no_decoherence": 8.555254962134247e-18,
+    "photon_loss": 0.006323205119738266,
+    "photon_gain": 9.628004743567893e-05,
+    "ancilla_relaxation": 0.01092164030535341,
+    "ancilla_excitation": 0.0004556590492732149,
+    "ancilla_dephasing": 8.555254962134247e-18,
+    "ancilla_jump_to_level_2": 8.555254962134247e-18,
+    "excited_ancilla_photon_loss": 1.789317299174179e-05,
+    "readout_assignment_error": 8.555254962134245e-18
+   },
+   "feedback latency, after outcome 0": {
+    "full_noise_model": 0.009146537030286572,
+    "no_decoherence": 1.8764875954111487e-17,
+    "photon_loss": 0.004055768215197081,
+    "photon_gain": 5.64049218269087e-05,
+    "ancilla_relaxation": 0.00907884619334492,
+    "ancilla_excitation": 7.302099493916027e-18,
+    "ancilla_dephasing": 1.8764875954111487e-17,
+    "ancilla_jump_to_level_2": 1.8764875954111487e-17,
+    "excited_ancilla_photon_loss": 1.8764875954111487e-17,
+    "readout_assignment_error": 1.8764875954111487e-17
+   },
+   "feedback latency, after outcome 1": {
+    "full_noise_model": 0.005224009259490987,
+    "no_decoherence": 6.618285363461236e-18,
+    "photon_loss": 0.005252941035432078,
+    "photon_gain": 7.991400802155175e-05,
+    "ancilla_relaxation": 5.736007918697617e-18,
+    "ancilla_excitation": 0.00037830187382380427,
+    "ancilla_dephasing": 6.618285363461236e-18,
+    "ancilla_jump_to_level_2": 7.831709337749002e-18,
+    "excited_ancilla_photon_loss": 1.4851375183195567e-05,
+    "readout_assignment_error": 6.618285363461236e-18
+   },
+   "conditional X_pi pulse, after outcome 1": {
+    "full_noise_model": 0.01697630089847736,
+    "no_decoherence": 0.017023677729604714,
+    "photon_loss": 0.01647536918135921,
+    "photon_gain": 0.017023677729604714,
+    "ancilla_relaxation": 0.01728885165024928,
+    "ancilla_excitation": 0.017034118128672764,
+    "ancilla_dephasing": 0.01724055313120157,
+    "ancilla_jump_to_level_2": 0.017023467106440652,
+    "excited_ancilla_photon_loss": 0.017023677729604714,
+    "readout_assignment_error": 0.017023677729604714
+   }
+  },
+  "returned_coherence_lower_bound": {
+   "X_pi/2 pulse": {
+    "full_noise_model": 0.009811564414733,
+    "no_decoherence": 0.012609225848763372,
+    "photon_loss": 0.011897513497853706,
+    "photon_gain": 0.012609225848763372,
+    "ancilla_relaxation": 0.01035602184877695,
+    "ancilla_excitation": 0.012609218473753774,
+    "ancilla_dephasing": 0.010286783625300508,
+    "ancilla_jump_to_level_2": 0.012608387950532596,
+    "excited_ancilla_photon_loss": 0.012609225848763372,
+    "readout_assignment_error": 0.012609225848763372
+   },
+   "parity-mapping idling": {
+    "full_noise_model": 0.0033198337433778184,
+    "no_decoherence": 0.004163440198829976,
+    "photon_loss": 0.002957558533904001,
+    "photon_gain": 0.003665697191757928,
+    "ancilla_relaxation": 0.001530453948120164,
+    "ancilla_excitation": 0.003046832040698266,
+    "ancilla_dephasing": 0.0020961760794330096,
+    "ancilla_jump_to_level_2": 0.004164909985655652,
+    "excited_ancilla_photon_loss": 0.004160159253147623,
+    "readout_assignment_error": 0.004163440198829976
+   },
+   "X_-pi/2 pulse": {
+    "full_noise_model": 0.0039018388282000016,
+    "no_decoherence": 0.012605566599000638,
+    "photon_loss": 0.01189386497957665,
+    "photon_gain": 0.012605566599000638,
+    "ancilla_relaxation": 0.004721678177979267,
+    "ancilla_excitation": 0.01260532731903988,
+    "ancilla_dephasing": 0.010444988747749497,
+    "ancilla_jump_to_level_2": 0.012606138813517217,
+    "excited_ancilla_photon_loss": 0.012605566599000638,
+    "readout_assignment_error": 0.012605566599000638
+   },
+   "measurement": {
+    "full_noise_model": 0.0,
+    "no_decoherence": 0.0,
+    "photon_loss": 0.0,
+    "photon_gain": 0.0,
+    "ancilla_relaxation": 0.0,
+    "ancilla_excitation": 0.0,
+    "ancilla_dephasing": 0.0,
+    "ancilla_jump_to_level_2": 0.0,
+    "excited_ancilla_photon_loss": 0.0,
+    "readout_assignment_error": 0.0
+   },
+   "feedback latency, after outcome 0": {
+    "full_noise_model": 0.0,
+    "no_decoherence": 0.0,
+    "photon_loss": 0.0,
+    "photon_gain": 0.0,
+    "ancilla_relaxation": 0.0,
+    "ancilla_excitation": 0.0,
+    "ancilla_dephasing": 0.0,
+    "ancilla_jump_to_level_2": 0.0,
+    "excited_ancilla_photon_loss": 0.0,
+    "readout_assignment_error": 0.0
+   },
+   "feedback latency, after outcome 1": {
+    "full_noise_model": 0.0,
+    "no_decoherence": 0.0,
+    "photon_loss": 0.0,
+    "photon_gain": 0.0,
+    "ancilla_relaxation": 0.0,
+    "ancilla_excitation": 0.0,
+    "ancilla_dephasing": 0.0,
+    "ancilla_jump_to_level_2": 0.0,
+    "excited_ancilla_photon_loss": 0.0,
+    "readout_assignment_error": 0.0
+   },
+   "conditional X_pi pulse, after outcome 1": {
+    "full_noise_model": 0.12785498875404588,
+    "no_decoherence": 0.13001295710966537,
+    "photon_loss": 0.1280066043371797,
+    "photon_gain": 0.13001295710966537,
+    "ancilla_relaxation": 0.12997627421915015,
+    "ancilla_excitation": 0.13001055479853388,
+    "ancilla_dephasing": 0.12989934944615422,
+    "ancilla_jump_to_level_2": 0.1300101192845894,
+    "excited_ancilla_photon_loss": 0.13001295710966537,
+    "readout_assignment_error": 0.13001295710966537
+   }
+  }
+ },
+ "attribution": {
+  "leak_probability_mixed": {
+   "idle": {
+    "full_noise_model": 0.022339900679637054,
+    "no_decoherence": 2.9061812501838876e-17,
+    "no_decoherence_over_full": 1.3008926457908956e-15,
+    "sum_of_shares": 1.1671754472752767,
+    "shares": {
+     "photon_loss": 0.1659035307757027,
+     "photon_gain": 0.0754587455534515,
+     "ancilla_relaxation": 0.0,
+     "ancilla_excitation": 0.9258131709461225,
+     "ancilla_dephasing": 0.0,
+     "ancilla_jump_to_level_2": 0.0,
+     "excited_ancilla_photon_loss": 0.0,
+     "readout_assignment_error": 0.0
+    },
+    "order": [
+     "ancilla_excitation",
+     "photon_loss",
+     "photon_gain"
+    ]
+   },
+   "X_pi/2 pulse": {
+    "full_noise_model": 0.00034021876278024195,
+    "no_decoherence": 0.00010310354261448497,
+    "no_decoherence_over_full": 0.3030507246923439,
+    "sum_of_shares": 1.0007097632664617,
+    "shares": {
+     "photon_loss": -0.05591488256142888,
+     "photon_gain": 0.0,
+     "ancilla_relaxation": 0.11721278430343858,
+     "ancilla_excitation": 0.03895494563613773,
+     "ancilla_dephasing": 0.8746081166291559,
+     "ancilla_jump_to_level_2": 0.025848799259158246,
+     "excited_ancilla_photon_loss": 0.0,
+     "readout_assignment_error": 0.0
+    },
+    "order": [
+     "ancilla_dephasing",
+     "ancilla_relaxation",
+     "ancilla_excitation",
+     "ancilla_jump_to_level_2"
+    ]
+   },
+   "parity-mapping idling": {
+    "full_noise_model": 0.011799633781033084,
+    "no_decoherence": 1.2665294751170018e-05,
+    "no_decoherence_over_full": 0.00107336337603362,
+    "sum_of_shares": 1.0089853281733643,
+    "shares": {
+     "photon_loss": 0.09561881169781819,
+     "photon_gain": 0.0036644165722746493,
+     "ancilla_relaxation": 0.17740681058095056,
+     "ancilla_excitation": 0.007196305384078799,
+     "ancilla_dephasing": 0.6993776630531627,
+     "ancilla_jump_to_level_2": 0.02557642353278935,
+     "excited_ancilla_photon_loss": 0.00014489735229004393,
+     "readout_assignment_error": 0.0
+    },
+    "order": [
+     "ancilla_dephasing",
+     "ancilla_relaxation",
+     "photon_loss",
+     "ancilla_jump_to_level_2"
+    ]
+   },
+   "X_-pi/2 pulse": {
+    "full_noise_model": 0.0004462047950490399,
+    "no_decoherence": 0.00010279737857770927,
+    "no_decoherence_over_full": 0.23038160888972828,
+    "sum_of_shares": 1.000310832791734,
+    "shares": {
+     "photon_loss": -0.03842263557590721,
+     "photon_gain": 0.0,
+     "ancilla_relaxation": 0.37158663378138496,
+     "ancilla_excitation": 0.01508817495636495,
+     "ancilla_dephasing": 0.6088336517245615,
+     "ancilla_jump_to_level_2": 0.04322500790532995,
+     "excited_ancilla_photon_loss": 0.0,
+     "readout_assignment_error": 0.0
+    },
+    "order": [
+     "ancilla_dephasing",
+     "ancilla_relaxation",
+     "ancilla_jump_to_level_2",
+     "ancilla_excitation"
+    ]
+   },
+   "measurement": {
+    "full_noise_model": 0.00965052297676768,
+    "no_decoherence": 1.3330214425669986e-17,
+    "no_decoherence_over_full": 1.3812945119928384e-15,
+    "sum_of_shares": 1.0056550676235372,
+    "shares": {
+     "photon_loss": 0.32000880110031,
+     "photon_gain": 0.01001022372510178,
+     "ancilla_relaxation": 0.5909616486996254,
+     "ancilla_excitation": 0.024056959830872134,
+     "ancilla_dephasing": 0.0,
+     "ancilla_jump_to_level_2": 3.7610544765263127e-16,
+     "excited_ancilla_photon_loss": 0.00051706443313436,
+     "readout_assignment_error": 0.06010036983449302
+    },
+    "order": [
+     "ancilla_relaxation",
+     "photon_loss",
+     "readout_assignment_error",
+     "ancilla_excitation",
+     "photon_gain"
+    ]
+   },
+   "feedback latency, after outcome 0": {
+    "full_noise_model": 0.0027100915128624196,
+    "no_decoherence": 3.964121470598407e-16,
+    "no_decoherence_over_full": 1.4627260562177367e-13,
+    "sum_of_shares": 1.0025099534510933,
+    "shares": {
+     "photon_loss": 0.8325127313756534,
+     "photon_gain": 0.027786327836309653,
+     "ancilla_relaxation": 0.0,
+     "ancilla_excitation": 0.14221089423913025,
+     "ancilla_dephasing": 0.0,
+     "ancilla_jump_to_level_2": 0.0,
+     "excited_ancilla_photon_loss": 0.0,
+     "readout_assignment_error": 0.0
+    },
+    "order": [
+     "photon_loss",
+     "ancilla_excitation",
+     "photon_gain"
+    ]
+   },
+   "feedback latency, after outcome 1": {
+    "full_noise_model": 0.013226153733951435,
+    "no_decoherence": 8.994796283092165e-17,
+    "no_decoherence_over_full": 6.800764957088463e-15,
+    "sum_of_shares": 1.003211267490042,
+    "shares": {
+     "photon_loss": 0.2167978188399166,
+     "photon_gain": 0.00643125910862658,
+     "ancilla_relaxation": 0.7164855015547722,
+     "ancilla_excitation": 0.0,
+     "ancilla_dephasing": 0.0,
+     "ancilla_jump_to_level_2": 0.0628704048612551,
+     "excited_ancilla_photon_loss": 0.000626283125471404,
+     "readout_assignment_error": 0.0
+    },
+    "order": [
+     "ancilla_relaxation",
+     "photon_loss",
+     "ancilla_jump_to_level_2"
+    ]
+   },
+   "conditional X_pi pulse, after outcome 1": {
+    "full_noise_model": 0.011526476445363662,
+    "no_decoherence": 0.012045409551719358,
+    "no_decoherence_over_full": 1.0450209661916612,
+    "sum_of_shares": 1.0016951998048143,
+    "shares": {
+     "photon_loss": 2.09301239305744,
+     "photon_gain": -0.0,
+     "ancilla_relaxation": -0.5446519908207171,
+     "ancilla_excitation": -0.022318336228074956,
+     "ancilla_dephasing": -0.467812710641431,
+     "ancilla_jump_to_level_2": -0.05653415556240254,
+     "excited_ancilla_photon_loss": -0.0,
+     "readout_assignment_error": -0.0
+    },
+    "order": [
+     "unitary dynamics"
+    ]
+   }
+  },
+  "eps_leak": {
+   "idle": {
+    "full_noise_model": 0.023123822503431448,
+    "no_decoherence": 5.569270303164312e-17,
+    "no_decoherence_over_full": 2.408455739676199e-15,
+    "sum_of_shares": 1.2874975489125482,
+    "shares": {
+     "photon_loss": 0.2714754441808755,
+     "photon_gain": 0.12159497081957599,
+     "ancilla_relaxation": 0.0,
+     "ancilla_excitation": 0.8944271339120967,
+     "ancilla_dephasing": 0.0,
+     "ancilla_jump_to_level_2": 0.0,
+     "excited_ancilla_photon_loss": 0.0,
+     "readout_assignment_error": 0.0
+    },
+    "order": [
+     "ancilla_excitation",
+     "photon_loss",
+     "photon_gain"
+    ]
+   },
+   "X_pi/2 pulse": {
+    "full_noise_model": 0.0003917055009771322,
+    "no_decoherence": 0.00015900132206755522,
+    "no_decoherence_over_full": 0.40592057469429754,
+    "sum_of_shares": 1.0014796770836862,
+    "shares": {
+     "photon_loss": -0.07496357728903137,
+     "photon_gain": 0.0,
+     "ancilla_relaxation": 0.11999831137281568,
+     "ancilla_excitation": 0.03978607853436451,
+     "ancilla_dephasing": 0.89032567935524,
+     "ancilla_jump_to_level_2": 0.02633318511029735,
+     "excited_ancilla_photon_loss": 0.0,
+     "readout_assignment_error": 0.0
+    },
+    "order": [
+     "ancilla_dephasing",
+     "ancilla_relaxation",
+     "ancilla_excitation",
+     "ancilla_jump_to_level_2"
+    ]
+   },
+   "parity-mapping idling": {
+    "full_noise_model": 0.01202031405172853,
+    "no_decoherence": 1.733438944940734e-05,
+    "no_decoherence_over_full": 0.0014420912278007114,
+    "sum_of_shares": 1.0754796142949254,
+    "shares": {
+     "photon_loss": 0.1341873307072571,
+     "photon_gain": 0.0049381167871590395,
+     "ancilla_relaxation": 0.21618007745419898,
+     "ancilla_excitation": 0.008142337367955102,
+     "ancilla_dephasing": 0.6867872529084365,
+     "ancilla_jump_to_level_2": 0.025116020703247706,
+     "excited_ancilla_photon_loss": 0.0001284783666710693,
+     "readout_assignment_error": 0.0
+    },
+    "order": [
+     "ancilla_dephasing",
+     "ancilla_relaxation",
+     "photon_loss",
+     "ancilla_jump_to_level_2"
+    ]
+   },
+   "X_-pi/2 pulse": {
+    "full_noise_model": 0.0005729280850516631,
+    "no_decoherence": 0.00015890904273891372,
+    "no_decoherence_over_full": 0.2773629830427745,
+    "sum_of_shares": 0.9453374502362647,
+    "shares": {
+     "photon_loss": -0.04212093337793862,
+     "photon_gain": 0.0,
+     "ancilla_relaxation": 0.4499558638111797,
+     "ancilla_excitation": 0.022404879045731057,
+     "ancilla_dephasing": 0.5003027923571788,
+     "ancilla_jump_to_level_2": 0.014794848400113839,
+     "excited_ancilla_photon_loss": 0.0,
+     "readout_assignment_error": 0.0
+    },
+    "order": [
+     "ancilla_dephasing",
+     "ancilla_relaxation",
+     "ancilla_excitation",
+     "ancilla_jump_to_level_2"
+    ]
+   },
+   "measurement": {
+    "full_noise_model": 0.016769445104310964,
+    "no_decoherence": 1.8631861638121044e-16,
+    "no_decoherence_over_full": 1.1110601169105651e-14,
+    "sum_of_shares": 1.035592663830252,
+    "shares": {
+     "photon_loss": 0.28472686222299715,
+     "photon_gain": 0.007608979780659189,
+     "ancilla_relaxation": 0.6801762292895533,
+     "ancilla_excitation": 0.027688721022657337,
+     "ancilla_dephasing": 0.0,
+     "ancilla_jump_to_level_2": 0.0,
+     "excited_ancilla_photon_loss": 0.0008051576194234433,
+     "readout_assignment_error": 0.03458671389496148
+    },
+    "order": [
+     "ancilla_relaxation",
+     "photon_loss",
+     "readout_assignment_error",
+     "ancilla_excitation"
+    ]
+   },
+   "feedback latency, after outcome 0": {
+    "full_noise_model": 0.0032288945943015875,
+    "no_decoherence": 4.995013560291881e-16,
+    "no_decoherence_over_full": 1.546973248710928e-13,
+    "sum_of_shares": 1.0013516068596027,
+    "shares": {
+     "photon_loss": 0.8564716337272936,
+     "photon_gain": 0.025518833814164525,
+     "ancilla_relaxation": 0.0,
+     "ancilla_excitation": 0.1193611393181445,
+     "ancilla_dephasing": 0.0,
+     "ancilla_jump_to_level_2": 0.0,
+     "excited_ancilla_photon_loss": 0.0,
+     "readout_assignment_error": 0.0
+    },
+    "order": [
+     "photon_loss",
+     "ancilla_excitation",
+     "photon_gain"
+    ]
+   },
+   "feedback latency, after outcome 1": {
+    "full_noise_model": 0.014336815333383763,
+    "no_decoherence": 2.0104182190882503e-16,
+    "no_decoherence_over_full": 1.4022767067431796e-14,
+    "sum_of_shares": 1.0037073546392636,
+    "shares": {
+     "photon_loss": 0.27655871869475934,
+     "photon_gain": 0.007387133207367599,
+     "ancilla_relaxation": 0.6609799436869915,
+     "ancilla_excitation": 0.0,
+     "ancilla_dephasing": 0.0,
+     "ancilla_jump_to_level_2": 0.057999884958723935,
+     "excited_ancilla_photon_loss": 0.0007816740914211573,
+     "readout_assignment_error": 0.0
+    },
+    "order": [
+     "ancilla_relaxation",
+     "photon_loss",
+     "ancilla_jump_to_level_2"
+    ]
+   },
+   "conditional X_pi pulse, after outcome 1": {
+    "full_noise_model": 0.017032272539264297,
+    "no_decoherence": 0.017023677710043532,
+    "no_decoherence_over_full": 0.999495379773841,
+    "sum_of_shares": 0.9528709524779755,
+    "shares": {
+     "photon_loss": -63.79516488324129,
+     "photon_gain": 0.0,
+     "ancilla_relaxation": 32.31854071387742,
+     "ancilla_excitation": 1.3409312742896682,
+     "ancilla_dephasing": 27.69218852025213,
+     "ancilla_jump_to_level_2": 3.3963753273000497,
+     "excited_ancilla_photon_loss": 0.0,
+     "readout_assignment_error": 0.0
+    },
+    "order": [
+     "unitary dynamics"
+    ]
+   }
+  },
+  "coherence_lower_bound": {
+   "idle": {
+    "full_noise_model": 0.01738574621834692,
+    "no_decoherence": 3.2715149023341367e-16,
+    "no_decoherence_over_full": 1.8817224531218312e-14,
+    "sum_of_shares": 1.1168637837077946,
+    "shares": {
+     "photon_loss": 0.7756835946084204,
+     "photon_gain": 0.34118018909937364,
+     "ancilla_relaxation": 0.0,
+     "ancilla_excitation": 6.079252874455457e-16,
+     "ancilla_dephasing": 0.0,
+     "ancilla_jump_to_level_2": 0.0,
+     "excited_ancilla_photon_loss": 0.0,
+     "readout_assignment_error": 0.0
+    },
+    "order": [
+     "photon_loss",
+     "photon_gain"
+    ]
+   },
+   "X_pi/2 pulse": {
+    "full_noise_model": 0.023794353168548783,
+    "no_decoherence": 0.025217140268994218,
+    "no_decoherence_over_full": 1.0597951577152376,
+    "sum_of_shares": 0.9704064854127946,
+    "shares": {
+     "photon_loss": 1.0003464602423968,
+     "photon_gain": -0.0,
+     "ancilla_relaxation": -0.016753515523579905,
+     "ancilla_excitation": 0.0012321650496159692,
+     "ancilla_dephasing": -0.013611274178132531,
+     "ancilla_jump_to_level_2": -0.000807350177505787,
+     "excited_ancilla_photon_loss": -0.0,
+     "readout_assignment_error": -0.0
+    },
+    "order": [
+     "unitary dynamics"
+    ]
+   },
+   "parity-mapping idling": {
+    "full_noise_model": 0.011689171129471257,
+    "no_decoherence": 0.00832684549360023,
+    "no_decoherence_over_full": 0.7123555127536988,
+    "sum_of_shares": 0.9144850948832779,
+    "shares": {
+     "photon_loss": 0.23652525795717924,
+     "photon_gain": 0.012628596209820826,
+     "ancilla_relaxation": 0.6872181140694564,
+     "ancilla_excitation": 0.0010051221435582434,
+     "ancilla_dephasing": -0.024607746261249203,
+     "ancilla_jump_to_level_2": 0.0008742643280079753,
+     "excited_ancilla_photon_loss": 0.0008414864365043572,
+     "readout_assignment_error": 0.0
+    },
+    "order": [
+     "unitary dynamics"
+    ]
+   },
+   "X_-pi/2 pulse": {
+    "full_noise_model": 0.023764942572958875,
+    "no_decoherence": 0.02520982275551542,
+    "no_decoherence_over_full": 1.0607988080813042,
+    "sum_of_shares": 1.0320482773063413,
+    "shares": {
+     "photon_loss": 0.9850356090396706,
+     "photon_gain": -0.0,
+     "ancilla_relaxation": 0.019936927642313713,
+     "ancilla_excitation": -0.000892982928687942,
+     "ancilla_dephasing": 0.026812341370069544,
+     "ancilla_jump_to_level_2": 0.001156382182975515,
+     "excited_ancilla_photon_loss": -0.0,
+     "readout_assignment_error": -0.0
+    },
+    "order": [
+     "unitary dynamics"
+    ]
+   },
+   "measurement": {
+    "full_noise_model": 6.361871470454168e-05,
+    "no_decoherence": 1.6851610168402206e-15,
+    "no_decoherence_over_full": 2.6488448008835965e-11,
+    "sum_of_shares": 1.187085879404457,
+    "shares": {
+     "photon_loss": 0.1161078419637293,
+     "photon_gain": 0.9820221433958817,
+     "ancilla_relaxation": -3.7520167269508194e-13,
+     "ancilla_excitation": 0.0,
+     "ancilla_dephasing": 0.0,
+     "ancilla_jump_to_level_2": 1.935768199452674e-12,
+     "excited_ancilla_photon_loss": 0.08895589404372747,
+     "readout_assignment_error": -4.420742031735043e-13
+    },
+    "order": [
+     "photon_gain",
+     "photon_loss",
+     "excited_ancilla_photon_loss"
+    ]
+   },
+   "feedback latency, after outcome 0": {
+    "full_noise_model": 5.206361368274597e-05,
+    "no_decoherence": 9.978725142509073e-16,
+    "no_decoherence_over_full": 1.9166409007479346e-11,
+    "sum_of_shares": 1.0518169571039595,
+    "shares": {
+     "photon_loss": 0.05582651287763002,
+     "photon_gain": 0.9959904442261173,
+     "ancilla_relaxation": 0.0,
+     "ancilla_excitation": 2.1226083250530565e-13,
+     "ancilla_dephasing": 0.0,
+     "ancilla_jump_to_level_2": 0.0,
+     "excited_ancilla_photon_loss": 0.0,
+     "readout_assignment_error": 0.0
+    },
+    "order": [
+     "photon_gain",
+     "photon_loss"
+    ]
+   },
+   "feedback latency, after outcome 1": {
+    "full_noise_model": 3.464550920974051e-05,
+    "no_decoherence": 5.491661589251059e-16,
+    "no_decoherence_over_full": 1.5851005554587404e-11,
+    "sum_of_shares": 1.2490464246912958,
+    "shares": {
+     "photon_loss": 0.146561416850106,
+     "photon_gain": 0.9669063258157193,
+     "ancilla_relaxation": -9.612957933262193e-13,
+     "ancilla_excitation": 0.0,
+     "ancilla_dephasing": 0.0,
+     "ancilla_jump_to_level_2": -1.9992590065226402e-13,
+     "excited_ancilla_photon_loss": 0.13557868202663173,
+     "readout_assignment_error": 0.0
+    },
+    "order": [
+     "photon_gain",
+     "photon_loss",
+     "excited_ancilla_photon_loss"
+    ]
+   },
+   "conditional X_pi pulse, after outcome 1": {
+    "full_noise_model": 0.25414854382970187,
+    "no_decoherence": 0.25871893731439427,
+    "no_decoherence_over_full": 1.017983158257853,
+    "sum_of_shares": 1.0012888183471804,
+    "shares": {
+     "photon_loss": 0.9035567732208899,
+     "photon_gain": -0.0,
+     "ancilla_relaxation": 0.03541902415726024,
+     "ancilla_excitation": 0.0006380050816142852,
+     "ancilla_dephasing": 0.059546297811923936,
+     "ancilla_jump_to_level_2": 0.0021287180754919564,
+     "excited_ancilla_photon_loss": -0.0,
+     "readout_assignment_error": -0.0
+    },
+    "order": [
+     "unitary dynamics"
+    ]
+   }
+  },
+  "eps_err_traj": {
+   "idle": {
+    "full_noise_model": 0.0,
+    "no_decoherence": 0.0,
+    "no_decoherence_over_full": null,
+    "sum_of_shares": null,
+    "shares": {},
+    "order": []
+   },
+   "X_pi/2 pulse": {
+    "full_noise_model": 0.0,
+    "no_decoherence": 0.0,
+    "no_decoherence_over_full": null,
+    "sum_of_shares": null,
+    "shares": {},
+    "order": []
+   },
+   "parity-mapping idling": {
+    "full_noise_model": 0.001276743110892636,
+    "no_decoherence": 0.0,
+    "no_decoherence_over_full": 0.0,
+    "sum_of_shares": 1.0094216663774938,
+    "shares": {
+     "photon_loss": 0.9888200830335795,
+     "photon_gain": 0.01925580983330922,
+     "ancilla_relaxation": 0.0,
+     "ancilla_excitation": 0.0,
+     "ancilla_dephasing": 0.0,
+     "ancilla_jump_to_level_2": 0.0,
+     "excited_ancilla_photon_loss": 0.0013457735106050446,
+     "readout_assignment_error": 0.0
+    },
+    "order": [
+     "photon_loss",
+     "photon_gain"
+    ]
+   },
+   "X_-pi/2 pulse": {
+    "full_noise_model": 0.0,
+    "no_decoherence": 0.0,
+    "no_decoherence_over_full": null,
+    "sum_of_shares": null,
+    "shares": {},
+    "order": []
+   },
+   "measurement": {
+    "full_noise_model": 5.1373382684468306e-05,
+    "no_decoherence": 0.0,
+    "no_decoherence_over_full": 0.0,
+    "sum_of_shares": 0.0,
+    "shares": {
+     "photon_loss": 0.0,
+     "photon_gain": 0.0,
+     "ancilla_relaxation": 0.0,
+     "ancilla_excitation": 0.0,
+     "ancilla_dephasing": 0.0,
+     "ancilla_jump_to_level_2": 0.0,
+     "excited_ancilla_photon_loss": 0.0,
+     "readout_assignment_error": 0.0
+    },
+    "order": []
+   },
+   "feedback latency, after outcome 0": {
+    "full_noise_model": 0.0,
+    "no_decoherence": 0.0,
+    "no_decoherence_over_full": null,
+    "sum_of_shares": null,
+    "shares": {},
+    "order": []
+   },
+   "feedback latency, after outcome 1": {
+    "full_noise_model": 0.0,
+    "no_decoherence": 0.0,
+    "no_decoherence_over_full": null,
+    "sum_of_shares": null,
+    "shares": {},
+    "order": []
+   },
+   "conditional X_pi pulse, after outcome 1": {
+    "full_noise_model": 0.0,
+    "no_decoherence": 0.0,
+    "no_decoherence_over_full": null,
+    "sum_of_shares": null,
+    "shares": {},
+    "order": []
+   }
+  },
+  "eps_unexp": {
+   "measurement": {
+    "full_noise_model": 0.000996040201043964,
+    "no_decoherence": 0.0,
+    "no_decoherence_over_full": 0.0,
+    "sum_of_shares": 1.0057449737259332,
+    "shares": {
+     "photon_loss": 0.0,
+     "photon_gain": 0.0,
+     "ancilla_relaxation": 0.0,
+     "ancilla_excitation": 0.0,
+     "ancilla_dephasing": 0.0,
+     "ancilla_jump_to_level_2": 1.0057449737259332,
+     "excited_ancilla_photon_loss": 0.0,
+     "readout_assignment_error": 0.0
+    },
+    "order": [
+     "ancilla_jump_to_level_2"
+    ]
+   }
+  },
+  "eps_seep": {
+   "X_pi/2 pulse": {
+    "full_noise_model": 0.0005293905056610838,
+    "no_decoherence": 0.00015900132025101256,
+    "no_decoherence_over_full": 0.30034788790263145,
+    "sum_of_shares": 0.8160593333363262,
+    "shares": {
+     "photon_loss": -0.047097315321805874,
+     "photon_gain": 0.0,
+     "ancilla_relaxation": 0.45662929231744687,
+     "ancilla_excitation": 0.00011935605122888013,
+     "ancilla_dephasing": 0.40646161976502587,
+     "ancilla_jump_to_level_2": -5.361947556957212e-05,
+     "excited_ancilla_photon_loss": 0.0,
+     "readout_assignment_error": 0.0
+    },
+    "order": [
+     "ancilla_relaxation",
+     "ancilla_dephasing"
+    ]
+   },
+   "parity-mapping idling": {
+    "full_noise_model": 0.011266513532768144,
+    "no_decoherence": 1.73343894496425e-05,
+    "no_decoherence_over_full": 0.0015385761885632334,
+    "sum_of_shares": 1.1360848431816275,
+    "shares": {
+     "photon_loss": 0.2377734556046404,
+     "photon_gain": 0.0022422333845297207,
+     "ancilla_relaxation": 0.15896218074173504,
+     "ancilla_excitation": 0.005409646289033324,
+     "ancilla_dephasing": 0.7316673795364851,
+     "ancilla_jump_to_level_2": 1.5531902110101381e-06,
+     "excited_ancilla_photon_loss": 2.839443499283735e-05,
+     "readout_assignment_error": 0.0
+    },
+    "order": [
+     "ancilla_dephasing",
+     "photon_loss",
+     "ancilla_relaxation"
+    ]
+   },
+   "X_-pi/2 pulse": {
+    "full_noise_model": 0.0004487686752210554,
+    "no_decoherence": 0.00015890904461460259,
+    "no_decoherence_over_full": 0.3541001263876692,
+    "sum_of_shares": 0.7581266211234367,
+    "shares": {
+     "photon_loss": -0.06016315543479835,
+     "photon_gain": 0.0,
+     "ancilla_relaxation": 0.29906589223927954,
+     "ancilla_excitation": 9.898925416992019e-05,
+     "ancilla_dephasing": 0.519070958542782,
+     "ancilla_jump_to_level_2": 5.393652200361987e-05,
+     "excited_ancilla_photon_loss": 0.0,
+     "readout_assignment_error": 0.0
+    },
+    "order": [
+     "ancilla_dephasing",
+     "ancilla_relaxation"
+    ]
+   },
+   "measurement": {
+    "full_noise_model": 0.014093160282229733,
+    "no_decoherence": 8.555254962134247e-18,
+    "no_decoherence_over_full": 6.070501428215281e-16,
+    "sum_of_shares": 1.2640654997201062,
+    "shares": {
+     "photon_loss": 0.4486719084371219,
+     "photon_gain": 0.006831686116354705,
+     "ancilla_relaxation": 0.774960341515782,
+     "ancilla_excitation": 0.03233192840698432,
+     "ancilla_dephasing": 0.0,
+     "ancilla_jump_to_level_2": 0.0,
+     "excited_ancilla_photon_loss": 0.0012696352438632947,
+     "readout_assignment_error": -1.0932565334210635e-31
+    },
+    "order": [
+     "ancilla_relaxation",
+     "photon_loss",
+     "ancilla_excitation"
+    ]
+   },
+   "feedback latency, after outcome 0": {
+    "full_noise_model": 0.009146537030286572,
+    "no_decoherence": 1.8764875954111487e-17,
+    "no_decoherence_over_full": 2.0515825707561327e-15,
+    "sum_of_shares": 1.4421872766370443,
+    "shares": {
+     "photon_loss": 0.4434211769730296,
+     "photon_gain": 0.006166806261224181,
+     "ancilla_relaxation": 0.9925992934027917,
+     "ancilla_excitation": -1.2532367629671469e-15,
+     "ancilla_dephasing": 0.0,
+     "ancilla_jump_to_level_2": 0.0,
+     "excited_ancilla_photon_loss": 0.0,
+     "readout_assignment_error": 0.0
+    },
+    "order": [
+     "ancilla_relaxation",
+     "photon_loss"
+    ]
+   },
+   "feedback latency, after outcome 1": {
+    "full_noise_model": 0.005224009259490987,
+    "no_decoherence": 6.618285363461236e-18,
+    "no_decoherence_over_full": 1.2668977091564542e-15,
+    "sum_of_shares": 1.096094590961452,
+    "shares": {
+     "photon_loss": 1.0055382321324426,
+     "photon_gain": 0.015297447621548022,
+     "ancilla_relaxation": -1.688889511749423e-16,
+     "ancilla_excitation": 0.07241600369227884,
+     "ancilla_dephasing": 0.0,
+     "ancilla_jump_to_level_2": 2.322782969963572e-16,
+     "excited_ancilla_photon_loss": 0.002842907515182323,
+     "readout_assignment_error": 0.0
+    },
+    "order": [
+     "photon_loss",
+     "ancilla_excitation",
+     "photon_gain"
+    ]
+   },
+   "conditional X_pi pulse, after outcome 1": {
+    "full_noise_model": 0.01697630089847736,
+    "no_decoherence": 0.017023677729604714,
+    "no_decoherence_over_full": 1.0027907629236004,
+    "sum_of_shares": 1.182633974600096,
+    "shares": {
+     "photon_loss": 11.573347883306253,
+     "photon_gain": -0.0,
+     "ancilla_relaxation": -5.597122355688074,
+     "ancilla_excitation": -0.22036929907754402,
+     "ancilla_dephasing": -4.577667953643339,
+     "ancilla_jump_to_level_2": 0.00444569970280061,
+     "excited_ancilla_photon_loss": -0.0,
+     "readout_assignment_error": -0.0
+    },
+    "order": [
+     "unitary dynamics"
+    ]
+   }
+  },
+  "returned_coherence_lower_bound": {
+   "X_pi/2 pulse": {
+    "full_noise_model": 0.009811564414733,
+    "no_decoherence": 0.012609225848763372,
+    "no_decoherence_over_full": 1.2851391802340324,
+    "sum_of_shares": 1.890222949522889,
+    "shares": {
+     "photon_loss": 0.25439545409337017,
+     "photon_gain": -0.0,
+     "ancilla_relaxation": 0.8053883763699052,
+     "ancilla_excitation": 2.6361337037083737e-06,
+     "ancilla_dephasing": 0.8301369834151456,
+     "ancilla_jump_to_level_2": 0.0002994995107643108,
+     "excited_ancilla_photon_loss": -0.0,
+     "readout_assignment_error": -0.0
+    },
+    "order": [
+     "unitary dynamics"
+    ]
+   },
+   "parity-mapping idling": {
+    "full_noise_model": 0.0033198337433778184,
+    "no_decoherence": 0.004163440198829976,
+    "no_decoherence_over_full": 1.2541110551499535,
+    "sum_of_shares": 8.916828825191216,
+    "shares": {
+     "photon_loss": 1.429436269877338,
+     "photon_gain": 0.590018015930505,
+     "ancilla_relaxation": 3.1211072813550005,
+     "ancilla_excitation": 1.3236126287502488,
+     "ancilla_dephasing": 2.4505077053837274,
+     "ancilla_jump_to_level_2": -0.0017422659774319596,
+     "excited_ancilla_photon_loss": 0.0038891898718279513,
+     "readout_assignment_error": -0.0
+    },
+    "order": [
+     "unitary dynamics"
+    ]
+   },
+   "X_-pi/2 pulse": {
+    "full_noise_model": 0.0039018388282000016,
+    "no_decoherence": 0.012605566599000638,
+    "no_decoherence_over_full": 3.230673319434838,
+    "sum_of_shares": 1.2357733652038698,
+    "shares": {
+     "photon_loss": 0.08176974718942988,
+     "photon_gain": -0.0,
+     "ancilla_relaxation": 0.905805952188708,
+     "ancilla_excitation": 2.749166415332308e-05,
+     "ancilla_dephasing": 0.2482359177753091,
+     "ancilla_jump_to_level_2": -6.574361373049259e-05,
+     "excited_ancilla_photon_loss": -0.0,
+     "readout_assignment_error": -0.0
+    },
+    "order": [
+     "unitary dynamics"
+    ]
+   },
+   "measurement": {
+    "full_noise_model": 0.0,
+    "no_decoherence": 0.0,
+    "no_decoherence_over_full": null,
+    "sum_of_shares": null,
+    "shares": {},
+    "order": []
+   },
+   "feedback latency, after outcome 0": {
+    "full_noise_model": 0.0,
+    "no_decoherence": 0.0,
+    "no_decoherence_over_full": null,
+    "sum_of_shares": null,
+    "shares": {},
+    "order": []
+   },
+   "feedback latency, after outcome 1": {
+    "full_noise_model": 0.0,
+    "no_decoherence": 0.0,
+    "no_decoherence_over_full": null,
+    "sum_of_shares": null,
+    "shares": {},
+    "order": []
+   },
+   "conditional X_pi pulse, after outcome 1": {
+    "full_noise_model": 0.12785498875404588,
+    "no_decoherence": 0.13001295710966537,
+    "no_decoherence_over_full": 1.0168782491528021,
+    "sum_of_shares": 1.001814256029218,
+    "shares": {
+     "photon_loss": 0.9297415169508876,
+     "photon_gain": -0.0,
+     "ancilla_relaxation": 0.01699880835587909,
+     "ancilla_excitation": 0.001113228155194383,
+     "ancilla_dephasing": 0.05264565776199119,
+     "ancilla_jump_to_level_2": 0.001315044805265754,
+     "excited_ancilla_photon_loss": -0.0,
+     "readout_assignment_error": -0.0
+    },
+    "order": [
+     "unitary dynamics"
+    ]
+   }
+  }
+ },
+ "idle_photon_loss_self_kerr": {
+  "description": "idle with photon loss alone, with the resonator self-Kerr and with it removed from the Hamiltonian and from the ideal operators",
+  "with_self_kerr": {
+   "step": 1,
+   "step_name": "idle",
+   "record": [],
+   "leak_probability_mixed": 0.003706268399930332,
+   "eps_leak": 0.006277549985278817,
+   "coherence_lower_bound": 0.013485838121597166,
+   "coherence_lower_bound_state": "largest leakage",
+   "eps_err_traj": 0.0,
+   "eps_unexp": null,
+   "eps_seep": null,
+   "returned_coherence_lower_bound": null,
+   "returned_coherence_lower_bound_state": null
+  },
+  "without_self_kerr": {
+   "step": 1,
+   "step_name": "idle",
+   "record": [],
+   "leak_probability_mixed": 1.0273138616115325e-05,
+   "eps_leak": 2.017129040895555e-05,
+   "coherence_lower_bound": 0.0011704697395386948,
+   "coherence_lower_bound_state": "largest leakage",
+   "eps_err_traj": 0.0,
+   "eps_unexp": null,
+   "eps_seep": null,
+   "returned_coherence_lower_bound": null,
+   "returned_coherence_lower_bound_state": null
+  },
+  "eps_leak_ratio_without_over_with": 0.0032132425000610558,
+  "leak_probability_mixed_ratio_without_over_with": 0.002771828024195019
+ },
+ "measurement_pairs": {
+  "photon_loss+ancilla_relaxation": [
+   {
+    "eps_err_traj": 5.090950099125499e-05,
+    "eps_unexp": 0.0,
+    "eps_leak": 0.016075518714297715
+   }
+  ],
+  "photon_loss+ancilla_excitation": [
+   {
+    "eps_err_traj": 1.3008180186242053e-06,
+    "eps_unexp": 0.0,
+    "eps_leak": 0.0047747114857712245
+   }
+  ],
+  "photon_loss+ancilla_dephasing": [
+   {
+    "eps_err_traj": 0.0,
+    "eps_unexp": 0.0,
+    "eps_leak": 0.0047747114857713945
+   }
+  ]
+ },
+ "toy_checks": {
+  "description": "Diamond-norm magnitudes and power-law fits for few-level toy steps with a jump of probability p and an optional rotation by angle theta.",
+  "grid": {
+   "p": [
+    0.0001,
+    0.0003,
+    0.001,
+    0.003,
+    0.01
+   ],
+   "theta": [
+    0.01,
+    0.03,
+    0.1
+   ]
+  },
+  "solver": "SCS",
+  "cases": {
+   "jump_into_leakage": {
+    "statement": "A",
+    "levels": "ancilla qubit",
+    "error_space": "|+>",
+    "jump_operator": "|-><+|",
+    "rotation": null,
+    "fit": {
+     "eps_leak": {
+      "zero": false,
+      "power_p": 0.9999999999998997,
+      "power_theta": null,
+      "prefactor": 0.9999999999994342,
+      "largest_relative_deviation": 1.8207657603852567e-13
+     },
+     "eps_seep": {
+      "zero": true,
+      "largest_value": 8.326705991246186e-17
+     },
+     "eps_leak_coh": {
+      "zero": true,
+      "largest_value": 0.0
+     },
+     "eps_seep_coh": {
+      "zero": true,
+      "largest_value": 0.0
+     }
+    },
+    "values": [
+     {
+      "p": 0.0001,
+      "theta": null,
+      "eps_leak": 0.0001000000000000445,
+      "eps_seep": 5.551115178636934e-17,
+      "eps_leak_coh": 0.0,
+      "eps_seep_coh": 0.0
+     },
+     {
+      "p": 0.0003,
+      "theta": null,
+      "eps_leak": 0.00030000000000007793,
+      "eps_seep": 8.326673017755567e-17,
+      "eps_leak_coh": 0.0,
+      "eps_seep_coh": 0.0
+     },
+     {
+      "p": 0.001,
+      "theta": null,
+      "eps_leak": 0.0009999999999999452,
+      "eps_seep": 2.7755686637487294e-17,
+      "eps_leak_coh": 0.0,
+      "eps_seep_coh": 0.0
+     },
+     {
+      "p": 0.003,
+      "theta": null,
+      "eps_leak": 0.0030000000000000022,
+      "eps_seep": 8.326705991246186e-17,
+      "eps_leak_coh": 0.0,
+      "eps_seep_coh": 0.0
+     },
+     {
+      "p": 0.01,
+      "theta": null,
+      "eps_leak": 0.009999999999999952,
+      "eps_seep": 5.551670179138044e-17,
+      "eps_leak_coh": 0.0,
+      "eps_seep_coh": 0.0
+     }
+    ]
+   },
+   "jump_into_superposition_relaxation": {
+    "statement": "A",
+    "levels": "ancilla qubit",
+    "error_space": "|+>",
+    "jump_operator": "|0><1|",
+    "rotation": null,
+    "fit": {
+     "eps_leak": {
+      "zero": false,
+      "power_p": 1.0004926251322281,
+      "power_theta": null,
+      "prefactor": 0.2510359880452783,
+      "largest_relative_deviation": 0.0006424538792401124
+     },
+     "eps_seep": {
+      "zero": false,
+      "power_p": 1.000492625132228,
+      "power_theta": null,
+      "prefactor": 0.2510359880452812,
+      "largest_relative_deviation": 0.0006424538792276779
+     },
+     "eps_leak_coh": {
+      "zero": false,
+      "power_p": 1.0000000000000304,
+      "power_theta": null,
+      "prefactor": 0.9999997492696329,
+      "largest_relative_deviation": 2.2648549702353193e-14
+     },
+     "eps_seep_coh": {
+      "zero": true,
+      "largest_value": 0.0
+     }
+    },
+    "values": [
+     {
+      "p": 0.0001,
+      "theta": null,
+      "eps_leak": 2.5000625031246226e-05,
+      "eps_seep": 2.5000625031246226e-05,
+      "eps_leak_coh": 9.999997492693599e-05,
+      "eps_seep_coh": 0.0
+     },
+     {
+      "p": 0.0003,
+      "theta": null,
+      "eps_leak": 7.500562584389359e-05,
+      "eps_seep": 7.500562584389359e-05,
+      "eps_leak_coh": 0.0002999999247808125,
+      "eps_seep_coh": 0.0
+     },
+     {
+      "p": 0.001,
+      "theta": null,
+      "eps_leak": 0.0002500625312695376,
+      "eps_seep": 0.00025006253126955147,
+      "eps_leak_coh": 0.00099999974926942,
+      "eps_seep_coh": 0.0
+     },
+     {
+      "p": 0.003,
+      "theta": null,
+      "eps_leak": 0.0007505633453353534,
+      "eps_seep": 0.0007505633453353534,
+      "eps_leak_coh": 0.0029999992478084363,
+      "eps_seep_coh": 0.0
+     },
+     {
+      "p": 0.01,
+      "theta": null,
+      "eps_leak": 0.0025062814466900174,
+      "eps_seep": 0.0025062814466900174,
+      "eps_leak_coh": 0.009999997492694809,
+      "eps_seep_coh": 0.0
+     }
+    ]
+   },
+   "jump_into_superposition_phase_flip": {
+    "statement": "A",
+    "levels": "ancilla qubit",
+    "error_space": "cos(pi/8)|0> + sin(pi/8)|1>",
+    "jump_operator": "sigma_z",
+    "rotation": null,
+    "fit": {
+     "eps_leak": {
+      "zero": false,
+      "power_p": 0.9999999999997559,
+      "power_theta": null,
+      "prefactor": 0.4999999999993278,
+      "largest_relative_deviation": 3.714806240395774e-13
+     },
+     "eps_seep": {
+      "zero": false,
+      "power_p": 0.9999999999997791,
+      "power_theta": null,
+      "prefactor": 0.4999999999993905,
+      "largest_relative_deviation": 3.388400671155978e-13
+     },
+     "eps_leak_coh": {
+      "zero": false,
+      "power_p": 1.0000000000000087,
+      "power_theta": null,
+      "prefactor": 0.9999997492718709,
+      "largest_relative_deviation": 5.417888360170764e-14
+     },
+     "eps_seep_coh": {
+      "zero": false,
+      "power_p": 0.9999999999999252,
+      "power_theta": null,
+      "prefactor": 0.5000000016104066,
+      "largest_relative_deviation": 1.680877659282487e-13
+     }
+    },
+    "values": [
+     {
+      "p": 0.0001,
+      "theta": null,
+      "eps_leak": 5.000000000006382e-05,
+      "eps_seep": 5.000000000005775e-05,
+      "eps_leak_coh": 9.999997492718362e-05,
+      "eps_seep_coh": 5.00000001610836e-05
+     },
+     {
+      "p": 0.0003,
+      "theta": null,
+      "eps_leak": 0.00015000000000005067,
+      "eps_seep": 0.00015000000000004612,
+      "eps_leak_coh": 0.00029999992478152394,
+      "eps_seep_coh": 0.0001500000004831913
+     },
+     {
+      "p": 0.001,
+      "theta": null,
+      "eps_leak": 0.0005000000000000312,
+      "eps_seep": 0.0005000000000000256,
+      "eps_leak_coh": 0.0009999997492717955,
+      "eps_seep_coh": 0.00050000000161061
+     },
+     {
+      "p": 0.003,
+      "theta": null,
+      "eps_leak": 0.0015000000000000553,
+      "eps_seep": 0.0015000000000000495,
+      "eps_leak_coh": 0.002999999247815501,
+      "eps_seep_coh": 0.0015000000048318756
+     },
+     {
+      "p": 0.01,
+      "theta": null,
+      "eps_leak": 0.0050000000000000626,
+      "eps_seep": 0.005000000000000057,
+      "eps_leak_coh": 0.009999997492718396,
+      "eps_seep_coh": 0.0050000000161062345
+     }
+    ]
+   },
+   "rotation_after_jump": {
+    "statement": "A",
+    "levels": "e0, l0, e1, l1",
+    "error_space": "e0, e1",
+    "jump_operator": "|e1><e0| + |l1><l0|",
+    "rotation": "exp(-i theta (|e1><l1| + h.c.)/2), after the jump only",
+    "fit": {
+     "eps_leak": {
+      "zero": false,
+      "power_p": 1.0000000000000009,
+      "power_theta": 1.9996373478873255,
+      "prefactor": 0.24960918001867324,
+      "largest_relative_deviation": 0.0002178182043274246
+     },
+     "eps_seep": {
+      "zero": false,
+      "power_p": 1.0000000000000009,
+      "power_theta": 1.9996373478873255,
+      "prefactor": 0.24960918001867324,
+      "largest_relative_deviation": 0.0002178182043274246
+     },
+     "eps_leak_coh": {
+      "zero": false,
+      "power_p": 0.9999999999999998,
+      "power_theta": 0.9992745121033867,
+      "prefactor": 0.9968753838635769,
+      "largest_relative_deviation": 0.00043571921947327397
+     },
+     "eps_seep_coh": {
+      "zero": false,
+      "power_p": 1.0,
+      "power_theta": 0.9992745121033859,
+      "prefactor": 0.49843760894447886,
+      "largest_relative_deviation": 0.00043571921947371806
+     }
+    },
+    "values": [
+     {
+      "p": 0.0001,
+      "theta": 0.01,
+      "eps_leak": 2.499979166736111e-09,
+      "eps_seep": 2.49997916673611e-09,
+      "eps_leak_coh": 9.999836094562258e-07,
+      "eps_seep_coh": 4.999917214820523e-07
+     },
+     {
+      "p": 0.0001,
+      "theta": 0.03,
+      "eps_leak": 2.2498312550624197e-08,
+      "eps_seep": 2.2498312550624197e-08,
+      "eps_leak_coh": 2.9995508482578322e-06,
+      "eps_seep_coh": 1.4997751744240323e-06
+     },
+     {
+      "p": 0.0001,
+      "theta": 0.1,
+      "eps_leak": 2.497917360987117e-07,
+      "eps_seep": 2.497917360987117e-07,
+      "eps_leak_coh": 9.98334442052598e-06,
+      "eps_seep_coh": 4.991671379175275e-06
+     },
+     {
+      "p": 0.0003,
+      "theta": 0.01,
+      "eps_leak": 7.499937500208331e-09,
+      "eps_seep": 7.49993750020833e-09,
+      "eps_leak_coh": 2.9999508283686774e-06,
+      "eps_seep_coh": 1.4999751644461572e-06
+     },
+     {
+      "p": 0.0003,
+      "theta": 0.03,
+      "eps_leak": 6.749493765187258e-08,
+      "eps_seep": 6.749493765187258e-08,
+      "eps_leak_coh": 8.998652544773497e-06,
+      "eps_seep_coh": 4.499325523272097e-06
+     },
+     {
+      "p": 0.0003,
+      "theta": 0.1,
+      "eps_leak": 7.493752082961351e-07,
+      "eps_seep": 7.493752082961349e-07,
+      "eps_leak_coh": 2.9950033261577943e-05,
+      "eps_seep_coh": 1.4975014137525828e-05
+     },
+     {
+      "p": 0.001,
+      "theta": 0.01,
+      "eps_leak": 2.49997916673611e-08,
+      "eps_seep": 2.499979166736109e-08,
+      "eps_leak_coh": 9.999836094562256e-06,
+      "eps_seep_coh": 4.999917214820523e-06
+     },
+     {
+      "p": 0.001,
+      "theta": 0.03,
+      "eps_leak": 2.2498312550624192e-07,
+      "eps_seep": 2.2498312550624192e-07,
+      "eps_leak_coh": 2.9995508482578322e-05,
+      "eps_seep_coh": 1.4997751744240322e-05
+     },
+     {
+      "p": 0.001,
+      "theta": 0.1,
+      "eps_leak": 2.497917360987117e-06,
+      "eps_seep": 2.4979173609871167e-06,
+      "eps_leak_coh": 9.983344420525978e-05,
+      "eps_seep_coh": 4.991671379175274e-05
+     },
+     {
+      "p": 0.003,
+      "theta": 0.01,
+      "eps_leak": 7.499937500208332e-08,
+      "eps_seep": 7.49993750020833e-08,
+      "eps_leak_coh": 2.9999508283686775e-05,
+      "eps_seep_coh": 1.4999751644461573e-05
+     },
+     {
+      "p": 0.003,
+      "theta": 0.03,
+      "eps_leak": 6.749493765187258e-07,
+      "eps_seep": 6.749493765187258e-07,
+      "eps_leak_coh": 8.998652544773497e-05,
+      "eps_seep_coh": 4.4993255232720966e-05
+     },
+     {
+      "p": 0.003,
+      "theta": 0.1,
+      "eps_leak": 7.493752082961351e-06,
+      "eps_seep": 7.493752082961348e-06,
+      "eps_leak_coh": 0.00029950033261577934,
+      "eps_seep_coh": 0.00014975014137525821
+     },
+     {
+      "p": 0.01,
+      "theta": 0.01,
+      "eps_leak": 2.499979166736111e-07,
+      "eps_seep": 2.49997916673611e-07,
+      "eps_leak_coh": 9.999836094562258e-05,
+      "eps_seep_coh": 4.999917214820524e-05
+     },
+     {
+      "p": 0.01,
+      "theta": 0.03,
+      "eps_leak": 2.2498312550624196e-06,
+      "eps_seep": 2.2498312550624196e-06,
+      "eps_leak_coh": 0.00029995508482578336,
+      "eps_seep_coh": 0.00014997751744240327
+     },
+     {
+      "p": 0.01,
+      "theta": 0.1,
+      "eps_leak": 2.497917360987118e-05,
+      "eps_seep": 2.4979173609871168e-05,
+      "eps_leak_coh": 0.0009983344420525983,
+      "eps_seep_coh": 0.0004991671379175276
+     }
+    ]
+   },
+   "rotation_after_jump_from_error_space_only": {
+    "statement": "A",
+    "levels": "e0, l0, e1, l1",
+    "error_space": "e0, e1",
+    "jump_operator": "|e1><e0|",
+    "rotation": "exp(-i theta (|e1><l1| + h.c.)/2), after the jump only",
+    "fit": {
+     "eps_leak": {
+      "zero": false,
+      "power_p": 1.0000000000000009,
+      "power_theta": 1.9996373478873255,
+      "prefactor": 0.24960918001867324,
+      "largest_relative_deviation": 0.0002178182043274246
+     },
+     "eps_seep": {
+      "zero": true,
+      "largest_value": 0.0
+     },
+     "eps_leak_coh": {
+      "zero": false,
+      "power_p": 0.9999999999999998,
+      "power_theta": 0.9992745121033867,
+      "prefactor": 0.9968753838635769,
+      "largest_relative_deviation": 0.00043571921947327397
+     },
+     "eps_seep_coh": {
+      "zero": true,
+      "largest_value": 0.0
+     }
+    },
+    "values": [
+     {
+      "p": 0.0001,
+      "theta": 0.01,
+      "eps_leak": 2.499979166736111e-09,
+      "eps_seep": 0.0,
+      "eps_leak_coh": 9.999836094562258e-07,
+      "eps_seep_coh": 0.0
+     },
+     {
+      "p": 0.0001,
+      "theta": 0.03,
+      "eps_leak": 2.2498312550624197e-08,
+      "eps_seep": 0.0,
+      "eps_leak_coh": 2.9995508482578322e-06,
+      "eps_seep_coh": 0.0
+     },
+     {
+      "p": 0.0001,
+      "theta": 0.1,
+      "eps_leak": 2.497917360987117e-07,
+      "eps_seep": 0.0,
+      "eps_leak_coh": 9.98334442052598e-06,
+      "eps_seep_coh": 0.0
+     },
+     {
+      "p": 0.0003,
+      "theta": 0.01,
+      "eps_leak": 7.499937500208331e-09,
+      "eps_seep": 0.0,
+      "eps_leak_coh": 2.9999508283686774e-06,
+      "eps_seep_coh": 0.0
+     },
+     {
+      "p": 0.0003,
+      "theta": 0.03,
+      "eps_leak": 6.749493765187258e-08,
+      "eps_seep": 0.0,
+      "eps_leak_coh": 8.998652544773497e-06,
+      "eps_seep_coh": 0.0
+     },
+     {
+      "p": 0.0003,
+      "theta": 0.1,
+      "eps_leak": 7.493752082961351e-07,
+      "eps_seep": 0.0,
+      "eps_leak_coh": 2.9950033261577943e-05,
+      "eps_seep_coh": 0.0
+     },
+     {
+      "p": 0.001,
+      "theta": 0.01,
+      "eps_leak": 2.49997916673611e-08,
+      "eps_seep": 0.0,
+      "eps_leak_coh": 9.999836094562256e-06,
+      "eps_seep_coh": 0.0
+     },
+     {
+      "p": 0.001,
+      "theta": 0.03,
+      "eps_leak": 2.2498312550624192e-07,
+      "eps_seep": 0.0,
+      "eps_leak_coh": 2.9995508482578322e-05,
+      "eps_seep_coh": 0.0
+     },
+     {
+      "p": 0.001,
+      "theta": 0.1,
+      "eps_leak": 2.497917360987117e-06,
+      "eps_seep": 0.0,
+      "eps_leak_coh": 9.983344420525978e-05,
+      "eps_seep_coh": 0.0
+     },
+     {
+      "p": 0.003,
+      "theta": 0.01,
+      "eps_leak": 7.499937500208332e-08,
+      "eps_seep": 0.0,
+      "eps_leak_coh": 2.9999508283686775e-05,
+      "eps_seep_coh": 0.0
+     },
+     {
+      "p": 0.003,
+      "theta": 0.03,
+      "eps_leak": 6.749493765187258e-07,
+      "eps_seep": 0.0,
+      "eps_leak_coh": 8.998652544773497e-05,
+      "eps_seep_coh": 0.0
+     },
+     {
+      "p": 0.003,
+      "theta": 0.1,
+      "eps_leak": 7.493752082961351e-06,
+      "eps_seep": 0.0,
+      "eps_leak_coh": 0.00029950033261577934,
+      "eps_seep_coh": 0.0
+     },
+     {
+      "p": 0.01,
+      "theta": 0.01,
+      "eps_leak": 2.499979166736111e-07,
+      "eps_seep": 0.0,
+      "eps_leak_coh": 9.999836094562258e-05,
+      "eps_seep_coh": 0.0
+     },
+     {
+      "p": 0.01,
+      "theta": 0.03,
+      "eps_leak": 2.2498312550624196e-06,
+      "eps_seep": 0.0,
+      "eps_leak_coh": 0.00029995508482578336,
+      "eps_seep_coh": 0.0
+     },
+     {
+      "p": 0.01,
+      "theta": 0.1,
+      "eps_leak": 2.497917360987118e-05,
+      "eps_seep": 0.0,
+      "eps_leak_coh": 0.0009983344420525983,
+      "eps_seep_coh": 0.0
+     }
+    ]
+   },
+   "phase_flip": {
+    "statement": "B",
+    "levels": "ancilla qubit",
+    "error_space": "|+>",
+    "jump_operator": "sigma_z",
+    "rotation": null,
+    "fit": {
+     "eps_leak": {
+      "zero": false,
+      "power_p": 1.000000000000029,
+      "power_theta": null,
+      "prefactor": 1.0000000000001472,
+      "largest_relative_deviation": 2.2648549702353193e-14
+     },
+     "eps_seep": {
+      "zero": false,
+      "power_p": 1.000000000000029,
+      "power_theta": null,
+      "prefactor": 1.0000000000001472,
+      "largest_relative_deviation": 2.2648549702353193e-14
+     },
+     "eps_leak_coh": {
+      "zero": true,
+      "largest_value": 0.0
+     },
+     "eps_seep_coh": {
+      "zero": true,
+      "largest_value": 0.0
+     }
+    },
+    "values": [
+     {
+      "p": 0.0001,
+      "theta": null,
+      "eps_leak": 9.9999999999989e-05,
+      "eps_seep": 9.9999999999989e-05,
+      "eps_leak_coh": 0.0,
+      "eps_seep_coh": 0.0
+     },
+     {
+      "p": 0.0003,
+      "theta": null,
+      "eps_leak": 0.00029999999999996696,
+      "eps_seep": 0.00029999999999996696,
+      "eps_leak_coh": 0.0,
+      "eps_seep_coh": 0.0
+     },
+     {
+      "p": 0.001,
+      "theta": null,
+      "eps_leak": 0.0009999999999999454,
+      "eps_seep": 0.0009999999999999454,
+      "eps_leak_coh": 0.0,
+      "eps_seep_coh": 0.0
+     },
+     {
+      "p": 0.003,
+      "theta": null,
+      "eps_leak": 0.003000000000000003,
+      "eps_seep": 0.003000000000000003,
+      "eps_leak_coh": 0.0,
+      "eps_seep_coh": 0.0
+     },
+     {
+      "p": 0.01,
+      "theta": null,
+      "eps_leak": 0.010000000000000009,
+      "eps_seep": 0.010000000000000009,
+      "eps_leak_coh": 0.0,
+      "eps_seep_coh": 0.0
+     }
+    ]
+   }
+  }
+ },
+ "computations": {
+  "full_noise_model": {
+   "mechanisms_kept": "all",
+   "steps": [
+    {
+     "step": 1,
+     "step_name": "idle",
+     "record": [],
+     "leak_probability_mixed": 0.022339900679637054,
+     "eps_leak": 0.023123822503431448,
+     "coherence_lower_bound": 0.01738574621834692,
+     "coherence_lower_bound_state": "largest leakage",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": null,
+     "returned_coherence_lower_bound": null,
+     "returned_coherence_lower_bound_state": null
+    },
+    {
+     "step": 2,
+     "step_name": "X_pi/2 pulse",
+     "record": [],
+     "leak_probability_mixed": 0.00034021876278024195,
+     "eps_leak": 0.0003917055009771322,
+     "coherence_lower_bound": 0.023794353168548783,
+     "coherence_lower_bound_state": "largest leakage",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": 0.0005293905056610838,
+     "returned_coherence_lower_bound": 0.009811564414733,
+     "returned_coherence_lower_bound_state": "1:-, phase pi/2"
+    },
+    {
+     "step": 3,
+     "step_name": "parity-mapping idling",
+     "record": [],
+     "leak_probability_mixed": 0.011799633781033084,
+     "eps_leak": 0.01202031405172853,
+     "coherence_lower_bound": 0.011689171129471257,
+     "coherence_lower_bound_state": "1:+",
+     "eps_err_traj": 0.001276743110892636,
+     "eps_unexp": null,
+     "eps_seep": 0.011266513532768144,
+     "returned_coherence_lower_bound": 0.0033198337433778184,
+     "returned_coherence_lower_bound_state": "0:1, phase pi/2"
+    },
+    {
+     "step": 4,
+     "step_name": "X_-pi/2 pulse",
+     "record": [],
+     "leak_probability_mixed": 0.0004462047950490399,
+     "eps_leak": 0.0005729280850516631,
+     "coherence_lower_bound": 0.023764942572958875,
+     "coherence_lower_bound_state": "0:+",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": 0.0004487686752210554,
+     "returned_coherence_lower_bound": 0.0039018388282000016,
+     "returned_coherence_lower_bound_state": "0:+, phase 0"
+    },
+    {
+     "step": 5,
+     "step_name": "measurement",
+     "record": [],
+     "leak_probability_mixed": 0.00965052297676768,
+     "eps_leak": 0.016769445104310964,
+     "coherence_lower_bound": 6.361871470454168e-05,
+     "coherence_lower_bound_state": "0:+",
+     "eps_err_traj": 5.1373382684468306e-05,
+     "eps_unexp": 0.000996040201043964,
+     "eps_seep": 0.014093160282229733,
+     "returned_coherence_lower_bound": 0.0,
+     "returned_coherence_lower_bound_state": "0:0, phase 0"
+    },
+    {
+     "step": 6,
+     "step_name": "feedback latency",
+     "record": [
+      0
+     ],
+     "leak_probability_mixed": 0.0027100915128624196,
+     "eps_leak": 0.0032288945943015875,
+     "coherence_lower_bound": 5.206361368274597e-05,
+     "coherence_lower_bound_state": "0:+",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": 0.009146537030286572,
+     "returned_coherence_lower_bound": 0.0,
+     "returned_coherence_lower_bound_state": "0:0, phase 0"
+    },
+    {
+     "step": 6,
+     "step_name": "feedback latency",
+     "record": [
+      1
+     ],
+     "leak_probability_mixed": 0.013226153733951435,
+     "eps_leak": 0.014336815333383763,
+     "coherence_lower_bound": 3.464550920974051e-05,
+     "coherence_lower_bound_state": "0:-",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": 0.005224009259490987,
+     "returned_coherence_lower_bound": 0.0,
+     "returned_coherence_lower_bound_state": "0:0, phase 0"
+    },
+    {
+     "step": 7,
+     "step_name": "conditional X_pi pulse",
+     "record": [
+      0
+     ],
+     "leak_probability_mixed": 0.0,
+     "eps_leak": 3.9090123963936235e-16,
+     "coherence_lower_bound": 0.0,
+     "coherence_lower_bound_state": "mixed joint",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": 0.0,
+     "returned_coherence_lower_bound": 0.0,
+     "returned_coherence_lower_bound_state": null
+    },
+    {
+     "step": 7,
+     "step_name": "conditional X_pi pulse",
+     "record": [
+      1
+     ],
+     "leak_probability_mixed": 0.011526476445363662,
+     "eps_leak": 0.017032272539264297,
+     "coherence_lower_bound": 0.25414854382970187,
+     "coherence_lower_bound_state": "largest leakage",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": 0.01697630089847736,
+     "returned_coherence_lower_bound": 0.12785498875404588,
+     "returned_coherence_lower_bound_state": "0:-, phase 0"
+    }
+   ],
+   "infidelity_actual_QEC_dynamics": 0.05688273450893433,
+   "seconds": 55.524205684661865
+  },
+  "no_decoherence": {
+   "mechanisms_kept": [],
+   "steps": [
+    {
+     "step": 1,
+     "step_name": "idle",
+     "record": [],
+     "leak_probability_mixed": 2.9061812501838876e-17,
+     "eps_leak": 5.569270303164312e-17,
+     "coherence_lower_bound": 3.2715149023341367e-16,
+     "coherence_lower_bound_state": "0:-i",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": null,
+     "returned_coherence_lower_bound": null,
+     "returned_coherence_lower_bound_state": null
+    },
+    {
+     "step": 2,
+     "step_name": "X_pi/2 pulse",
+     "record": [],
+     "leak_probability_mixed": 0.00010310354261448497,
+     "eps_leak": 0.00015900132206755522,
+     "coherence_lower_bound": 0.025217140268994218,
+     "coherence_lower_bound_state": "0:+",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": 0.00015900132025101256,
+     "returned_coherence_lower_bound": 0.012609225848763372,
+     "returned_coherence_lower_bound_state": "0:-, phase pi/2"
+    },
+    {
+     "step": 3,
+     "step_name": "parity-mapping idling",
+     "record": [],
+     "leak_probability_mixed": 1.2665294751170018e-05,
+     "eps_leak": 1.733438944940734e-05,
+     "coherence_lower_bound": 0.00832684549360023,
+     "coherence_lower_bound_state": "largest leakage",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": 1.73343894496425e-05,
+     "returned_coherence_lower_bound": 0.004163440198829976,
+     "returned_coherence_lower_bound_state": "1:-, phase pi/2"
+    },
+    {
+     "step": 4,
+     "step_name": "X_-pi/2 pulse",
+     "record": [],
+     "leak_probability_mixed": 0.00010279737857770927,
+     "eps_leak": 0.00015890904273891372,
+     "coherence_lower_bound": 0.02520982275551542,
+     "coherence_lower_bound_state": "largest leakage",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": 0.00015890904461460259,
+     "returned_coherence_lower_bound": 0.012605566599000638,
+     "returned_coherence_lower_bound_state": "0:-, phase pi/2"
+    },
+    {
+     "step": 5,
+     "step_name": "measurement",
+     "record": [],
+     "leak_probability_mixed": 1.3330214425669986e-17,
+     "eps_leak": 1.8631861638121044e-16,
+     "coherence_lower_bound": 1.6851610168402206e-15,
+     "coherence_lower_bound_state": "1:-",
+     "eps_err_traj": 0.0,
+     "eps_unexp": 0.0,
+     "eps_seep": 8.555254962134247e-18,
+     "returned_coherence_lower_bound": 0.0,
+     "returned_coherence_lower_bound_state": null
+    },
+    {
+     "step": 6,
+     "step_name": "feedback latency",
+     "record": [
+      0
+     ],
+     "leak_probability_mixed": 3.964121470598407e-16,
+     "eps_leak": 4.995013560291881e-16,
+     "coherence_lower_bound": 9.978725142509073e-16,
+     "coherence_lower_bound_state": "largest leakage",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": 1.8764875954111487e-17,
+     "returned_coherence_lower_bound": 0.0,
+     "returned_coherence_lower_bound_state": null
+    },
+    {
+     "step": 6,
+     "step_name": "feedback latency",
+     "record": [
+      1
+     ],
+     "leak_probability_mixed": 8.994796283092165e-17,
+     "eps_leak": 2.0104182190882503e-16,
+     "coherence_lower_bound": 5.491661589251059e-16,
+     "coherence_lower_bound_state": "0:+i",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": 6.618285363461236e-18,
+     "returned_coherence_lower_bound": 0.0,
+     "returned_coherence_lower_bound_state": null
+    },
+    {
+     "step": 7,
+     "step_name": "conditional X_pi pulse",
+     "record": [
+      0
+     ],
+     "leak_probability_mixed": 0.0,
+     "eps_leak": 2.702492896876796e-16,
+     "coherence_lower_bound": 0.0,
+     "coherence_lower_bound_state": "mixed joint",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": 0.0,
+     "returned_coherence_lower_bound": 0.0,
+     "returned_coherence_lower_bound_state": null
+    },
+    {
+     "step": 7,
+     "step_name": "conditional X_pi pulse",
+     "record": [
+      1
+     ],
+     "leak_probability_mixed": 0.012045409551719358,
+     "eps_leak": 0.017023677710043532,
+     "coherence_lower_bound": 0.25871893731439427,
+     "coherence_lower_bound_state": "largest leakage",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": 0.017023677729604714,
+     "returned_coherence_lower_bound": 0.13001295710966537,
+     "returned_coherence_lower_bound_state": "0:-, phase pi/2"
+    }
+   ],
+   "infidelity_actual_QEC_dynamics": 3.1130725529848746e-05,
+   "seconds": 5.402045249938965
+  },
+  "photon_loss": {
+   "mechanisms_kept": [
+    "photon_loss"
+   ],
+   "steps": [
+    {
+     "step": 1,
+     "step_name": "idle",
+     "record": [],
+     "leak_probability_mixed": 0.003706268399930332,
+     "eps_leak": 0.006277549985278817,
+     "coherence_lower_bound": 0.013485838121597166,
+     "coherence_lower_bound_state": "largest leakage",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": null,
+     "returned_coherence_lower_bound": null,
+     "returned_coherence_lower_bound_state": null
+    },
+    {
+     "step": 2,
+     "step_name": "X_pi/2 pulse",
+     "record": [],
+     "leak_probability_mixed": 8.984527292538931e-05,
+     "eps_leak": 0.00014155698436638656,
+     "coherence_lower_bound": 0.023793860229385084,
+     "coherence_lower_bound_state": "largest leakage",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": 0.00014155698399396762,
+     "returned_coherence_lower_bound": 0.011897513497853706,
+     "returned_coherence_lower_bound_state": "0:-, phase pi/2"
+    },
+    {
+     "step": 3,
+     "step_name": "parity-mapping idling",
+     "record": [],
+     "leak_probability_mixed": 0.0011397212149290776,
+     "eps_leak": 0.0016279821908641373,
+     "coherence_lower_bound": 0.009122120431960661,
+     "coherence_lower_bound_state": "0:-",
+     "eps_err_traj": 0.001262469228925407,
+     "eps_unexp": null,
+     "eps_seep": 0.002692090587072131,
+     "returned_coherence_lower_bound": 0.002957558533904001,
+     "returned_coherence_lower_bound_state": "0:-, phase 0"
+    },
+    {
+     "step": 4,
+     "step_name": "X_-pi/2 pulse",
+     "record": [],
+     "leak_probability_mixed": 8.960276056056754e-05,
+     "eps_leak": 0.00014147017424046045,
+     "coherence_lower_bound": 0.023786564324901484,
+     "coherence_lower_bound_state": "0:+",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": 0.00014147017460415333,
+     "returned_coherence_lower_bound": 0.01189386497957665,
+     "returned_coherence_lower_bound_state": "0:-, phase 0"
+    },
+    {
+     "step": 5,
+     "step_name": "measurement",
+     "record": [],
+     "leak_probability_mixed": 0.0030882522877864293,
+     "eps_leak": 0.0047747114857713945,
+     "coherence_lower_bound": 7.3866316743400075e-06,
+     "coherence_lower_bound_state": "1:+",
+     "eps_err_traj": 0.0,
+     "eps_unexp": 0.0,
+     "eps_seep": 0.006323205119738266,
+     "returned_coherence_lower_bound": 0.0,
+     "returned_coherence_lower_bound_state": "0:0, phase 0"
+    },
+    {
+     "step": 6,
+     "step_name": "feedback latency",
+     "record": [
+      0
+     ],
+     "leak_probability_mixed": 0.002256185687651136,
+     "eps_leak": 0.0027654566283147794,
+     "coherence_lower_bound": 2.906530000657937e-06,
+     "coherence_lower_bound_state": "0:+i",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": 0.004055768215197081,
+     "returned_coherence_lower_bound": 0.0,
+     "returned_coherence_lower_bound_state": "0:0, phase 0"
+    },
+    {
+     "step": 6,
+     "step_name": "feedback latency",
+     "record": [
+      1
+     ],
+     "leak_probability_mixed": 0.0028674012811621603,
+     "eps_leak": 0.003964971278764138,
+     "coherence_lower_bound": 5.077694917741646e-06,
+     "coherence_lower_bound_state": "largest leakage",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": 0.005252941035432078,
+     "returned_coherence_lower_bound": 0.0,
+     "returned_coherence_lower_bound_state": "0:0, phase 0"
+    },
+    {
+     "step": 7,
+     "step_name": "conditional X_pi pulse",
+     "record": [
+      0
+     ],
+     "leak_probability_mixed": 0.0,
+     "eps_leak": 3.9090123963936235e-16,
+     "coherence_lower_bound": 0.0,
+     "coherence_lower_bound_state": "mixed joint",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": 0.0,
+     "returned_coherence_lower_bound": 0.0,
+     "returned_coherence_lower_bound_state": null
+    },
+    {
+     "step": 7,
+     "step_name": "conditional X_pi pulse",
+     "record": [
+      1
+     ],
+     "leak_probability_mixed": 0.010959276128949091,
+     "eps_leak": 0.01647536916276149,
+     "coherence_lower_bound": 0.2545893273250158,
+     "coherence_lower_bound_state": "largest leakage",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": 0.01647536918135921,
+     "returned_coherence_lower_bound": 0.1280066043371797,
+     "returned_coherence_lower_bound_state": "0:-, phase 0"
+    }
+   ],
+   "infidelity_actual_QEC_dynamics": 0.019851665813794384,
+   "seconds": 10.844883918762207
+  },
+  "photon_gain": {
+   "mechanisms_kept": [
+    "photon_gain"
+   ],
+   "steps": [
+    {
+     "step": 1,
+     "step_name": "idle",
+     "record": [],
+     "leak_probability_mixed": 0.0016857408810741377,
+     "eps_leak": 0.00281174052254185,
+     "coherence_lower_bound": 0.005931672182409539,
+     "coherence_lower_bound_state": "0:-i",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": null,
+     "returned_coherence_lower_bound": null,
+     "returned_coherence_lower_bound_state": null
+    },
+    {
+     "step": 2,
+     "step_name": "X_pi/2 pulse",
+     "record": [],
+     "leak_probability_mixed": 0.00010310354261448497,
+     "eps_leak": 0.00015900132206755522,
+     "coherence_lower_bound": 0.025217140268994218,
+     "coherence_lower_bound_state": "0:+",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": 0.00015900132025101256,
+     "returned_coherence_lower_bound": 0.012609225848763372,
+     "returned_coherence_lower_bound_state": "0:-, phase pi/2"
+    },
+    {
+     "step": 3,
+     "step_name": "parity-mapping idling",
+     "record": [],
+     "leak_probability_mixed": 5.58576574091805e-05,
+     "eps_leak": 7.660650481563641e-05,
+     "coherence_lower_bound": 0.008369306946381574,
+     "coherence_lower_bound_state": "0:-",
+     "eps_err_traj": 2.4584722549336227e-05,
+     "eps_unexp": null,
+     "eps_seep": 4.255767447334669e-05,
+     "returned_coherence_lower_bound": 0.003665697191757928,
+     "returned_coherence_lower_bound_state": "1:+i, phase pi/2"
+    },
+    {
+     "step": 4,
+     "step_name": "X_-pi/2 pulse",
+     "record": [],
+     "leak_probability_mixed": 0.00010279737857770927,
+     "eps_leak": 0.00015890904273891372,
+     "coherence_lower_bound": 0.02520982275551542,
+     "coherence_lower_bound_state": "largest leakage",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": 0.00015890904461460259,
+     "returned_coherence_lower_bound": 0.012605566599000638,
+     "returned_coherence_lower_bound_state": "0:-, phase pi/2"
+    },
+    {
+     "step": 5,
+     "step_name": "measurement",
+     "record": [],
+     "leak_probability_mixed": 9.660389406169288e-05,
+     "eps_leak": 0.00012759836873176125,
+     "coherence_lower_bound": 6.247498657427541e-05,
+     "coherence_lower_bound_state": "0:+",
+     "eps_err_traj": 0.0,
+     "eps_unexp": 0.0,
+     "eps_seep": 9.628004743567893e-05,
+     "returned_coherence_lower_bound": 0.0,
+     "returned_coherence_lower_bound_state": "0:0, phase 0"
+    },
+    {
+     "step": 6,
+     "step_name": "feedback latency",
+     "record": [
+      0
+     ],
+     "leak_probability_mixed": 7.530349124318099e-05,
+     "eps_leak": 8.239762455592315e-05,
+     "coherence_lower_bound": 5.185486171989912e-05,
+     "coherence_lower_bound_state": "0:+",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": 5.64049218269087e-05,
+     "returned_coherence_lower_bound": 0.0,
+     "returned_coherence_lower_bound_state": "0:0, phase 0"
+    },
+    {
+     "step": 6,
+     "step_name": "feedback latency",
+     "record": [
+      1
+     ],
+     "leak_probability_mixed": 8.506082167365998e-05,
+     "eps_leak": 0.00010590796463733572,
+     "coherence_lower_bound": 3.349896201602304e-05,
+     "coherence_lower_bound_state": "0:-",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": 7.991400802155175e-05,
+     "returned_coherence_lower_bound": 0.0,
+     "returned_coherence_lower_bound_state": "0:0, phase 0"
+    },
+    {
+     "step": 7,
+     "step_name": "conditional X_pi pulse",
+     "record": [
+      0
+     ],
+     "leak_probability_mixed": 0.0,
+     "eps_leak": 2.702492896876796e-16,
+     "coherence_lower_bound": 0.0,
+     "coherence_lower_bound_state": "mixed joint",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": 0.0,
+     "returned_coherence_lower_bound": 0.0,
+     "returned_coherence_lower_bound_state": null
+    },
+    {
+     "step": 7,
+     "step_name": "conditional X_pi pulse",
+     "record": [
+      1
+     ],
+     "leak_probability_mixed": 0.012045409551719358,
+     "eps_leak": 0.017023677710043532,
+     "coherence_lower_bound": 0.25871893731439427,
+     "coherence_lower_bound_state": "largest leakage",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": 0.017023677729604714,
+     "returned_coherence_lower_bound": 0.13001295710966537,
+     "returned_coherence_lower_bound_state": "0:-, phase pi/2"
+    }
+   ],
+   "infidelity_actual_QEC_dynamics": 0.004323932419336152,
+   "seconds": 10.90050721168518
+  },
+  "ancilla_relaxation": {
+   "mechanisms_kept": [
+    "ancilla_relaxation"
+   ],
+   "steps": [
+    {
+     "step": 1,
+     "step_name": "idle",
+     "record": [],
+     "leak_probability_mixed": 2.9061812501838876e-17,
+     "eps_leak": 5.569270303164312e-17,
+     "coherence_lower_bound": 3.2715149023341367e-16,
+     "coherence_lower_bound_state": "0:-i",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": null,
+     "returned_coherence_lower_bound": null,
+     "returned_coherence_lower_bound_state": null
+    },
+    {
+     "step": 2,
+     "step_name": "X_pi/2 pulse",
+     "record": [],
+     "leak_probability_mixed": 0.0001308964777708362,
+     "eps_leak": 0.00018692543058610204,
+     "coherence_lower_bound": 0.02524097695476828,
+     "coherence_lower_bound_state": "largest leakage",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": 0.000328131871866849,
+     "returned_coherence_lower_bound": 0.01035602184877695,
+     "returned_coherence_lower_bound_state": "1:-, phase pi/2"
+    },
+    {
+     "step": 3,
+     "step_name": "parity-mapping idling",
+     "record": [],
+     "leak_probability_mixed": 0.002103753780320619,
+     "eps_leak": 0.0026121394625220834,
+     "coherence_lower_bound": 0.010637496575970903,
+     "coherence_lower_bound_state": "0:-",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": 0.0018055284376259947,
+     "returned_coherence_lower_bound": 0.001530453948120164,
+     "returned_coherence_lower_bound_state": "1:-, phase pi/2"
+    },
+    {
+     "step": 4,
+     "step_name": "X_-pi/2 pulse",
+     "record": [],
+     "leak_probability_mixed": 0.00023040298447985316,
+     "eps_leak": 0.00034519933855702424,
+     "coherence_lower_bound": 0.025181016283863978,
+     "coherence_lower_bound_state": "0:+",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": 0.00024559617366606937,
+     "returned_coherence_lower_bound": 0.004721678177979267,
+     "returned_coherence_lower_bound_state": "1:-, phase pi/2"
+    },
+    {
+     "step": 5,
+     "step_name": "measurement",
+     "record": [],
+     "leak_probability_mixed": 0.00570308896916425,
+     "eps_leak": 0.01140617793832845,
+     "coherence_lower_bound": 1.6612911686689976e-15,
+     "coherence_lower_bound_state": "1:-",
+     "eps_err_traj": 0.0,
+     "eps_unexp": 0.0,
+     "eps_seep": 0.01092164030535341,
+     "returned_coherence_lower_bound": 0.0,
+     "returned_coherence_lower_bound_state": "0:0, phase 0"
+    },
+    {
+     "step": 6,
+     "step_name": "feedback latency",
+     "record": [
+      0
+     ],
+     "leak_probability_mixed": 3.964121470598407e-16,
+     "eps_leak": 4.995013560291881e-16,
+     "coherence_lower_bound": 9.978725142509073e-16,
+     "coherence_lower_bound_state": "largest leakage",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": 0.00907884619334492,
+     "returned_coherence_lower_bound": 0.0,
+     "returned_coherence_lower_bound_state": "0:0, phase 0"
+    },
+    {
+     "step": 6,
+     "step_name": "feedback latency",
+     "record": [
+      1
+     ],
+     "leak_probability_mixed": 0.009476347391710743,
+     "eps_leak": 0.009476347391710865,
+     "coherence_lower_bound": 5.158615766646655e-16,
+     "coherence_lower_bound_state": "0:+i",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": 5.736007918697617e-18,
+     "returned_coherence_lower_bound": 0.0,
+     "returned_coherence_lower_bound_state": null
+    },
+    {
+     "step": 7,
+     "step_name": "conditional X_pi pulse",
+     "record": [
+      0
+     ],
+     "leak_probability_mixed": 0.0,
+     "eps_leak": 2.702492896876796e-16,
+     "coherence_lower_bound": 0.0,
+     "coherence_lower_bound_state": "mixed joint",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": 0.0,
+     "returned_coherence_lower_bound": 0.0,
+     "returned_coherence_lower_bound_state": null
+    },
+    {
+     "step": 7,
+     "step_name": "conditional X_pi pulse",
+     "record": [
+      1
+     ],
+     "leak_probability_mixed": 0.012328047501198766,
+     "eps_leak": 0.01730145004814367,
+     "coherence_lower_bound": 0.25855705843715177,
+     "coherence_lower_bound_state": "largest leakage",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": 0.01728885165024928,
+     "returned_coherence_lower_bound": 0.12997627421915015,
+     "returned_coherence_lower_bound_state": "0:-, phase 0"
+    }
+   ],
+   "infidelity_actual_QEC_dynamics": 0.002947773269011411,
+   "seconds": 54.86265325546265
+  },
+  "ancilla_excitation": {
+   "mechanisms_kept": [
+    "ancilla_excitation"
+   ],
+   "steps": [
+    {
+     "step": 1,
+     "step_name": "idle",
+     "record": [],
+     "leak_probability_mixed": 0.02068257428683622,
+     "eps_leak": 0.02068257428683624,
+     "coherence_lower_bound": 3.3772072500065733e-16,
+     "coherence_lower_bound_state": "0:-i",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": null,
+     "returned_coherence_lower_bound": null,
+     "returned_coherence_lower_bound_state": null
+    },
+    {
+     "step": 2,
+     "step_name": "X_pi/2 pulse",
+     "record": [],
+     "leak_probability_mixed": 0.00011234035312554286,
+     "eps_leak": 0.00016825970880492646,
+     "coherence_lower_bound": 0.025215387160456005,
+     "coherence_lower_bound_state": "0:+",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": 0.000159045528441601,
+     "returned_coherence_lower_bound": 0.012609218473753774,
+     "returned_coherence_lower_bound_state": "0:-, phase 0"
+    },
+    {
+     "step": 3,
+     "step_name": "parity-mapping idling",
+     "record": [],
+     "leak_probability_mixed": 9.74879195309677e-05,
+     "eps_leak": 0.00011506669928038774,
+     "coherence_lower_bound": 0.008330225041550697,
+     "coherence_lower_bound_state": "0:-",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": 7.81884696569665e-05,
+     "returned_coherence_lower_bound": 0.003046832040698266,
+     "returned_coherence_lower_bound_state": "1:-, phase pi/2"
+    },
+    {
+     "step": 4,
+     "step_name": "X_-pi/2 pulse",
+     "record": [],
+     "leak_probability_mixed": 0.00010797876975874199,
+     "eps_leak": 0.00016818508930456028,
+     "coherence_lower_bound": 0.025211113008852443,
+     "coherence_lower_bound_state": "largest leakage",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": 0.0001589377376032503,
+     "returned_coherence_lower_bound": 0.01260532731903988,
+     "returned_coherence_lower_bound_state": "0:-, phase pi/2"
+    },
+    {
+     "step": 5,
+     "step_name": "measurement",
+     "record": [],
+     "leak_probability_mixed": 0.00023216224359902168,
+     "eps_leak": 0.0004643244871982143,
+     "coherence_lower_bound": 1.6851610168402206e-15,
+     "coherence_lower_bound_state": "1:-",
+     "eps_err_traj": 0.0,
+     "eps_unexp": 0.0,
+     "eps_seep": 0.0004556590492732149,
+     "returned_coherence_lower_bound": 0.0,
+     "returned_coherence_lower_bound_state": "0:0, phase 0"
+    },
+    {
+     "step": 6,
+     "step_name": "feedback latency",
+     "record": [
+      0
+     ],
+     "leak_probability_mixed": 0.0003854045375143821,
+     "eps_leak": 0.0003854045375144753,
+     "coherence_lower_bound": 1.0089235802342297e-15,
+     "coherence_lower_bound_state": "0:-",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": 7.302099493916027e-18,
+     "returned_coherence_lower_bound": 0.0,
+     "returned_coherence_lower_bound_state": null
+    },
+    {
+     "step": 6,
+     "step_name": "feedback latency",
+     "record": [
+      1
+     ],
+     "leak_probability_mixed": 8.994796283092165e-17,
+     "eps_leak": 2.0104182190882503e-16,
+     "coherence_lower_bound": 5.491661589251059e-16,
+     "coherence_lower_bound_state": "0:+i",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": 0.00037830187382380427,
+     "returned_coherence_lower_bound": 0.0,
+     "returned_coherence_lower_bound_state": "0:0, phase 0"
+    },
+    {
+     "step": 7,
+     "step_name": "conditional X_pi pulse",
+     "record": [
+      0
+     ],
+     "leak_probability_mixed": 0.0,
+     "eps_leak": 2.702492896876796e-16,
+     "coherence_lower_bound": 0.0,
+     "coherence_lower_bound_state": "mixed joint",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": 0.0,
+     "returned_coherence_lower_bound": 0.0,
+     "returned_coherence_lower_bound_state": null
+    },
+    {
+     "step": 7,
+     "step_name": "conditional X_pi pulse",
+     "record": [
+      1
+     ],
+     "leak_probability_mixed": 0.012056991275266883,
+     "eps_leak": 0.017035202785342835,
+     "coherence_lower_bound": 0.25871602138012606,
+     "coherence_lower_bound_state": "largest leakage",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": 0.017034118128672764,
+     "returned_coherence_lower_bound": 0.13001055479853388,
+     "returned_coherence_lower_bound_state": "0:-, phase 0"
+    }
+   ],
+   "infidelity_actual_QEC_dynamics": 0.021678096286591342,
+   "seconds": 58.74245095252991
+  },
+  "ancilla_dephasing": {
+   "mechanisms_kept": [
+    "ancilla_dephasing"
+   ],
+   "steps": [
+    {
+     "step": 1,
+     "step_name": "idle",
+     "record": [],
+     "leak_probability_mixed": 2.9061812501838876e-17,
+     "eps_leak": 5.569270303164312e-17,
+     "coherence_lower_bound": 3.2715149023341367e-16,
+     "coherence_lower_bound_state": "0:-i",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": null,
+     "returned_coherence_lower_bound": null,
+     "returned_coherence_lower_bound_state": null
+    },
+    {
+     "step": 2,
+     "step_name": "X_pi/2 pulse",
+     "record": [],
+     "leak_probability_mixed": 0.00031048643874776534,
+     "eps_leak": 0.00036618382824402763,
+     "coherence_lower_bound": 0.02523650621431549,
+     "coherence_lower_bound_state": "0:+",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": 0.0003095503084962386,
+     "returned_coherence_lower_bound": 0.010286783625300508,
+     "returned_coherence_lower_bound_state": "0:-, phase pi/2"
+    },
+    {
+     "step": 3,
+     "step_name": "parity-mapping idling",
+     "record": [],
+     "leak_probability_mixed": 0.00825620776916829,
+     "eps_leak": 0.008260827818421919,
+     "coherence_lower_bound": 0.008244106237505022,
+     "coherence_lower_bound_state": "largest leakage",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": 0.008247991815177973,
+     "returned_coherence_lower_bound": 0.0020961760794330096,
+     "returned_coherence_lower_bound_state": "0:-, phase pi/2"
+    },
+    {
+     "step": 4,
+     "step_name": "X_-pi/2 pulse",
+     "record": [],
+     "leak_probability_mixed": 0.00031187536997724684,
+     "eps_leak": 0.0003660439256970272,
+     "coherence_lower_bound": 0.025171082134821866,
+     "coherence_lower_bound_state": "largest leakage",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": 0.00030936676091635075,
+     "returned_coherence_lower_bound": 0.010444988747749497,
+     "returned_coherence_lower_bound_state": "1:-, phase 0"
+    },
+    {
+     "step": 5,
+     "step_name": "measurement",
+     "record": [],
+     "leak_probability_mixed": 1.3330214425669986e-17,
+     "eps_leak": 1.8631861638121044e-16,
+     "coherence_lower_bound": 1.6851610168402206e-15,
+     "coherence_lower_bound_state": "1:-",
+     "eps_err_traj": 0.0,
+     "eps_unexp": 0.0,
+     "eps_seep": 8.555254962134247e-18,
+     "returned_coherence_lower_bound": 0.0,
+     "returned_coherence_lower_bound_state": null
+    },
+    {
+     "step": 6,
+     "step_name": "feedback latency",
+     "record": [
+      0
+     ],
+     "leak_probability_mixed": 3.964121470598407e-16,
+     "eps_leak": 4.995013560291881e-16,
+     "coherence_lower_bound": 9.978725142509073e-16,
+     "coherence_lower_bound_state": "largest leakage",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": 1.8764875954111487e-17,
+     "returned_coherence_lower_bound": 0.0,
+     "returned_coherence_lower_bound_state": null
+    },
+    {
+     "step": 6,
+     "step_name": "feedback latency",
+     "record": [
+      1
+     ],
+     "leak_probability_mixed": 8.994796283092165e-17,
+     "eps_leak": 2.0104182190882503e-16,
+     "coherence_lower_bound": 5.491661589251059e-16,
+     "coherence_lower_bound_state": "0:+i",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": 6.618285363461236e-18,
+     "returned_coherence_lower_bound": 0.0,
+     "returned_coherence_lower_bound_state": null
+    },
+    {
+     "step": 7,
+     "step_name": "conditional X_pi pulse",
+     "record": [
+      0
+     ],
+     "leak_probability_mixed": 0.0,
+     "eps_leak": 2.702492896876796e-16,
+     "coherence_lower_bound": 0.0,
+     "coherence_lower_bound_state": "mixed joint",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": 0.0,
+     "returned_coherence_lower_bound": 0.0,
+     "returned_coherence_lower_bound_state": null
+    },
+    {
+     "step": 7,
+     "step_name": "conditional X_pi pulse",
+     "record": [
+      1
+     ],
+     "leak_probability_mixed": 0.012288173054845194,
+     "eps_leak": 0.017261687341124345,
+     "coherence_lower_bound": 0.2584467873028371,
+     "coherence_lower_bound_state": "largest leakage",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": 0.01724055313120157,
+     "returned_coherence_lower_bound": 0.12989934944615422,
+     "returned_coherence_lower_bound_state": "0:-, phase 0"
+    }
+   ],
+   "infidelity_actual_QEC_dynamics": 0.008681055109860947,
+   "seconds": 48.7028169631958
+  },
+  "ancilla_jump_to_level_2": {
+   "mechanisms_kept": [
+    "ancilla_jump_to_level_2"
+   ],
+   "steps": [
+    {
+     "step": 1,
+     "step_name": "idle",
+     "record": [],
+     "leak_probability_mixed": 2.9061812501838876e-17,
+     "eps_leak": 5.569270303164312e-17,
+     "coherence_lower_bound": 3.2715149023341367e-16,
+     "coherence_lower_bound_state": "0:-i",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": null,
+     "returned_coherence_lower_bound": null,
+     "returned_coherence_lower_bound_state": null
+    },
+    {
+     "step": 2,
+     "step_name": "X_pi/2 pulse",
+     "record": [],
+     "leak_probability_mixed": 0.00010923268634184073,
+     "eps_leak": 0.00016512916428672086,
+     "coherence_lower_bound": 0.025218288956412316,
+     "coherence_lower_bound_state": "largest leakage",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": 0.00015898146017713423,
+     "returned_coherence_lower_bound": 0.012608387950532596,
+     "returned_coherence_lower_bound_state": "0:-, phase 0"
+    },
+    {
+     "step": 3,
+     "step_name": "parity-mapping idling",
+     "record": [],
+     "leak_probability_mixed": 0.0003141337929239572,
+     "eps_leak": 0.00031880147514787093,
+     "coherence_lower_bound": 0.008329785054962818,
+     "coherence_lower_bound_state": "largest leakage",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": 1.7351861564569803e-05,
+     "returned_coherence_lower_bound": 0.004164909985655652,
+     "returned_coherence_lower_bound_state": "1:-, phase 0"
+    },
+    {
+     "step": 4,
+     "step_name": "X_-pi/2 pulse",
+     "record": [],
+     "leak_probability_mixed": 0.00011764116686943147,
+     "eps_leak": 0.00016503439170469116,
+     "coherence_lower_bound": 0.025208151921815778,
+     "coherence_lower_bound_state": "largest leakage",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": 0.00015892467863494675,
+     "returned_coherence_lower_bound": 0.012606138813517217,
+     "returned_coherence_lower_bound_state": "0:-, phase pi/2"
+    },
+    {
+     "step": 5,
+     "step_name": "measurement",
+     "record": [],
+     "leak_probability_mixed": 1.6959828689929193e-17,
+     "eps_leak": 1.8631861638121044e-16,
+     "coherence_lower_bound": 1.8083121016520625e-15,
+     "coherence_lower_bound_state": "1:-",
+     "eps_err_traj": 0.0,
+     "eps_unexp": 0.0010017624258289346,
+     "eps_seep": 8.555254962134247e-18,
+     "returned_coherence_lower_bound": 0.0,
+     "returned_coherence_lower_bound_state": null
+    },
+    {
+     "step": 6,
+     "step_name": "feedback latency",
+     "record": [
+      0
+     ],
+     "leak_probability_mixed": 3.964121470598407e-16,
+     "eps_leak": 4.995013560291881e-16,
+     "coherence_lower_bound": 9.978725142509073e-16,
+     "coherence_lower_bound_state": "largest leakage",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": 1.8764875954111487e-17,
+     "returned_coherence_lower_bound": 0.0,
+     "returned_coherence_lower_bound_state": null
+    },
+    {
+     "step": 6,
+     "step_name": "feedback latency",
+     "record": [
+      1
+     ],
+     "leak_probability_mixed": 0.0008315336400108119,
+     "eps_leak": 0.000831533640010917,
+     "coherence_lower_bound": 5.42239624292902e-16,
+     "coherence_lower_bound_state": "0:+i",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": 7.831709337749002e-18,
+     "returned_coherence_lower_bound": 0.0,
+     "returned_coherence_lower_bound_state": null
+    },
+    {
+     "step": 7,
+     "step_name": "conditional X_pi pulse",
+     "record": [
+      0
+     ],
+     "leak_probability_mixed": 0.0,
+     "eps_leak": 2.702492896876796e-16,
+     "coherence_lower_bound": 0.0,
+     "coherence_lower_bound_state": "mixed joint",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": 0.0,
+     "returned_coherence_lower_bound": 0.0,
+     "returned_coherence_lower_bound_state": null
+    },
+    {
+     "step": 7,
+     "step_name": "conditional X_pi pulse",
+     "record": [
+      1
+     ],
+     "leak_probability_mixed": 0.012074746996680551,
+     "eps_leak": 0.017052868975951298,
+     "coherence_lower_bound": 0.2587092082351713,
+     "coherence_lower_bound_state": "largest leakage",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": 0.017023467106440652,
+     "returned_coherence_lower_bound": 0.1300101192845894,
+     "returned_coherence_lower_bound_state": "0:-, phase 0"
+    }
+   ],
+   "infidelity_actual_QEC_dynamics": 0.000343049048616928,
+   "seconds": 58.30732011795044
+  },
+  "excited_ancilla_photon_loss": {
+   "mechanisms_kept": [
+    "excited_ancilla_photon_loss"
+   ],
+   "steps": [
+    {
+     "step": 1,
+     "step_name": "idle",
+     "record": [],
+     "leak_probability_mixed": 2.9061812501838876e-17,
+     "eps_leak": 5.569270303164312e-17,
+     "coherence_lower_bound": 3.2715149023341367e-16,
+     "coherence_lower_bound_state": "0:-i",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": null,
+     "returned_coherence_lower_bound": null,
+     "returned_coherence_lower_bound_state": null
+    },
+    {
+     "step": 2,
+     "step_name": "X_pi/2 pulse",
+     "record": [],
+     "leak_probability_mixed": 0.00010310354261448497,
+     "eps_leak": 0.00015900132206755522,
+     "coherence_lower_bound": 0.025217140268994218,
+     "coherence_lower_bound_state": "0:+",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": 0.00015900132025101256,
+     "returned_coherence_lower_bound": 0.012609225848763372,
+     "returned_coherence_lower_bound_state": "0:-, phase pi/2"
+    },
+    {
+     "step": 3,
+     "step_name": "parity-mapping idling",
+     "record": [],
+     "leak_probability_mixed": 1.4373195276358454e-05,
+     "eps_leak": 1.8876512671603026e-05,
+     "coherence_lower_bound": 0.008329674845017926,
+     "coherence_lower_bound_state": "largest leakage",
+     "eps_err_traj": 1.7182070584867885e-06,
+     "eps_unexp": null,
+     "eps_seep": 1.765380353555024e-05,
+     "returned_coherence_lower_bound": 0.004160159253147623,
+     "returned_coherence_lower_bound_state": "0:+, phase 0"
+    },
+    {
+     "step": 4,
+     "step_name": "X_-pi/2 pulse",
+     "record": [],
+     "leak_probability_mixed": 0.00010279737857770927,
+     "eps_leak": 0.00015890904273891372,
+     "coherence_lower_bound": 0.02520982275551542,
+     "coherence_lower_bound_state": "largest leakage",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": 0.00015890904461460259,
+     "returned_coherence_lower_bound": 0.012605566599000638,
+     "returned_coherence_lower_bound_state": "0:-, phase pi/2"
+    },
+    {
+     "step": 5,
+     "step_name": "measurement",
+     "record": [],
+     "leak_probability_mixed": 4.9899421924458206e-06,
+     "eps_leak": 1.35020464994253e-05,
+     "coherence_lower_bound": 5.6592596459905925e-06,
+     "coherence_lower_bound_state": "1:-",
+     "eps_err_traj": 0.0,
+     "eps_unexp": 0.0,
+     "eps_seep": 1.789317299174179e-05,
+     "returned_coherence_lower_bound": 0.0,
+     "returned_coherence_lower_bound_state": "0:0, phase 0"
+    },
+    {
+     "step": 6,
+     "step_name": "feedback latency",
+     "record": [
+      0
+     ],
+     "leak_probability_mixed": 3.964121470598407e-16,
+     "eps_leak": 4.995013560291881e-16,
+     "coherence_lower_bound": 9.978725142509073e-16,
+     "coherence_lower_bound_state": "largest leakage",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": 1.8764875954111487e-17,
+     "returned_coherence_lower_bound": 0.0,
+     "returned_coherence_lower_bound_state": null
+    },
+    {
+     "step": 6,
+     "step_name": "feedback latency",
+     "record": [
+      1
+     ],
+     "leak_probability_mixed": 8.283316898554278e-06,
+     "eps_leak": 1.1206717099796553e-05,
+     "coherence_lower_bound": 4.697192477272861e-06,
+     "coherence_lower_bound_state": "0:-",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": 1.4851375183195567e-05,
+     "returned_coherence_lower_bound": 0.0,
+     "returned_coherence_lower_bound_state": "0:0, phase 0"
+    },
+    {
+     "step": 7,
+     "step_name": "conditional X_pi pulse",
+     "record": [
+      0
+     ],
+     "leak_probability_mixed": 0.0,
+     "eps_leak": 2.702492896876796e-16,
+     "coherence_lower_bound": 0.0,
+     "coherence_lower_bound_state": "mixed joint",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": 0.0,
+     "returned_coherence_lower_bound": 0.0,
+     "returned_coherence_lower_bound_state": null
+    },
+    {
+     "step": 7,
+     "step_name": "conditional X_pi pulse",
+     "record": [
+      1
+     ],
+     "leak_probability_mixed": 0.012045409551719358,
+     "eps_leak": 0.017023677710043532,
+     "coherence_lower_bound": 0.25871893731439427,
+     "coherence_lower_bound_state": "largest leakage",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": 0.017023677729604714,
+     "returned_coherence_lower_bound": 0.13001295710966537,
+     "returned_coherence_lower_bound_state": "0:-, phase pi/2"
+    }
+   ],
+   "infidelity_actual_QEC_dynamics": 3.24616855430504e-05,
+   "seconds": 10.958708047866821
+  },
+  "readout_assignment_error": {
+   "mechanisms_kept": [
+    "readout_assignment_error"
+   ],
+   "steps": [
+    {
+     "step": 1,
+     "step_name": "idle",
+     "record": [],
+     "leak_probability_mixed": 2.9061812501838876e-17,
+     "eps_leak": 5.569270303164312e-17,
+     "coherence_lower_bound": 3.2715149023341367e-16,
+     "coherence_lower_bound_state": "0:-i",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": null,
+     "returned_coherence_lower_bound": null,
+     "returned_coherence_lower_bound_state": null
+    },
+    {
+     "step": 2,
+     "step_name": "X_pi/2 pulse",
+     "record": [],
+     "leak_probability_mixed": 0.00010310354261448497,
+     "eps_leak": 0.00015900132206755522,
+     "coherence_lower_bound": 0.025217140268994218,
+     "coherence_lower_bound_state": "0:+",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": 0.00015900132025101256,
+     "returned_coherence_lower_bound": 0.012609225848763372,
+     "returned_coherence_lower_bound_state": "0:-, phase pi/2"
+    },
+    {
+     "step": 3,
+     "step_name": "parity-mapping idling",
+     "record": [],
+     "leak_probability_mixed": 1.2665294751170018e-05,
+     "eps_leak": 1.733438944940734e-05,
+     "coherence_lower_bound": 0.00832684549360023,
+     "coherence_lower_bound_state": "largest leakage",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": 1.73343894496425e-05,
+     "returned_coherence_lower_bound": 0.004163440198829976,
+     "returned_coherence_lower_bound_state": "1:-, phase pi/2"
+    },
+    {
+     "step": 4,
+     "step_name": "X_-pi/2 pulse",
+     "record": [],
+     "leak_probability_mixed": 0.00010279737857770927,
+     "eps_leak": 0.00015890904273891372,
+     "coherence_lower_bound": 0.02520982275551542,
+     "coherence_lower_bound_state": "largest leakage",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": 0.00015890904461460259,
+     "returned_coherence_lower_bound": 0.012605566599000638,
+     "returned_coherence_lower_bound_state": "0:-, phase pi/2"
+    },
+    {
+     "step": 5,
+     "step_name": "measurement",
+     "record": [],
+     "leak_probability_mixed": 0.0005800000000000226,
+     "eps_leak": 0.0005800000000002456,
+     "coherence_lower_bound": 1.6570368242310328e-15,
+     "coherence_lower_bound_state": "1:-",
+     "eps_err_traj": 0.0,
+     "eps_unexp": 0.0,
+     "eps_seep": 8.555254962134245e-18,
+     "returned_coherence_lower_bound": 0.0,
+     "returned_coherence_lower_bound_state": null
+    },
+    {
+     "step": 6,
+     "step_name": "feedback latency",
+     "record": [
+      0
+     ],
+     "leak_probability_mixed": 3.964121470598407e-16,
+     "eps_leak": 4.995013560291881e-16,
+     "coherence_lower_bound": 9.978725142509073e-16,
+     "coherence_lower_bound_state": "largest leakage",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": 1.8764875954111487e-17,
+     "returned_coherence_lower_bound": 0.0,
+     "returned_coherence_lower_bound_state": null
+    },
+    {
+     "step": 6,
+     "step_name": "feedback latency",
+     "record": [
+      1
+     ],
+     "leak_probability_mixed": 8.994796283092165e-17,
+     "eps_leak": 2.0104182190882503e-16,
+     "coherence_lower_bound": 5.491661589251059e-16,
+     "coherence_lower_bound_state": "0:+i",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": 6.618285363461236e-18,
+     "returned_coherence_lower_bound": 0.0,
+     "returned_coherence_lower_bound_state": null
+    },
+    {
+     "step": 7,
+     "step_name": "conditional X_pi pulse",
+     "record": [
+      0
+     ],
+     "leak_probability_mixed": 0.0,
+     "eps_leak": 2.702492896876796e-16,
+     "coherence_lower_bound": 0.0,
+     "coherence_lower_bound_state": "mixed joint",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": 0.0,
+     "returned_coherence_lower_bound": 0.0,
+     "returned_coherence_lower_bound_state": null
+    },
+    {
+     "step": 7,
+     "step_name": "conditional X_pi pulse",
+     "record": [
+      1
+     ],
+     "leak_probability_mixed": 0.012045409551719358,
+     "eps_leak": 0.017023677710043532,
+     "coherence_lower_bound": 0.25871893731439427,
+     "coherence_lower_bound_state": "largest leakage",
+     "eps_err_traj": 0.0,
+     "eps_unexp": null,
+     "eps_seep": 0.017023677729604714,
+     "returned_coherence_lower_bound": 0.13001295710966537,
+     "returned_coherence_lower_bound_state": "0:-, phase pi/2"
+    }
+   ],
+   "infidelity_actual_QEC_dynamics": 0.0006111126697088132,
+   "seconds": 5.6334028244018555
+  }
+ },
+ "settings": {
+  "dynamics_resonator_dimension": 10,
+  "dynamics_ancilla_dimension": 3
+ },
+ "environment": {
+  "cpu_model": "arm",
+  "cores_available_to_process": 8,
+  "worker_processes": 1,
+  "thread_settings": {
+   "OMP_NUM_THREADS": null,
+   "MKL_NUM_THREADS": null,
+   "OPENBLAS_NUM_THREADS": null,
+   "NUMEXPR_NUM_THREADS": null
+  },
+  "versions": {
+   "python": "3.12.2",
+   "numpy": "1.26.4",
+   "scipy": "1.13.1",
+   "qutip": "5.3.0.dev0+nogit",
+   "scqubits": "4.3.1+gc04b8db76",
+   "chencrafts": "3.15.post0"
+  }
+ }
+}

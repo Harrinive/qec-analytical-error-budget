@@ -1,0 +1,646 @@
+{
+ "description": "Analytical error budget by mechanism and by step compared with the failure Markov chain and actual QEC dynamics for one cat-code QEC cycle at the parameters of Ofek et al.",
+ "settings": {
+  "dynamics_resonator_dimension": 10,
+  "dynamics_ancilla_dimension": 3,
+  "diagonalization_ancilla_dimension": 10,
+  "diagonalization_resonator_dimension": 14,
+  "orthonormalization": "symm"
+ },
+ "environment": {
+  "cpu_model": "arm",
+  "cores_available_to_process": 8,
+  "worker_processes": 1,
+  "thread_settings": {
+   "OMP_NUM_THREADS": "1",
+   "MKL_NUM_THREADS": "1",
+   "OPENBLAS_NUM_THREADS": "1",
+   "NUMEXPR_NUM_THREADS": "1"
+  },
+  "versions": {
+   "python": "3.12.2",
+   "numpy": "1.26.4",
+   "scipy": "1.13.1",
+   "qutip": "5.3.0.dev0+nogit",
+   "scqubits": "4.3.1+gc04b8db76"
+  }
+ },
+ "parameters": {
+  "Q_s": 13800000.0,
+  "temp_a": 0.094,
+  "temp_s": 0.102,
+  "Q_cap": 1480000.0,
+  "Q_ind": 1e+20,
+  "kappa_a_phi": 6.95e-05,
+  "kappa_s_phi": 0.0,
+  "M_ge": 0.00058,
+  "M_eg": 0.00058,
+  "sigma_2_K_a": 5.598318108697011,
+  "tau_p_by_sigma": 20.0,
+  "tau_p_eff_by_sigma": 4.0,
+  "sigma_omega": 6.283185307179586,
+  "disp": 1.4142135623730951,
+  "tau_FD": 332.0,
+  "ng": 0.3,
+  "E_osc_GHz": 8.3005,
+  "tau_m": 400.0,
+  "T_W": 18000.0,
+  "EJ_GHz": 20.0948,
+  "EC_GHz": 0.2684,
+  "g_GHz": 0.1276
+ },
+ "t_cycle": 19020.35903908712,
+ "error_space_probabilities_formula": {
+  "even_parity": 0.8495877028638594,
+  "odd_parity": 0.113746521372356
+ },
+ "steps": [
+  "idle",
+  "X_plus_half_pi",
+  "parity_mapping_idling",
+  "X_minus_half_pi",
+  "measurement",
+  "feedback_latency",
+  "conditional_X_pi"
+ ],
+ "formula": {
+  "terms": [
+   {
+    "step": 1,
+    "step_key": "idle",
+    "term": "ancilla_excitation",
+    "mechanism": "ancilla excitation",
+    "chencrafts_name": "idle_ancilla_excitation",
+    "value": 0.020899454363701678
+   },
+   {
+    "step": 1,
+    "step_key": "idle",
+    "term": "resonator_dephasing",
+    "mechanism": "resonator dephasing",
+    "chencrafts_name": "idle_storage_dephasing",
+    "value": 0.0
+   },
+   {
+    "step": 1,
+    "step_key": "idle",
+    "term": "photon_gain",
+    "mechanism": "photon gain",
+    "chencrafts_name": "idle_photon_gain",
+    "value": 0.0036731812332278526
+   },
+   {
+    "step": 1,
+    "step_key": "idle",
+    "term": "two_or_more_photon_losses",
+    "mechanism": "photon loss",
+    "chencrafts_name": "idle_multiple_photon_loss",
+    "value": 0.0090651872488835
+   },
+   {
+    "step": 1,
+    "step_key": "idle",
+    "term": "kerr_term",
+    "mechanism": "photon loss",
+    "chencrafts_name": "idle_kerr_after_loss",
+    "value": 0.0030279529179714462
+   },
+   {
+    "step": 2,
+    "step_key": "X_plus_half_pi",
+    "term": "stark_shift",
+    "mechanism": "Stark shift",
+    "chencrafts_name": "gate1_stark",
+    "value": 0.0
+   },
+   {
+    "step": 2,
+    "step_key": "X_plus_half_pi",
+    "term": "dispersive_shift",
+    "mechanism": "dispersive shift",
+    "chencrafts_name": "gate1_dispersive",
+    "value": 0.0
+   },
+   {
+    "step": 2,
+    "step_key": "X_plus_half_pi",
+    "term": "stark_shift_dispersive_shift_cross",
+    "mechanism": "Stark shift $\\times$ dispersive shift",
+    "chencrafts_name": "gate1_cross",
+    "value": 0.0
+   },
+   {
+    "step": 2,
+    "step_key": "X_plus_half_pi",
+    "term": "ancilla_dephasing",
+    "mechanism": "ancilla dephasing",
+    "chencrafts_name": "gate1_ancilla_dephasing",
+    "value": 0.000198252831912634
+   },
+   {
+    "step": 2,
+    "step_key": "X_plus_half_pi",
+    "term": "ancilla_relaxation",
+    "mechanism": "ancilla relaxation",
+    "chencrafts_name": "gate1_ancilla_relaxation",
+    "value": 2.6146957590874447e-05
+   },
+   {
+    "step": 2,
+    "step_key": "X_plus_half_pi",
+    "term": "ancilla_excitation",
+    "mechanism": "ancilla excitation",
+    "chencrafts_name": "gate1_ancilla_excitation",
+    "value": 1.4819493497550492e-05
+   },
+   {
+    "step": 4,
+    "step_key": "X_minus_half_pi",
+    "term": "stark_shift",
+    "mechanism": "Stark shift",
+    "chencrafts_name": "gate2_stark",
+    "value": 0.0
+   },
+   {
+    "step": 4,
+    "step_key": "X_minus_half_pi",
+    "term": "dispersive_shift",
+    "mechanism": "dispersive shift",
+    "chencrafts_name": "gate2_dispersive",
+    "value": 0.0
+   },
+   {
+    "step": 4,
+    "step_key": "X_minus_half_pi",
+    "term": "stark_shift_dispersive_shift_cross",
+    "mechanism": "Stark shift $\\times$ dispersive shift",
+    "chencrafts_name": "gate2_cross",
+    "value": 0.0
+   },
+   {
+    "step": 4,
+    "step_key": "X_minus_half_pi",
+    "term": "ancilla_dephasing",
+    "mechanism": "ancilla dephasing",
+    "chencrafts_name": "gate2_ancilla_dephasing",
+    "value": 0.000198252831912634
+   },
+   {
+    "step": 4,
+    "step_key": "X_minus_half_pi",
+    "term": "ancilla_relaxation",
+    "mechanism": "ancilla relaxation",
+    "chencrafts_name": "gate2_ancilla_relaxation",
+    "value": 4.913103347047258e-05
+   },
+   {
+    "step": 4,
+    "step_key": "X_minus_half_pi",
+    "term": "ancilla_excitation",
+    "mechanism": "ancilla excitation",
+    "chencrafts_name": "gate2_ancilla_excitation",
+    "value": 1.5897062367586492e-05
+   },
+   {
+    "step": 3,
+    "step_key": "parity_mapping_idling",
+    "term": "ancilla_dephasing",
+    "mechanism": "ancilla dephasing",
+    "chencrafts_name": "pm_ancilla_dephasing",
+    "value": 0.008007600252792103
+   },
+   {
+    "step": 3,
+    "step_key": "parity_mapping_idling",
+    "term": "ancilla_relaxation",
+    "mechanism": "ancilla relaxation",
+    "chencrafts_name": "pm_ancilla_relaxation",
+    "value": 0.0033248275765122297
+   },
+   {
+    "step": 3,
+    "step_key": "parity_mapping_idling",
+    "term": "ancilla_excitation",
+    "mechanism": "ancilla excitation",
+    "chencrafts_name": "pm_ancilla_excitation",
+    "value": 0.00042508978671249373
+   },
+   {
+    "step": 3,
+    "step_key": "parity_mapping_idling",
+    "term": "photon_loss",
+    "mechanism": "photon loss",
+    "chencrafts_name": "pm_photon_loss",
+    "value": 0.0016337180505494734
+   },
+   {
+    "step": 3,
+    "step_key": "parity_mapping_idling",
+    "term": "photon_gain",
+    "mechanism": "photon gain",
+    "chencrafts_name": "pm_photon_gain",
+    "value": 5.07880056252786e-05
+   },
+   {
+    "step": 3,
+    "step_key": "parity_mapping_idling",
+    "term": "resonator_dephasing",
+    "mechanism": "resonator dephasing",
+    "chencrafts_name": "pm_storage_dephasing",
+    "value": 0.0
+   },
+   {
+    "step": 3,
+    "step_key": "parity_mapping_idling",
+    "term": "chi_1_prime",
+    "mechanism": "$\\chi_1'$",
+    "chencrafts_name": "pm_nonlinearity",
+    "value": 1.1008010304190771e-05
+   },
+   {
+    "step": 5,
+    "step_key": "measurement",
+    "term": "readout_assignment_error",
+    "mechanism": "readout assignment error",
+    "chencrafts_name": "meas_assignment",
+    "value": 0.000558733850057005
+   },
+   {
+    "step": 5,
+    "step_key": "measurement",
+    "term": "ancilla_relaxation",
+    "mechanism": "ancilla relaxation",
+    "chencrafts_name": "meas_ancilla_relaxation",
+    "value": 0.0013048690753914474
+   },
+   {
+    "step": 5,
+    "step_key": "measurement",
+    "term": "ancilla_excitation",
+    "mechanism": "ancilla excitation",
+    "chencrafts_name": "meas_ancilla_excitation",
+    "value": 0.0005085800904309455
+   },
+   {
+    "step": 5,
+    "step_key": "measurement",
+    "term": "photon_loss",
+    "mechanism": "photon loss",
+    "chencrafts_name": "meas_photon_loss",
+    "value": 0.0027150872382748197
+   },
+   {
+    "step": 5,
+    "step_key": "measurement",
+    "term": "photon_gain",
+    "mechanism": "photon gain",
+    "chencrafts_name": "meas_photon_gain",
+    "value": 8.440493504019582e-05
+   },
+   {
+    "step": 5,
+    "step_key": "measurement",
+    "term": "resonator_dephasing",
+    "mechanism": "resonator dephasing",
+    "chencrafts_name": "meas_storage_dephasing",
+    "value": 0.0
+   },
+   {
+    "step": 6,
+    "step_key": "feedback_latency",
+    "term": "ancilla_relaxation",
+    "mechanism": "ancilla relaxation",
+    "chencrafts_name": "latency_ancilla_relaxation",
+    "value": 0.0010830413325749013
+   },
+   {
+    "step": 6,
+    "step_key": "feedback_latency",
+    "term": "ancilla_excitation",
+    "mechanism": "ancilla excitation",
+    "chencrafts_name": "latency_ancilla_excitation",
+    "value": 0.0004221214750576848
+   },
+   {
+    "step": 6,
+    "step_key": "feedback_latency",
+    "term": "photon_loss",
+    "mechanism": "photon loss",
+    "chencrafts_name": "latency_photon_loss",
+    "value": 0.0022535224077681
+   },
+   {
+    "step": 6,
+    "step_key": "feedback_latency",
+    "term": "photon_gain",
+    "mechanism": "photon gain",
+    "chencrafts_name": "latency_photon_gain",
+    "value": 7.005609608336253e-05
+   },
+   {
+    "step": 6,
+    "step_key": "feedback_latency",
+    "term": "resonator_dephasing",
+    "mechanism": "resonator dephasing",
+    "chencrafts_name": "latency_storage_dephasing",
+    "value": 0.0
+   },
+   {
+    "step": 7,
+    "step_key": "conditional_X_pi",
+    "term": "stark_shift",
+    "mechanism": "Stark shift",
+    "chencrafts_name": "reset_stark",
+    "value": 0.00040714857751949704
+   },
+   {
+    "step": 7,
+    "step_key": "conditional_X_pi",
+    "term": "dispersive_shift",
+    "mechanism": "dispersive shift",
+    "chencrafts_name": "reset_dispersive",
+    "value": 0.000668572187013636
+   },
+   {
+    "step": 7,
+    "step_key": "conditional_X_pi",
+    "term": "stark_shift_dispersive_shift_cross",
+    "mechanism": "Stark shift $\\times$ dispersive shift",
+    "chencrafts_name": "reset_cross",
+    "value": 0.00017842318725094035
+   },
+   {
+    "step": 7,
+    "step_key": "conditional_X_pi",
+    "term": "ancilla_dephasing",
+    "mechanism": "ancilla dephasing",
+    "chencrafts_name": "reset_ancilla_dephasing",
+    "value": 2.8259418508058495e-05
+   },
+   {
+    "step": 7,
+    "step_key": "conditional_X_pi",
+    "term": "ancilla_relaxation",
+    "mechanism": "ancilla relaxation",
+    "chencrafts_name": "reset_ancilla_relaxation",
+    "value": 3.301151792335467e-05
+   },
+   {
+    "step": 7,
+    "step_key": "conditional_X_pi",
+    "term": "ancilla_excitation",
+    "mechanism": "ancilla excitation",
+    "chencrafts_name": "reset_ancilla_excitation",
+    "value": 4.7331980117872734e-06
+   }
+  ],
+  "by_step": [
+   0.03666577576378448,
+   0.00023921928300105894,
+   0.013453031682495769,
+   0.00026328092775069307,
+   0.005171675189194413,
+   0.0038287413114840487,
+   0.0013201480862272737
+  ],
+  "by_mechanism": {
+   "ancilla excitation": {
+    "total": 0.022290695469779725,
+    "by_step": [
+     0.020899454363701678,
+     1.4819493497550492e-05,
+     0.00042508978671249373,
+     1.5897062367586492e-05,
+     0.0005085800904309455,
+     0.0004221214750576848,
+     4.7331980117872734e-06
+    ]
+   },
+   "resonator dephasing": {
+    "total": 0.0,
+    "by_step": [
+     0.0,
+     0,
+     0.0,
+     0,
+     0.0,
+     0.0,
+     0
+    ]
+   },
+   "photon gain": {
+    "total": 0.0038784302699766894,
+    "by_step": [
+     0.0036731812332278526,
+     0,
+     5.07880056252786e-05,
+     0,
+     8.440493504019582e-05,
+     7.005609608336253e-05,
+     0
+    ]
+   },
+   "photon loss": {
+    "total": 0.01869546786344734,
+    "by_step": [
+     0.012093140166854945,
+     0,
+     0.0016337180505494734,
+     0,
+     0.0027150872382748197,
+     0.0022535224077681,
+     0
+    ]
+   },
+   "Stark shift": {
+    "total": 0.00040714857751949704,
+    "by_step": [
+     0,
+     0.0,
+     0,
+     0.0,
+     0,
+     0,
+     0.00040714857751949704
+    ]
+   },
+   "dispersive shift": {
+    "total": 0.000668572187013636,
+    "by_step": [
+     0,
+     0.0,
+     0,
+     0.0,
+     0,
+     0,
+     0.000668572187013636
+    ]
+   },
+   "Stark shift $\\times$ dispersive shift": {
+    "total": 0.00017842318725094035,
+    "by_step": [
+     0,
+     0.0,
+     0,
+     0.0,
+     0,
+     0,
+     0.00017842318725094035
+    ]
+   },
+   "ancilla dephasing": {
+    "total": 0.00843236533512543,
+    "by_step": [
+     0,
+     0.000198252831912634,
+     0.008007600252792103,
+     0.000198252831912634,
+     0,
+     0,
+     2.8259418508058495e-05
+    ]
+   },
+   "ancilla relaxation": {
+    "total": 0.00582102749346328,
+    "by_step": [
+     0,
+     2.6146957590874447e-05,
+     0.0033248275765122297,
+     4.913103347047258e-05,
+     0.0013048690753914474,
+     0.0010830413325749013,
+     3.301151792335467e-05
+    ]
+   },
+   "$\\chi_1'$": {
+    "total": 1.1008010304190771e-05,
+    "by_step": [
+     0,
+     0,
+     1.1008010304190771e-05,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "readout assignment error": {
+    "total": 0.000558733850057005,
+    "by_step": [
+     0,
+     0,
+     0,
+     0,
+     0.000558733850057005,
+     0,
+     0
+    ]
+   }
+  },
+  "cycle_infidelity": 0.06094187224393772
+ },
+ "failure_Markov_chain": {
+  "success_probability_after_each_step": [
+   1.0,
+   0.9651497898753194,
+   0.9648194491908479,
+   0.9520732773072947,
+   0.9517258619472907,
+   0.9467528981999789,
+   0.9431136081348932,
+   0.9419542361992416
+  ],
+  "fidelity_loss_by_step": [
+   0.03485021012468059,
+   0.00033034068447146403,
+   0.012746171883553203,
+   0.00034741536000404416,
+   0.0049729637473118204,
+   0.0036392900650856763,
+   0.0011593719356516319
+  ],
+  "cycle_infidelity": 0.05804576380075843
+ },
+ "actual_QEC_dynamics": {
+  "process_fidelity_after_each_step": [
+   0.9999999999999984,
+   0.9651497898753195,
+   0.9648233483391118,
+   0.9528118889365036,
+   0.9526054044598768,
+   0.9477842314010415,
+   0.9441929557078478,
+   0.9431172654910657
+  ],
+  "fidelity_loss_by_step": [
+   0.034850210124678926,
+   0.0003264415362077555,
+   0.012011459402608171,
+   0.00020648447662674485,
+   0.004821173058835337,
+   0.0035912756931937295,
+   0.0010756902167821103
+  ],
+  "cycle_infidelity": 0.05688273450893433
+ },
+ "formula_over_markov_chain_minus_1_by_step": [
+  0.052096260900823754,
+  -0.2758406873685475,
+  0.055456634776332336,
+  -0.24217245965282508,
+  0.0399583532033605,
+  0.05205719879707149,
+  0.1386752133906679
+ ],
+ "quoted": {
+  "formula_over_markov_chain_minus_1_cycle": 0.04989353664326224,
+  "formula_over_actual_QEC_dynamics_minus_1_cycle": 0.07135975037145648,
+  "dominant_steps": [
+   "idle",
+   "parity_mapping_idling",
+   "measurement",
+   "feedback_latency"
+  ],
+  "formula_over_markov_chain_minus_1_dominant_steps": {
+   "idle": 0.052096260900823754,
+   "parity_mapping_idling": 0.055456634776332336,
+   "measurement": 0.0399583532033605,
+   "feedback_latency": 0.05205719879707149
+  },
+  "largest_deviation_of_a_dominant_step": 0.055456634776332336,
+  "formula_over_markov_chain_minus_1_sum_of_dominant_steps": 0.05178186739161328,
+  "dominant_steps_over_cycle_infidelity": {
+   "failure_Markov_chain": 0.9683503522077328,
+   "analytical_formula": 0.9700920199877792
+  },
+  "mechanisms_largest_first": [
+   "ancilla excitation",
+   "photon loss",
+   "ancilla dephasing",
+   "ancilla relaxation",
+   "photon gain",
+   "dispersive shift",
+   "readout assignment error",
+   "Stark shift",
+   "Stark shift $\\times$ dispersive shift",
+   "$\\chi_1'$",
+   "resonator dephasing"
+  ],
+  "mechanism_over_formula_infidelity": {
+   "ancilla excitation": 0.36576978437017293,
+   "photon loss": 0.30677541032236827,
+   "ancilla dephasing": 0.13836734948628449,
+   "ancilla relaxation": 0.09551770037787664,
+   "photon gain": 0.06364146894687013,
+   "dispersive shift": 0.01097065387714837,
+   "readout assignment error": 0.009168307921694773,
+   "Stark shift": 0.006680933199586738,
+   "Stark shift $\\times$ dispersive shift": 0.002927760186571709,
+   "$\\chi_1'$": 0.00018063131142620595,
+   "resonator dephasing": 0.0
+  },
+  "ancilla_excitation_over_photon_loss": 1.192304767796779,
+  "ancilla_relaxation_over_ancilla_excitation": 0.26114158265519577,
+  "idle_part_of_ancilla_excitation": 0.9375864648115533
+ }
+}

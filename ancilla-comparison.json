@@ -1,0 +1,715 @@
+{
+ "description": "Failure-rate contributions by step and by error mechanism for the cat-code protocol with transmon and integer-fluxonium ancillas.",
+ "steps": [
+  "idle",
+  "X_pi/2 pulse",
+  "parity-mapping idling",
+  "X_-pi/2 pulse",
+  "measurement",
+  "feedback latency",
+  "conditional X_pi pulse"
+ ],
+ "parameter_sets": {
+  "transmon, Ofek et al.": {
+   "free_parameters": {
+    "E_osc_GHz": 8.3005,
+    "g_GHz": 0.1276,
+    "EJ_GHz": 20.0948,
+    "T_W": 18000.0
+   },
+   "t_cycle_ns": 19020.35903908712,
+   "infidelity": {
+    "analytical_formula": 0.06094187224393772,
+    "failure_Markov_chain": 0.05804576380075843,
+    "actual_QEC_dynamics": 0.05688273450893433
+   },
+   "failure_rate_per_ms": {
+    "analytical_formula": 3.2040337471391185,
+    "failure_Markov_chain": 3.051770141745144,
+    "actual_QEC_dynamics": 2.9906235940152057
+   },
+   "rate_by_step_per_ms": {
+    "actual_QEC_dynamics": [
+     1.8322582687877353,
+     0.017162743118408718,
+     0.6315053978699583,
+     0.01085597155145264,
+     0.25347434551197245,
+     0.1888121925466078,
+     0.05655467462898839
+    ],
+    "failure_Markov_chain": [
+     1.832258268787823,
+     0.01736774178618863,
+     0.6701330851515279,
+     0.01826544700287205,
+     0.26145477785631205,
+     0.19133655982028946,
+     0.060954261340130614
+    ],
+    "chain_by_manifestation": {
+     "leakage": [
+      1.1745257087095735,
+      0.01736487447269565,
+      0.6336017015218932,
+      0.018263232049122273,
+      0.2612659727251206,
+      0.19120594145282266,
+      0.06090286486916669
+     ],
+     "X": [
+      0.21463293419557294,
+      2.867313493313008e-06,
+      0.03651768865758759,
+      2.2149537441609137e-06,
+      5.515586301080353e-05,
+      3.800931589141341e-05,
+      5.1396470962563294e-05
+     ],
+     "Y": [
+      0.062241456305672065,
+      4.950359291621958e-16,
+      9.138376226723091e-06,
+      1.2773259332211641e-15,
+      9.171716625152287e-05,
+      6.552306919742419e-05,
+      -1.8750550363815861e-16
+     ],
+     "Z": [
+      0.380858169577004,
+      1.101778076361707e-15,
+      4.556595819214184e-06,
+      1.871471041939319e-15,
+      4.193210192924668e-05,
+      2.708598237899763e-05,
+      -1.872569741320813e-15
+     ]
+    }
+   },
+   "rate_by_mechanism_per_ms": {
+    "coherent error of the conditional X_pi pulse": 0.06593692312573012,
+    "ancilla excitation": 1.1719387328058328,
+    "resonator dephasing": 0.0,
+    "photon gain": 0.20390941422327818,
+    "photon loss": 0.9829187674653183,
+    "ancilla dephasing": 0.4433336572562481,
+    "ancilla relaxation": 0.3060419354598397,
+    "chi_1'": 0.0005787488175995598,
+    "readout assignment error": 0.029375567985272973
+   },
+   "formula_over_failure_Markov_chain_minus_1": 0.04989353664326224,
+   "formula_over_actual_QEC_dynamics_minus_1": 0.07135975037145648
+  },
+  "transmon, optimized": {
+   "free_parameters": {
+    "E_osc_GHz": 5.853205175978728,
+    "g_GHz": 0.25083749088233726,
+    "EJ_GHz": 52.1547721048105,
+    "T_W": 50000.0
+   },
+   "t_cycle_ns": 51182.81720732502,
+   "infidelity": {
+    "analytical_formula": 0.11964975169045526,
+    "failure_Markov_chain": 0.10734589776726722,
+    "actual_QEC_dynamics": 0.10611125846587532
+   },
+   "failure_rate_per_ms": {
+    "analytical_formula": 2.337693746043577,
+    "failure_Markov_chain": 2.097303423772938,
+    "actual_QEC_dynamics": 2.073181279491767
+   },
+   "rate_by_step_per_ms": {
+    "actual_QEC_dynamics": [
+     1.4289218437053506,
+     0.004214331804254996,
+     0.3665519212474269,
+     0.0049615140312859,
+     0.13941071527029525,
+     0.10723695894320585,
+     0.021883994489917295
+    ],
+    "failure_Markov_chain": [
+     1.4289218437053834,
+     0.004251958692973102,
+     0.38249212867858123,
+     0.0058267630355654755,
+     0.14341273790864748,
+     0.10824241066077851,
+     0.024155581091009196
+    ],
+    "chain_by_manifestation": {
+     "leakage": [
+      0.4204559239724687,
+      0.0042507590672166366,
+      0.3340927128394754,
+      0.005825788413285575,
+      0.14336951778302337,
+      0.10821338061998673,
+      0.024137087642062426
+     ],
+     "X": [
+      0.20852919961264382,
+      1.1996257571840104e-06,
+      0.048391024127186585,
+      9.746222811322803e-07,
+      1.54092539354823e-05,
+      1.0076330287615388e-05,
+      1.8493448946865117e-05
+     ],
+     "Y": [
+      0.08012816892276332,
+      8.703938391679551e-17,
+      3.540417027707249e-06,
+      -7.964068364660316e-17,
+      1.1959074351494278e-05,
+      8.308370856142796e-06,
+      2.0365826008392977e-17
+     ],
+     "Z": [
+      0.719808551197509,
+      0.0,
+      4.851294891619989e-06,
+      3.934543071003685e-16,
+      1.5851797335687324e-05,
+      1.0645339649268748e-05,
+      1.1744538729870032e-15
+     ]
+    }
+   },
+   "rate_by_mechanism_per_ms": {
+    "coherent error of the conditional X_pi pulse": 0.025772681041776845,
+    "ancilla excitation": 0.3316175505391024,
+    "resonator dephasing": 0.0,
+    "photon gain": 0.43531113924730613,
+    "photon loss": 0.9462696891543623,
+    "ancilla dephasing": 0.15904359685148076,
+    "ancilla relaxation": 0.4292118314301177,
+    "chi_1'": 5.430327051093679e-05,
+    "readout assignment error": 0.010412954508918932
+   },
+   "formula_over_failure_Markov_chain_minus_1": 0.11461876214276567,
+   "formula_over_actual_QEC_dynamics_minus_1": 0.12758771708408134
+  },
+  "fluxonium, optimized": {
+   "free_parameters": {
+    "E_osc_GHz": 5.840122388657525,
+    "g_GHz": 0.2,
+    "EJ_GHz": 7.88230940647305,
+    "EC_GHz": 1.7618883444675149,
+    "EL_GHz": 0.4599553328400946,
+    "T_W": 50000.0
+   },
+   "t_cycle_ns": 51003.44837177457,
+   "infidelity": {
+    "analytical_formula": 0.09489059191349976,
+    "failure_Markov_chain": 0.09043780910146526,
+    "actual_QEC_dynamics": 0.08975805779477808
+   },
+   "failure_rate_per_ms": {
+    "analytical_formula": 1.8604740452414672,
+    "failure_Markov_chain": 1.7731704813808975,
+    "actual_QEC_dynamics": 1.7598429255314905
+   },
+   "rate_by_step_per_ms": {
+    "actual_QEC_dynamics": [
+     1.2216640893092667,
+     0.014212641776494903,
+     0.3457307451682734,
+     0.013573450978898581,
+     0.0688802244602467,
+     0.048794857557443,
+     0.04698691628083645
+    ],
+    "failure_Markov_chain": [
+     1.2216640893092994,
+     0.0140755170394719,
+     0.3541475270532415,
+     0.014280314078787658,
+     0.07109212068798271,
+     0.050065280171865574,
+     0.04784563304024878
+    ],
+    "chain_by_manifestation": {
+     "leakage": [
+      0.27072400256431367,
+      0.01407097306461021,
+      0.3486552052071413,
+      0.014277748842210487,
+      0.0710498322849874,
+      0.05003637830456397,
+      0.04781624632328777
+     ],
+     "X": [
+      0.10357101872285657,
+      4.543974860584315e-06,
+      0.005489548926165744,
+      2.565236576582231e-06,
+      4.465937564166203e-06,
+      3.0283147132500824e-06,
+      2.9386716960624302e-05
+     ],
+     "Y": [
+      0.016688586633956313,
+      4.967422877423562e-16,
+      9.24843520531994e-08,
+      9.89395922293572e-17,
+      1.1746761979639287e-06,
+      8.342239554747906e-07,
+      7.387394272002568e-18
+     ],
+     "Z": [
+      0.8306804813881703,
+      0.0,
+      2.6804355843562224e-06,
+      -3.082947916222052e-16,
+      3.6647789233862566e-05,
+      2.5039328633146912e-05,
+      1.8845475710780857e-16
+     ]
+    }
+   },
+   "rate_by_mechanism_per_ms": {
+    "coherent error of the conditional X_pi pulse": 0.053259006053266916,
+    "ancilla excitation": 0.21931679464506554,
+    "resonator dephasing": 0.0,
+    "photon gain": 0.41652262155808584,
+    "photon loss": 0.7585043211897224,
+    "ancilla dephasing": 0.3327784773962685,
+    "ancilla relaxation": 0.06339679951549569,
+    "chi_1'": 0.006071290986884795,
+    "readout assignment error": 0.010624733896678052
+   },
+   "formula_over_failure_Markov_chain_minus_1": 0.04923585452007995,
+   "formula_over_actual_QEC_dynamics_minus_1": 0.05718187586519141
+  }
+ },
+ "settings": {
+  "transmon_optimized": "Delta<0 minimum",
+  "fluxonium_optimum": {
+   "description": "Free parameters of the optimized fluxonium: the minimum that ancilla-comparison.py uses. It is the lowest minimum that more than one run reaches in the search for the lowest failure rate of one QEC cycle (analytical formula) over six parameters of the cat-code protocol with a fluxonium at zero flux as the ancilla, with inductive loss (fluxonium_model.build_sweep with inductive_loss=True). One end of that search is lower, reached by one run: a minimum a few MHz wide in the resonator frequency, at a zero of the resonator self-Kerr coefficient.",
+   "source": "Multi-start L-BFGS-B minimization of the analytical formula with inductive loss: 44 runs from the minima of fluxonium-minima.json and 50 runs from random starts.",
+   "units": "circuit energies, resonator frequency, and coupling in GHz; idle duration T_W in ns; failure rates in 1/ms",
+   "search_ranges": {
+    "E_osc_GHz": [
+     4,
+     10
+    ],
+    "g_GHz": [
+     0.05,
+     0.2
+    ],
+    "EJ_GHz": [
+     3,
+     10
+    ],
+    "EC_GHz": [
+     0.5,
+     2.0
+    ],
+    "EL_GHz": [
+     0.15,
+     1.0
+    ],
+    "T_W": [
+     2000.0,
+     50000.0
+    ]
+   },
+   "run_count": 94,
+   "free_parameters": {
+    "E_osc_GHz": 5.840122388657525,
+    "g_GHz": 0.2,
+    "EJ_GHz": 7.88230940647305,
+    "EC_GHz": 1.7618883444675149,
+    "EL_GHz": 0.4599553328400946,
+    "T_W": 50000.0
+   },
+   "failure_rate_per_ms_in_the_search": {
+    "analytical_formula": 1.860474043035208,
+    "actual_QEC_dynamics": 1.7598429304565129,
+    "failure_Markov_chain": 1.7731704866153628
+   },
+   "runs_ending_at_this_minimum": [
+    {
+     "started_from": "random start",
+     "free_parameters": {
+      "E_osc_GHz": 5.840122388657525,
+      "g_GHz": 0.2,
+      "EJ_GHz": 7.88230940647305,
+      "EC_GHz": 1.7618883444675149,
+      "EL_GHz": 0.4599553328400946,
+      "T_W": 50000.0
+     },
+     "failure_rate_per_ms": {
+      "analytical_formula": 1.860474043035208,
+      "actual_QEC_dynamics": 1.7598429304565129,
+      "failure_Markov_chain": 1.7731704866153628
+     }
+    },
+    {
+     "started_from": "31",
+     "free_parameters": {
+      "E_osc_GHz": 5.94553649267841,
+      "g_GHz": 0.2,
+      "EJ_GHz": 8.028363222164437,
+      "EC_GHz": 1.790778968675113,
+      "EL_GHz": 0.46776694133750873,
+      "T_W": 50000.0
+     },
+     "failure_rate_per_ms": {
+      "analytical_formula": 1.860723296684472,
+      "actual_QEC_dynamics": 1.765354542652211,
+      "failure_Markov_chain": 1.7794293186695982
+     }
+    },
+    {
+     "started_from": "random start",
+     "free_parameters": {
+      "E_osc_GHz": 5.756609190202457,
+      "g_GHz": 0.2,
+      "EJ_GHz": 7.830340734549937,
+      "EC_GHz": 1.7445143748591583,
+      "EL_GHz": 0.4558332278330064,
+      "T_W": 50000.0
+     },
+     "failure_rate_per_ms": {
+      "analytical_formula": 1.8610422575163412,
+      "actual_QEC_dynamics": 1.7595101997899625,
+      "failure_Markov_chain": 1.772666664334023
+     }
+    }
+   ],
+   "lower_end_not_kept": {
+    "free_parameters": {
+     "E_osc_GHz": 6.14732134909598,
+     "g_GHz": 0.09883131709587889,
+     "EJ_GHz": 6.66345054393685,
+     "EC_GHz": 1.713261663349296,
+     "EL_GHz": 0.368326737057101,
+     "T_W": 49997.884436844026
+    },
+    "failure_rate_per_ms": {
+     "analytical_formula": 1.809231043132432,
+     "actual_QEC_dynamics": 1.7232929129361885,
+     "failure_Markov_chain": 1.7387171695444927
+    }
+   }
+  },
+  "fluxonium_inductive_quality_factor": 500000000.0,
+  "units": "energies and frequencies in GHz, T_W (idle duration) in ns, rates in 1/ms"
+ },
+ "environment": {
+  "cpu_model": "arm",
+  "cores_available_to_process": 8,
+  "worker_processes": 4,
+  "thread_settings": {
+   "OMP_NUM_THREADS": "1",
+   "MKL_NUM_THREADS": "1",
+   "OPENBLAS_NUM_THREADS": "1",
+   "NUMEXPR_NUM_THREADS": "1"
+  },
+  "versions": {
+   "python": "3.12.2",
+   "numpy": "1.26.4",
+   "scipy": "1.13.1",
+   "qutip": "5.3.0.dev0+nogit",
+   "scqubits": "4.3.1+gc04b8db76"
+  }
+ },
+ "ancilla_properties": {
+  "description": "Ancilla circuit parameters, static quantities, and decoherence rates at the three parameter sets.",
+  "noise_amplitudes": {
+   "flux_flux_quanta": 6.4873408427291855e-06,
+   "critical_current": 1.535192681061229e-05,
+   "charge_2e": 0.0001
+  },
+  "units": "energies and frequencies in GHz (divided by h or 2 pi), t_ea in us, times in us, rates in 1/ms; chi_1_MHz, chi_1_prime_kHz, K_kHz divided by 2 pi",
+  "parameter_sets": {
+   "transmon, Ofek et al.": {
+    "parameters": {
+     "EJ_GHz": 20.0948,
+     "EC_GHz": 0.2684,
+     "E_osc_GHz": 8.3005,
+     "g_GHz": 0.1276,
+     "t_ea_us": 18.0
+    },
+    "static": {
+     "omega_01_bare_GHz": 6.28792318273792,
+     "omega_01_dressed_GHz": 6.281245467743048,
+     "detuning_GHz": 2.0125768172620795,
+     "bare_ancilla_levels_GHz": [
+      0.0,
+      6.28792318273792,
+      12.276800794762892
+     ],
+     "omega_01_GHz": 6.28792318273792,
+     "chi_1_MHz": -1.9624878791404399,
+     "chi_1_prime_kHz": 1.5360758567339874,
+     "K_kHz": -1.9904357344557866,
+     "rates_per_ms": {
+      "photon_loss": 3.919272709245508,
+      "photon_gain": 0.07829143018642726,
+      "ancilla_relaxation": 28.67931826943263,
+      "ancilla_excitation": 1.1610807979834266,
+      "ancilla_dephasing": 138.14401555530964,
+      "ancilla_level_1_to_2": 2.5056613128966805,
+      "ancilla_level_2_to_1": 53.18530021014841
+     },
+     "t_cycle_us": 19.020359039087122,
+     "t_idle_us": 18.0,
+     "t_parity_mapping_idling_ns": 240.6873749791622,
+     "t_pulse_ns": 59.58958013494615
+    },
+    "jump_rates_per_ms": {
+     "|0><0|": 0.0,
+     "|0><1|": 28.67931826943263,
+     "|0><2|": 1.1153334739068803e-12,
+     "|1><0|": 1.1610807979834266,
+     "|1><1|": 138.14401555530964,
+     "|1><2|": 53.18530021014841,
+     "|2><0|": 2.126965383445e-15,
+     "|2><1|": 2.5056613128966805,
+     "|2><2|": 0.0024008356035862834
+    },
+    "times_us": {
+     "T1": 34.86833231548022,
+     "T_phi": 14.477644883568965,
+     "T_phi_from_kappa_phi": 14.388489208633095,
+     "level_1_lifetime": 32.06671972832206
+    },
+    "relaxation_by_bath_per_ms": {
+     "capacitive (dielectric) loss of the ancilla": 28.66791035730198,
+     "1/f dephasing of the ancilla": 0.0,
+     "dielectric loss of the resonator, through the dressing": 0.011407912130648666,
+     "dephasing of the resonator": 0.0
+    },
+    "excitation_by_bath_per_ms": {
+     "capacitive (dielectric) loss of the ancilla": 1.1604869351682305,
+     "1/f dephasing of the ancilla": 0.0,
+     "dielectric loss of the resonator, through the dressing": 0.0005938628151960155,
+     "dephasing of the resonator": 0.0
+    },
+    "dephasing_jump_by_bath_per_ms": {
+     "capacitive (dielectric) loss of the ancilla": 3.3266721363091233e-12,
+     "1/f dephasing of the ancilla": 138.14401555530628,
+     "dielectric loss of the resonator, through the dressing": 3.7506276820155404e-17,
+     "dephasing of the resonator": 0.0
+    },
+    "dephasing_by_source_per_ms": {
+     "charge": 0.0017174784455595898,
+     "critical_current": 69.49828252155444,
+     "total": 69.5
+    },
+    "dephasing_sensitivity_per_ms": {
+     "charge": 17.174784455595898,
+     "critical_current": 4527007.155447909
+    },
+    "loss_matrix_elements": {
+     "capacitive (dielectric) loss of the ancilla": {
+      "operator": "n_operator",
+      "matrix_element_squared": 1.4637918951037283,
+      "spectral_density_per_ms": 19.61972577944302,
+      "product_per_ms": 28.71919558010637
+     }
+    }
+   },
+   "transmon, optimized": {
+    "parameters": {
+     "EJ_GHz": 52.1547721048105,
+     "EC_GHz": 0.2684,
+     "E_osc_GHz": 5.853205175978728,
+     "g_GHz": 0.25083749088233726,
+     "t_ea_us": 50.0
+    },
+    "static": {
+     "omega_01_bare_GHz": 10.306670591548126,
+     "omega_01_dressed_GHz": 10.31899587746679,
+     "detuning_GHz": -4.453465415569399,
+     "bare_ancilla_levels_GHz": [
+      0.0,
+      10.306670591548126,
+      20.32757717531563
+     ],
+     "omega_01_GHz": 10.306670591548126,
+     "chi_1_MHz": -1.2028596795374824,
+     "chi_1_prime_kHz": -0.5309276076559399,
+     "K_kHz": -0.5732143222303421,
+     "rates_per_ms": {
+      "photon_loss": 3.116303771567013,
+      "photon_gain": 0.19672183038506844,
+      "ancilla_relaxation": 63.99052572823472,
+      "ancilla_excitation": 0.32967967515527585,
+      "ancilla_dephasing": 85.36046634672239,
+      "ancilla_level_1_to_2": 0.7270541297191854,
+      "ancilla_level_2_to_1": 122.04892869974353
+     },
+     "t_cycle_us": 51.182817207325016,
+     "t_idle_us": 50.0,
+     "t_parity_mapping_idling_ns": 400.92988907693785,
+     "t_pulse_ns": 62.35914781010514
+    },
+    "jump_rates_per_ms": {
+     "|0><0|": 0.0,
+     "|0><1|": 63.99052572823472,
+     "|0><2|": 1.9547790443047996e-24,
+     "|1><0|": 0.32967967515527585,
+     "|1><1|": 85.36046634672239,
+     "|1><2|": 122.04892869974353,
+     "|2><0|": 5.998411581036399e-29,
+     "|2><1|": 0.7270541297191854,
+     "|2><2|": 0.0055434786675511985
+    },
+    "times_us": {
+     "T1": 15.627313397095081,
+     "T_phi": 23.430050064116067,
+     "T_phi_from_kappa_phi": 23.213143998102336,
+     "level_1_lifetime": 15.451752092628633
+    },
+    "relaxation_by_bath_per_ms": {
+     "capacitive (dielectric) loss of the ancilla": 63.981177074518115,
+     "1/f dephasing of the ancilla": 0.0,
+     "dielectric loss of the resonator, through the dressing": 0.009348653716614468,
+     "dephasing of the resonator": 0.0
+    },
+    "excitation_by_bath_per_ms": {
+     "capacitive (dielectric) loss of the ancilla": 0.32960687228935,
+     "1/f dephasing of the ancilla": 0.0,
+     "dielectric loss of the resonator, through the dressing": 7.280286592590655e-05,
+     "dephasing of the resonator": 0.0
+    },
+    "dephasing_jump_by_bath_per_ms": {
+     "capacitive (dielectric) loss of the ancilla": 2.6917704078152267e-24,
+     "1/f dephasing of the ancilla": 85.36046634672239,
+     "dielectric loss of the resonator, through the dressing": 2.0772232186108446e-28,
+     "dephasing of the resonator": 0.0
+    },
+    "dephasing_by_source_per_ms": {
+     "charge": 1.90832449957897e-09,
+     "critical_current": 43.07904177208617,
+     "total": 43.07904177399449
+    },
+    "dephasing_sensitivity_per_ms": {
+     "charge": 1.90832449957897e-05,
+     "critical_current": 2806099.9966666736
+    },
+    "loss_matrix_elements": {
+     "capacitive (dielectric) loss of the ancilla": {
+      "operator": "n_operator",
+      "matrix_element_squared": 2.3997921153575943,
+      "spectral_density_per_ms": 26.78576677725523,
+      "product_per_ms": 64.2802719158645
+     }
+    }
+   },
+   "fluxonium, optimized": {
+    "parameters": {
+     "EJ_GHz": 7.88230940647305,
+     "EC_GHz": 1.7618883444675149,
+     "EL_GHz": 0.4599553328400946,
+     "flux": 0.0,
+     "E_osc_GHz": 5.840122388657525,
+     "g_GHz": 0.2,
+     "t_ea_us": 50.0
+    },
+    "static": {
+     "omega_01_bare_GHz": 8.059595765192766,
+     "omega_01_dressed_GHz": 8.060526904717833,
+     "detuning_GHz": -2.219473376535241,
+     "bare_ancilla_levels_GHz": [
+      0.0,
+      8.059595765192766,
+      8.277874560134824,
+      9.034684664280787
+     ],
+     "omega_01_GHz": 8.059595765192766,
+     "chi_1_MHz": 2.217858729608224,
+     "chi_1_prime_kHz": -10.650269203438256,
+     "K_kHz": 0.0514060829459595,
+     "rates_per_ms": {
+      "photon_loss": 2.8805111495577878,
+      "photon_gain": 0.1842112146274836,
+      "ancilla_relaxation": 12.921146531657193,
+      "ancilla_excitation": 0.21087872730624613,
+      "ancilla_dephasing": 323.5584050969842,
+      "ancilla_level_1_to_2": 1.9795970792320914,
+      "ancilla_level_2_to_1": 2.211908470737881
+     },
+     "t_cycle_us": 51.00344837177457,
+     "t_idle_us": 50.0,
+     "t_parity_mapping_idling_ns": 206.13740098702522,
+     "t_pulse_ns": 81.63871348442372
+    },
+    "jump_rates_per_ms": {
+     "|0><0|": 0.0,
+     "|0><1|": 12.921146531657193,
+     "|0><2|": 2.4760927814318047e-26,
+     "|0><3|": 34.997635702323144,
+     "|1><0|": 0.21087872730624613,
+     "|1><1|": 323.5584050969842,
+     "|1><2|": 2.211908470737881,
+     "|1><3|": 2.280747392354909e-27,
+     "|2><0|": 3.616565834199955e-28,
+     "|2><1|": 1.9795970792320914,
+     "|2><2|": 9.249713320040008e-09,
+     "|2><3|": 2.5727019999909624,
+     "|3><0|": 0.3472043832843232,
+     "|3><1|": 1.3864299224682533e-27,
+     "|3><2|": 1.7474346901783284,
+     "|3><3|": 2.1903240603981844e-08
+    },
+    "times_us": {
+     "T1": 77.39251292832027,
+     "T_phi": 6.181264243160412,
+     "T_phi_from_kappa_phi": 6.176573077442201,
+     "level_1_lifetime": 67.11074467915897
+    },
+    "relaxation_by_bath_per_ms": {
+     "capacitive (dielectric) loss of the ancilla": 12.915685286914856,
+     "1/f dephasing of the ancilla": 0.0,
+     "inductive loss of the ancilla": 0.004532770823149325,
+     "dielectric loss of the resonator, through the dressing": 0.000928473919187537,
+     "dephasing of the resonator": 0.0
+    },
+    "excitation_by_bath_per_ms": {
+     "capacitive (dielectric) loss of the ancilla": 0.21078382740107385,
+     "1/f dephasing of the ancilla": 0.0,
+     "inductive loss of the ancilla": 7.397476491652379e-05,
+     "dielectric loss of the resonator, through the dressing": 2.0925140255717946e-05,
+     "dephasing of the resonator": 0.0
+    },
+    "dephasing_jump_by_bath_per_ms": {
+     "capacitive (dielectric) loss of the ancilla": 0.0,
+     "1/f dephasing of the ancilla": 323.5584050969842,
+     "inductive loss of the ancilla": 4.579491201493038e-26,
+     "dielectric loss of the resonator, through the dressing": 0.0,
+     "dephasing of the resonator": 0.0
+    },
+    "dephasing_by_source_per_ms": {
+     "flux_first": 7.619466744103132e-11,
+     "flux_second": 17.632435923863262,
+     "critical_current": 144.26963946024964,
+     "total": 161.9020753841891
+    },
+    "dephasing_sensitivity_per_ms": {
+     "flux_first": 1.1745130907747507e-05,
+     "flux_second": 418966097826.41254,
+     "critical_current": 9397493.958902976
+    },
+    "loss_matrix_elements": {
+     "capacitive (dielectric) loss of the ancilla": {
+      "operator": "n_operator",
+      "matrix_element_squared": 0.08674085394072956,
+      "spectral_density_per_ms": 149.5929747281235,
+      "product_per_ms": 12.97582237145141
+     },
+     "inductive loss of the ancilla": {
+      "operator": "phi_operator",
+      "matrix_element_squared": 0.26529796118631066,
+      "spectral_density_per_ms": 0.017150680307156118,
+      "product_per_ms": 0.0045500405184467265
+     }
+    }
+   }
+  }
+ }
+}
