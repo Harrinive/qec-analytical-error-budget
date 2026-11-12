@@ -4,7 +4,7 @@ This repository contains the `qec_aeb` Python package, simulation and plotting s
 
 ## Installation
 
-Requires Python >= 3.10 and [`chencrafts`](https://github.com/Harrinive/chencrafts). From the root of this repository, install `qec_aeb` in editable mode:
+Requires Python >= 3.10 and `chencrafts` >= 4.0.0. From the root of this repository, install `qec_aeb` in editable mode:
 
 ```bash
 pip install -e .
