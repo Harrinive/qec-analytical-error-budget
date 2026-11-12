@@ -1223,8 +1223,8 @@ def chain_model(by_manifestation: dict) -> dict:
     Parameters
     ----------
     by_manifestation : dict
-        Key of ``MANIFESTATION_STYLES`` to the terms of the AEB by
-        step.
+        Key of ``MANIFESTATION_STYLES`` to the step contributions of the
+        failure Markov chain.
 
     Returns
     -------

@@ -519,7 +519,7 @@ def plot(record: dict) -> None:
     ax.legend(
         handles=[Line2D([], [], label="failure Markov chain", **markov),
                  Line2D([], [], label="actual QEC dynamics", **actual)],
-        title="bars: AEB by mechanism", alignment="left", loc="upper right",
+        title="bars: AEB", alignment="left", loc="upper right",
         **plot_style.BAR_LEGEND)
 
     # Both panels: the failure rate from 0 with the same ticks, one label of

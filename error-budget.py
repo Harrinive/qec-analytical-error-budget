@@ -37,7 +37,7 @@ cc_settings.PROGRESSBAR_DISABLED = True
 
 
 def compute() -> dict:
-    r"""Fidelity losses of the three models and the split of the terms of the AEB by step.
+    r"""Fidelity losses of the three models and the split of the step contributions by logical manifestation.
 
     Returns
     -------
@@ -57,7 +57,7 @@ def compute() -> dict:
     """
     graph, sweep, parameters = device_model.build_actual_tree(n_cycles=1, num_cpus=NUM_CPUS)
     # the three models after every step, their losses, and the split of the
-    # terms of the AEB by step by logical manifestation
+    # step contributions by logical manifestation
     budget = model_chain.losses_by_step(graph)
     fidelity, loss = budget["fidelity"], budget["loss"]
     split = budget["chain_by_manifestation"]

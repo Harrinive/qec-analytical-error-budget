@@ -1,4 +1,4 @@
-r"""Magnitudes of the seven neglected processes and accuracy bounds of the AEB by step.
+r"""Magnitudes of the seven neglected processes and accuracy bounds of the AEB.
 
 Evaluates the step-by-step diamond-norm magnitudes of the neglected processes
 at incoherent-error scales :math:`\xi = 1` and :math:`\xi = 1/32` for the

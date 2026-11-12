@@ -363,7 +363,7 @@ def draw_figure(record: dict) -> None:
     ax.set_xlim(0, 1.04 * t_idle.max())
     # a tick every half failure per ms, as on the other axes of a failure rate
     ax.yaxis.set_major_locator(MultipleLocator(0.5))
-    handles = [Line2D([], [], label="AEB by mechanism", **curve)]
+    handles = [Line2D([], [], label="AEB", **curve)]
     handles += [Line2D([], [], label=label, **plot_style.model_marker_style(label, color))
                 for label in models]
     ax.legend(handles=handles, loc="upper right", **plot_style.LEGEND_STYLE)

@@ -454,7 +454,7 @@ def plot_tradeoff(ax, record: dict) -> None:
     # which model a curve or a marker is, said once, under the upper frame and
     # above the minimum of the sum
     handles = [Line2D([], [], color=plot_style.NEUTRAL, lw=plot_style.CURVE_WIDTH,
-                      label="AEB by mechanism"), *model_handles()]
+                      label="AEB"), *model_handles()]
     total = np.array(formula["all seven steps"])
     above_minimum = blended_transform_factory(ax.transData, ax.transAxes)
     legend = ax.legend(handles=handles, loc="upper center",

@@ -1,4 +1,4 @@
-r"""Failure rate of the AEB by mechanism against the coupling, at a fixed ratio of coupling to detuning.
+r"""Failure rate of the AEB against the coupling, at a fixed ratio of coupling to detuning.
 
 Scans the resonator--ancilla coupling :math:`g` while adjusting the resonator
 frequency to keep :math:`g/\Delta` fixed at its value at the :math:`\Delta>0`
@@ -46,7 +46,7 @@ def start_point() -> dict:
 
 
 def point_record(free_parameters: dict) -> dict:
-    r"""Failure rate of the AEB by mechanism and the dressed quantities at one point.
+    r"""Failure rate of the AEB and the dressed quantities at one point.
 
     Parameters
     ----------

@@ -1146,7 +1146,7 @@ def plot(record: dict) -> None:
         Patch(facecolor=plot_style.NEUTRAL, linewidth=0, label="even-parity error space"),
         Patch(facecolor=plot_style.NEUTRAL, linewidth=0, label="odd-parity error space",
               **plot_style.hatch_style(plot_style.DIAGONAL_HATCH, plot_style.NEUTRAL)),
-        Line2D([], [], label="AEB by mechanism", **marker)]
+        Line2D([], [], label="AEB", **marker)]
     # on a white ground without an edge, so that the lines between the steps
     # and the grid stop at it
     parity_legend = ax.legend(handles=handles, ncol=3, loc="upper right",

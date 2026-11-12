@@ -291,7 +291,7 @@ def fidelities_by_step(graph) -> dict:
 def losses_by_step(graph) -> dict:
     r"""
     Fidelity loss of the three models at each step of one QEC cycle, and the
-    split of the terms of the AEB by step by logical manifestation.
+    split of the step contributions by logical manifestation.
 
     Parameters
     ----------
@@ -312,7 +312,7 @@ def losses_by_step(graph) -> dict:
     ValueError
         If the tree does not hold exactly one QEC cycle.
     RuntimeError
-        If the four parts of a term of the AEB by step do not add
+        If the four parts of a step contribution do not add
         up to the entry.
     """
     fidelity = fidelities_by_step(graph)

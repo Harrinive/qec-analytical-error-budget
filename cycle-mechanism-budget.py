@@ -185,7 +185,7 @@ def plot(record: dict) -> None:
     # (a) the chain keeps the place next to the model it is compared with
     ax = axes[0]
     handles = plot_style.entries_by_step(ax, chain, formula_model)
-    title = Patch(facecolor="none", edgecolor="none", label="AEB by mechanism:")
+    title = Patch(facecolor="none", edgecolor="none", label="AEB:")
     ax.legend(handles=[plot_style.chain_handle(), title] + handles[1:],
               loc="upper right", **plot_style.BAR_LEGEND)
     plot_style.panel_tag(ax, "(a)")
