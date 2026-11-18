@@ -27,7 +27,7 @@ import numpy as np
 import pytest
 import qutip as qt
 
-from qec_aeb import cat_ideal
+from cat_code import ideal as cat_ideal
 
 # parameters of the order of magnitude of a cat-code device (duration in ns,
 # coefficients in rad/ns); K_s and chi_prime are enlarged so that every factor

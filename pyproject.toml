@@ -14,7 +14,6 @@ authors = [
 dependencies = [
     "chencrafts>=4.0.0",
     "networkx>=2.4",
-    "cvxpy",
 ]
 requires-python = ">= 3.10"
 
@@ -30,7 +29,7 @@ test = [
 ]
 
 [tool.setuptools.packages.find]
-include = ["qec_aeb*"]
+include = ["qec_aeb*", "cat_code*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

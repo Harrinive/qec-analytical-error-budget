@@ -11,8 +11,8 @@ import pytest
 import qutip as qt
 from scipy.integrate import trapezoid
 
-import qec_aeb as bsq
-from qec_aeb.batched_sweeps_recipe import (
+import cat_code
+from cat_code.sweeps import (
     DEFAULT_CAT_BUDGET_PARA,
     _check_cat_budget_para,
     cat_error_space_distribution,
@@ -23,7 +23,7 @@ from qec_aeb.batched_sweeps_recipe import (
     pulse_population_averages,
     pulse_shape_numbers,
 )
-from qec_aeb.error_budgeting import (
+from cat_code.formula import (
     ErrorBudget,
     _rate,
     cat_branch_probabilities,
@@ -858,8 +858,8 @@ def test_ingredients_on_two_point_grid():
     import chencrafts.cqed as cqed
 
     # Small truncation: the test checks plumbing and shapes, not convergence
-    sim_para = dict(res_dim=8, qubit_dim=3, qubit_ncut=15, num_cpus=1,
-                    evals_count=24)
+    sim_para = dict(res_dim_for_static=8, qubit_dim_for_static=3, qubit_ncut=15,
+                    num_cpus=1, evals_count=24)
     para = dict(
         E_osc_GHz=8.3005, g_GHz=0.1276, EJ_GHz=20.0948, EC_GHz=0.2684,
         ng=0.3, disp=np.sqrt(2), tau_m=400, M_ge=0.01, M_eg=0.01,
@@ -869,7 +869,7 @@ def test_ingredients_on_two_point_grid():
         tau_p_by_sigma=20, tau_p_eff_by_sigma=4,
     )
     swept = dict(T_W=np.array([9000.0, 18000.0]))
-    system = bsq.ResonatorTransmon(sim_para=sim_para, para=para | {"T_W": 0})
+    system = cat_code.ResonatorTransmon(sim_para=sim_para, para=para | {"T_W": 0})
     fs = cqed.FlexibleSweep(para=para, swept_para=swept, **system.dict,
                             **sim_para, lookup_scheme="LX")
 
@@ -877,11 +877,11 @@ def test_ingredients_on_two_point_grid():
     names = dict(res_trunc_dim=6, qubit_trunc_dim=3,
                  qubit_op_names=["n_operator", "proj_11"],
                  res_op_names=["a_m_adag", "adag_a"])
-    bsq.batched_sweep_general(fs.sweep)
-    bsq.batched_sweep_dressed_op(fs.sweep, **names)
-    bsq.batched_sweep_jump_rates(fs.sweep, **names)
-    bsq.batched_sweep_pulse(fs.sweep)
-    bsq.batched_sweep_cat_budget_ingredients(fs.sweep)
+    cat_code.batched_sweep_general(fs.sweep)
+    cat_code.batched_sweep_dressed_op(fs.sweep, **names)
+    cat_code.batched_sweep_jump_rates(fs.sweep, **names)
+    cat_code.batched_sweep_pulse(fs.sweep)
+    cat_code.batched_sweep_cat_budget_ingredients(fs.sweep)
 
     # Grid-shaped scalars and (grid, 2)-shaped moments
     assert np.shape(fs["t_pm"]) == (2,)
@@ -910,44 +910,3 @@ def test_ingredients_on_two_point_grid():
     assert total[1] > total[0]
 
 
-# ----------------------------------------------------------------------------
-# I. Master-equation ingredients: argument without effect
-# ----------------------------------------------------------------------------
-
-@pytest.mark.unit
-def test_me_ingredients_res_n_bar_warns_and_has_no_effect():
-    """I: ``res_n_bar`` changes nothing that is returned, and passing it warns."""
-    import warnings
-
-    import scqubits as scq
-
-    from qec_aeb import cat_real
-
-    resonator = scq.Oscillator(E_osc=8.3, truncated_dim=6)
-    transmon = scq.Transmon(EJ=20.0, EC=0.27, ng=0.3, ncut=12, truncated_dim=3)
-    space = scq.HilbertSpace([resonator, transmon])
-    space.add_interaction(
-        g=0.1, op1=resonator.creation_operator, op2=transmon.n_operator,
-        add_hc=True)
-    space.generate_lookup()
-    kwargs = dict(
-        hilbertspace=space, res_mode_idx=0, qubit_mode_idx=1,
-        res_truncated_dim=4, qubit_truncated_dim=2,
-        dressed_indices=space["dressed_indices"][0],
-        eigensys=(space["evals"][0], space["evecs"][0]),
-        collapse_parameters={"res_decay": 1e-6},
-    )
-
-    # The default call is silent
-    with warnings.catch_warnings():
-        warnings.simplefilter("error", UserWarning)
-        ham, c_ops, (evals, _), frame = cat_real.cavity_ancilla_me_ingredients(**kwargs)
-
-    with pytest.warns(UserWarning, match="res_n_bar has no effect"):
-        ham_n, c_ops_n, (evals_n, _), frame_n = (
-            cat_real.cavity_ancilla_me_ingredients(**kwargs, res_n_bar=3))
-
-    assert (ham - ham_n).norm() == 0
-    assert (frame - frame_n).norm() == 0
-    assert (c_ops[0] - c_ops_n[0]).norm() == 0
-    assert np.array_equal(evals, evals_n)

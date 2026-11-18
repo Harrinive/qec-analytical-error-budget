@@ -1,4 +1,4 @@
-r"""Encoded-process identities of ``qec_aeb.QEC_graph.utils``.
+r"""Encoded-process identities of ``qec_aeb.utils``.
 
 A node of the actual evolution tree stores its process restricted to the
 encoded input, :math:`\mathcal P\circ\mathcal S` with
@@ -12,10 +12,9 @@ import numpy as np
 import pytest
 import qutip as qt
 
-from qec_aeb.QEC_graph.utils import (
+from qec_aeb.utils import (
     abstract_encoders,
     effective_logical_process,
-    leakage_process,
     stacked_encoder,
 )
 
@@ -88,22 +87,5 @@ def test_effective_logical_process_from_encoded_process(num_init):
     ref = effective_logical_process(process, init_encs, final_encs)
     new = effective_logical_process(encoded, abstract_encoders(num_init), final_encs)
     assert ref.shape == new.shape
-    for r, n in zip(ref.ravel(), new.ravel()):
-        assert np.allclose(r.full(), n.full(), atol=1e-12)
-
-
-@pytest.mark.unit
-def test_truncated_leakage_process_from_encoded_process():
-    dim = 6
-    init_encs = _random_encoders(dim, 1, seed=5)
-    final_encs = _random_encoders(dim, 1, seed=6)
-    process = _random_process(dim, seed=7)
-    S = stacked_encoder(init_encs)
-    encoded = process * qt.sprepost(S, S.dag())
-
-    ref = leakage_process(process, init_encs, final_encs, truncate_init_space=True)
-    new = leakage_process(
-        encoded, abstract_encoders(1), final_encs, truncate_init_space=True
-    )
     for r, n in zip(ref.ravel(), new.ravel()):
         assert np.allclose(r.full(), n.full(), atol=1e-12)

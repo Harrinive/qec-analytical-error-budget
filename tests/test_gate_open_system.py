@@ -14,9 +14,9 @@ import pytest
 import qutip as qt
 from scipy.linalg import expm
 
-import qec_aeb as bsq
+import cat_code
 from tests.sweep_view_helpers import requires_store_data
-from qec_aeb import cat_real, cat_recipe
+from cat_code import real as cat_real
 from chencrafts.cqed.qt_helper import (
     component_liouvillian, qobj_submatrix, superop_evolve,
     superop_from_component_maps, trans_by_kets,
@@ -71,9 +71,9 @@ def test_dressed_jump_ops_family_selection():
         "jump_a_ij": np.full((qubit_dim, qubit_dim), 0.001),
         "jump_adag_ij": np.full((qubit_dim, qubit_dim), 0.001),
     }
-    everything = cat_recipe.dressed_jump_ops(
+    everything = cat_real.dressed_jump_ops(
         rates, 0, res_dim, qubit_dim, qubit_dim, higher_order_decay=False)
-    ancilla = cat_recipe.dressed_jump_ops(
+    ancilla = cat_real.dressed_jump_ops(
         rates, 0, res_dim, qubit_dim, qubit_dim, higher_order_decay=False,
         op_families=["jump_ij"])
     # at second order, the ancilla-only jumps are |0><1|, |1><0|, |1><1|, and |2><1|
@@ -130,7 +130,7 @@ def test_master_equation_ingredients_with_the_ancilla_first():
     res_dim, qubit_dim, n_ref = 4, 3, 2
     arguments = dict(res_dim=res_dim, qubit_dim=qubit_dim, res_me_dim=res_dim,
                      qubit_me_dim=qubit_dim, in_rot_frame=True, res_n_ref=n_ref)
-    ham_qr, jumps_qr, (evals_qr, _), frame_qr = cat_recipe.cavity_ancilla_me_ingredients(
+    ham_qr, jumps_qr, (evals_qr, _), frame_qr = cat_real.cavity_ancilla_me_ingredients(
         _FixedPointSweep(qubit_first=True), res_mode_idx=1, qubit_mode_idx=0, **arguments)
     assert ham_qr.dims == [[qubit_dim, res_dim]] * 2
 
@@ -147,7 +147,7 @@ def test_master_equation_ingredients_with_the_ancilla_first():
     assert np.allclose(energy, lab - lab[0, 0] - res_freq * n - qubit_freq * q, atol=1e-10)
 
     # the same system with the resonator first
-    ham_rq, jumps_rq, _, frame_rq = cat_recipe.cavity_ancilla_me_ingredients(
+    ham_rq, jumps_rq, _, frame_rq = cat_real.cavity_ancilla_me_ingredients(
         _FixedPointSweep(qubit_first=False), res_mode_idx=0, qubit_mode_idx=1, **arguments)
 
     def exchanged(op):
@@ -253,8 +253,8 @@ def test_qubit_gate_with_collapse_operators_on_small_device():
     from chencrafts.cqed.mode_assignment import two_mode_dressed_esys
 
     res_dim, qubit_dim = 4, 3
-    sim_para = dict(res_dim=res_dim + 2, qubit_dim=qubit_dim, qubit_ncut=12,
-                    num_cpus=1, evals_count=3 * (res_dim + 2))
+    sim_para = dict(res_dim_for_static=res_dim + 2, qubit_dim_for_static=qubit_dim,
+                    qubit_ncut=12, num_cpus=1, evals_count=3 * (res_dim + 2))
     para = dict(
         E_osc_GHz=8.3005, g_GHz=0.1276, EJ_GHz=20.0948, EC_GHz=0.2684,
         ng=0.3, disp=np.sqrt(2), tau_m=400, M_ge=0.01, M_eg=0.01, T_W=18000,
@@ -263,11 +263,11 @@ def test_qubit_gate_with_collapse_operators_on_small_device():
         sigma_2_K_a=3 * 0.297 * 2 * np.pi, sigma_omega=2 * np.pi,
         tau_p_by_sigma=20, tau_p_eff_by_sigma=4,
     )
-    system = bsq.ResonatorTransmon(sim_para=sim_para, para=para)
+    system = cat_code.ResonatorTransmon(sim_para=sim_para, para=para)
     fs = cqed.FlexibleSweep(para=para, swept_para={}, **system.dict, **sim_para,
                             lookup_scheme="LX")
-    bsq.batched_sweep_general(fs.sweep)
-    bsq.batched_sweep_pulse(fs.sweep)
+    cat_code.batched_sweep_general(fs.sweep)
+    cat_code.batched_sweep_pulse(fs.sweep)
 
     kwargs = dict(
         hilbertspace=fs.hilbertspace, res_mode_idx=0, qubit_mode_idx=1,
@@ -318,7 +318,7 @@ def test_qubit_gate_with_collapse_operators_on_small_device():
 
 def test_qubit_frame_change_phases_every_ancilla_level_in_every_subspace():
     """A: exp(-i angle n_q) on the ancilla; the resonator position sets the tensor order."""
-    from qec_aeb import cat_ideal
+    from cat_code import ideal as cat_ideal
 
     angle = 0.37
     for res_mode_idx in (0, 1):

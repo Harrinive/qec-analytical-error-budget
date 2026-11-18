@@ -1,4 +1,4 @@
-r"""Public access to the cat-code tree builder ``QEC_graph.FullCatTreeBuilder``.
+r"""Public access to the cat-code tree builder ``cat_code.FullCatTreeBuilder``.
 
 A builder gives public access to its collapse operators with their names, to
 the ideal operators and the measurement maps for durations and confusion
@@ -9,7 +9,7 @@ dispersively coupled ancilla, whose pulses are replaced by fixed unitaries
 
 Each quantity is compared with the formula that defines it:
 
-- collapse operators: the names of ``cat_recipe.dressed_jump_ops``, in the
+- collapse operators: the names of ``cat_real.dressed_jump_ops``, in the
   order of ``c_ops``;
 - ideal operators: the formulas of ``test_cat_ideal_operators.py`` at the
   builder's durations;
@@ -31,9 +31,11 @@ import pytest
 import qutip as qt
 import scqubits as scq
 
-from qec_aeb import cat_ideal, cat_real, cat_recipe
-from qec_aeb.QEC_graph import (
-    FullCatTreeBuilder, GATE_NU_HALF,
+from cat_code import (
+    FullCatTreeBuilder,
+    GATE_NU_HALF,
+    ideal as cat_ideal,
+    real as cat_real,
 )
 from chencrafts.cqed.qt_helper import oprt_in_basis
 from tests.test_cat_ideal_operators import (
@@ -106,8 +108,9 @@ def _model_builder(qubit_dim: int) -> FullCatTreeBuilder:
     """
     builder = object.__new__(FullCatTreeBuilder)
     builder.fsweep = _sweep_data(qubit_dim)
-    builder.sim_para = dict(res_dim=RES_DIM, qubit_dim=qubit_dim, higher_order_decay=False)
-    builder.new_recipe = True
+    builder.sim_para = dict(
+        res_dim_for_dynamics=RES_DIM, qubit_dim_for_dynamics=qubit_dim,
+        higher_order_decay=False)
     builder.res_dim, builder.qubit_dim = RES_DIM, qubit_dim
     builder.res_me_dim, builder.qubit_me_dim = RES_DIM, qubit_dim
     builder._res_mode_idx, builder._qubit_mode_idx = 0, 1
@@ -124,9 +127,9 @@ def _model_builder(qubit_dim: int) -> FullCatTreeBuilder:
     builder.static_hamiltonian = builder.fsweep["chi_sa"] * (number - N_REF) * excited
     builder.frame_hamiltonian = 2 * np.pi * (8.3 * number + 6.0 * excited)
 
-    # collapse operators with their names, as cat_recipe.dressed_jump_ops
+    # collapse operators with their names, as cat_real.dressed_jump_ops
     # returns them
-    jumps = cat_recipe.dressed_jump_ops(
+    jumps = cat_real.dressed_jump_ops(
         builder.fsweep, 0, RES_DIM, qubit_dim, qubit_dim, higher_order_decay=False)
     builder.c_ops, builder.c_op_names = list(jumps.values()), list(jumps.keys())
     # dressed states of the model: the product states themselves
@@ -177,8 +180,7 @@ def test_step_table_of_the_cat_cycle():
 
 
 @pytest.mark.unit
-@pytest.mark.parametrize("with_check_point", [False, True])
-def test_edge_names_follow_the_step_table(monkeypatch, with_check_point):
+def test_edge_names_follow_the_step_table(monkeypatch):
     """generate_tree names the edges '<prefix> (<cycle>.<step>)' in the order of the protocol."""
     qubit_dim = 3
     builder = _model_builder(qubit_dim)
@@ -187,12 +189,10 @@ def test_edge_names_follow_the_step_table(monkeypatch, with_check_point):
     logical_0, logical_1 = cat_ideal.cat_codewords(RES_DIM, qubit_dim, builder.fsweep["disp"])
     graph = builder.generate_tree(
         np.array([0, 1], dtype=complex), logical_0, logical_1,
-        QEC_rounds=2, with_check_point=with_check_point)
+        QEC_rounds=2)
 
     # the expected names, written out independently of the step table
     prefixes = ["ID", "G1", "PM", "G2", "MS", "FL", "RS"]
-    if with_check_point:
-        prefixes = [name for prefix in prefixes for name in (prefix, "CP")]
     expected = [f"{prefix} ({cycle}.{cycle * len(prefixes) + position})"
                 for cycle in range(2) for position, prefix in enumerate(prefixes)]
     # every step adds one edge per active node; keep the order of first appearance
@@ -315,11 +315,12 @@ def test_switches_are_read_from_sim_para(monkeypatch):
     monkeypatch.setattr(FullCatTreeBuilder, "_generate_cat_ingredients", lambda self: None)
 
     sim_para = dict(
-        res_dim=RES_DIM, qubit_dim=3, gate_1_is_ideal=False, qubit_reset_is_ideal=False,
+        res_dim_for_dynamics=RES_DIM, qubit_dim_for_dynamics=3,
+        gate_1_is_ideal=False, qubit_reset_is_ideal=False,
         use_frame_update=True, drive_operator="n_operator", gate_simulated_qubit_dim=4,
         gate_qubit_decoherence=False, not_a_switch=1,
     )
-    builder = FullCatTreeBuilder(fsweep=None, sim_para=sim_para, new_recipe=True)
+    builder = FullCatTreeBuilder(fsweep=None, sim_para=sim_para)
     for name in ("gate_1_is_ideal", "qubit_reset_is_ideal", "use_frame_update",
                  "drive_operator", "gate_simulated_qubit_dim", "gate_qubit_decoherence"):
         assert name in FullCatTreeBuilder.SWITCH_NAMES
@@ -327,7 +328,8 @@ def test_switches_are_read_from_sim_para(monkeypatch):
     assert not hasattr(builder, "not_a_switch")
 
     # absent switches: the class defaults, which the instance does not shadow
-    empty = FullCatTreeBuilder(fsweep=None, sim_para=dict(res_dim=RES_DIM, qubit_dim=3))
+    empty = FullCatTreeBuilder(
+        fsweep=None, sim_para=dict(res_dim_for_dynamics=RES_DIM, qubit_dim_for_dynamics=3))
     for name in FullCatTreeBuilder.SWITCH_NAMES:
         assert name not in vars(empty)
         assert getattr(empty, name) == getattr(FullCatTreeBuilder, name)
@@ -343,7 +345,7 @@ def test_switches_are_read_from_sim_para(monkeypatch):
 @pytest.mark.unit
 @pytest.mark.parametrize("qubit_dim", [3, 4])
 def test_collapse_operators_keep_their_names(qubit_dim):
-    """The dictionary pairs c_ops with the names of cat_recipe.dressed_jump_ops, in the same order."""
+    """The dictionary pairs c_ops with the names of cat_real.dressed_jump_ops, in the same order."""
     builder = _model_builder(qubit_dim)
     named = builder.collapse_operators
     assert list(named) == builder.c_op_names
@@ -380,10 +382,7 @@ def test_collapse_operators_of_a_builder_without_stored_names():
     with pytest.raises(ValueError, match="collapse operators"):
         builder.collapse_operators
 
-    # with new_recipe False, the collapse operators have no names
-    builder.new_recipe = False
-    with pytest.raises(ValueError, match="new_recipe"):
-        builder.collapse_operators
+
 
 
 @pytest.mark.unit

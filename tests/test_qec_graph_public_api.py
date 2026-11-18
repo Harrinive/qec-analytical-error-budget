@@ -1,4 +1,4 @@
-r"""Tests of the public functions of ``qec_aeb.QEC_graph`` that read a built tree.
+r"""Tests of the public functions of ``qec_aeb`` that read a built tree.
 
 The functions return the projector onto the joint error space, the projector
 maps onto the components of an operator, the nodes and edges of a tree in the
@@ -11,11 +11,11 @@ import numpy as np
 import pytest
 import qutip as qt
 
-import qec_aeb.QEC_graph as QEC_graph
-from qec_aeb.QEC_graph import utils
-from qec_aeb.QEC_graph.edge import MeasurementEdge, PropagatorEdge
-from qec_aeb.QEC_graph.graph import EvolutionTree
-from qec_aeb.QEC_graph.node import StateNode
+import qec_aeb
+from qec_aeb import utils
+from qec_aeb.edge import MeasurementEdge, PropagatorEdge
+from qec_aeb.graph import EvolutionTree
+from qec_aeb.node import StateNode
 
 DIM = 5
 
@@ -96,7 +96,7 @@ def _small_tree(loss: float = 0.1) -> EvolutionTree:
 def test_joint_error_space_projector_is_the_sum_of_the_projectors_of_the_error_spaces():
     """A: P_err = sum_a E_a E_a^dag."""
     encoders = _encoders(2)
-    projector = QEC_graph.joint_error_space_projector(encoders)
+    projector = qec_aeb.joint_error_space_projector(encoders)
     expected = sum(enc * enc.dag() for enc in encoders)
     assert (projector - expected).norm() == 0
     # orthogonal error spaces: a projector of rank 4, equal to the projector onto the span
@@ -110,12 +110,12 @@ def test_joint_error_space_projector_is_the_sum_of_the_projectors_of_the_error_s
 def test_component_projector_maps_resolve_the_identity_and_match_the_kron_form():
     """A, C: the projector maps of the joint error space, the leakage subspace and the error-leakage coherence add up to the identity map."""
     encoders = _encoders(2, seed=1)
-    p_err = QEC_graph.joint_error_space_projector(encoders).full()
+    p_err = qec_aeb.joint_error_space_projector(encoders).full()
     p_leak = np.eye(DIM) - p_err
 
-    err = QEC_graph.component_projector_map(encoders, ("L", "L"))
-    leak = QEC_graph.component_projector_map(encoders, ("p", "p"))
-    coherence = QEC_graph.component_projector_map(encoders, ("L", "p"))
+    err = qec_aeb.component_projector_map(encoders, ("L", "L"))
+    leak = qec_aeb.component_projector_map(encoders, ("p", "p"))
+    coherence = qec_aeb.component_projector_map(encoders, ("L", "p"))
     # column stacking: vec(A rho B) = (B^T kron A) vec(rho)
     assert np.allclose(err.full(), np.kron(p_err.T, p_err), atol=1e-12)
     assert np.allclose(leak.full(), np.kron(p_leak.T, p_leak), atol=1e-12)
@@ -123,13 +123,13 @@ def test_component_projector_maps_resolve_the_identity_and_match_the_kron_form()
         coherence.full(), np.kron(p_leak.T, p_err) + np.kron(p_err.T, p_leak), atol=1e-12)
     assert np.allclose((err + leak + coherence).full(), np.eye(DIM ** 2), atol=1e-12)
     # the default component is the one within the joint error space
-    assert (QEC_graph.component_projector_map(encoders) - err).norm() == 0
+    assert (qec_aeb.component_projector_map(encoders) - err).norm() == 0
 
     # within the joint error space: the individual error spaces plus the coherence between them
-    within = QEC_graph.component_projector_map(encoders, "LD")
-    between = QEC_graph.component_projector_map(encoders, "LC")
+    within = qec_aeb.component_projector_map(encoders, "LD")
+    between = qec_aeb.component_projector_map(encoders, "LC")
     assert np.allclose((within + between).full(), err.full(), atol=1e-12)
-    single = QEC_graph.component_projector_map(encoders, (1, 1))
+    single = qec_aeb.component_projector_map(encoders, (1, 1))
     p_1 = (encoders[1] * encoders[1].dag()).full()
     assert np.allclose(single.full(), np.kron(p_1.T, p_1), atol=1e-12)
 
@@ -222,10 +222,10 @@ def test_step_wise_success_probability_equals_trace_over_four():
     rng = np.random.default_rng(3)
     kraus = [qt.Qobj(0.5 * (rng.normal(size=(2, 2)) + 1j * rng.normal(size=(2, 2)))) for _ in range(2)]
     selm = qt.kraus_to_super(kraus)
-    g = QEC_graph.step_wise_success_probability(selm)
+    g = qec_aeb.step_wise_success_probability(selm)
     assert g == pytest.approx(np.real(np.trace(selm.full())) / 4, abs=1e-14)
     assert g == pytest.approx(sum(abs(k.tr()) ** 2 for k in kraus) / 4, abs=1e-14)
-    assert QEC_graph.step_wise_success_probability(qt.to_super(qt.qeye(2))) == pytest.approx(1.0)
+    assert qec_aeb.step_wise_success_probability(qt.to_super(qt.qeye(2))) == pytest.approx(1.0)
 
 
 def test_process_matrix_diagonal_of_a_pauli_channel():
@@ -233,7 +233,7 @@ def test_process_matrix_diagonal_of_a_pauli_channel():
     probabilities = [0.6, 0.1, 0.05, 0.2]
     paulis = [qt.qeye(2), qt.sigmax(), qt.sigmay(), qt.sigmaz()]
     channel = sum(p * qt.to_super(op) for p, op in zip(probabilities, paulis))
-    assert QEC_graph.process_matrix_diagonal(channel) == pytest.approx(probabilities, abs=1e-14)
+    assert qec_aeb.process_matrix_diagonal(channel) == pytest.approx(probabilities, abs=1e-14)
 
 
 def test_failure_prob_by_step_and_manifestation_of_a_lossy_step():
@@ -349,39 +349,24 @@ def test_process_block_dnorm_of_a_completely_positive_map():
 
 
 # regression tests of corrected defects -----------------------------------------
-def _row_stacking_choi(kraus: qt.Qobj) -> np.ndarray:
-    r"""Choi matrix of the map :math:`\rho\mapsto K\rho K^\dagger` in the row-stacking convention, :math:`|K\rangle\rangle\langle\langle K|` with :math:`|K\rangle\rangle` the rows of :math:`K` one after another."""
-    vec = kraus.full().reshape(-1)
-    return np.outer(vec, vec.conj())
-
-
-def test_choi_multiply_returns_the_convention_of_its_arguments():
-    """Row-stacking Choi matrices of two maps give the row-stacking Choi matrix of the composed map; the same for column stacking."""
-    rng = np.random.default_rng(11)
-    k_1, k_2 = (qt.Qobj(rng.normal(size=(3, 3)) + 1j * rng.normal(size=(3, 3))) for _ in range(2))
-    # column stacking: the matrices of qutip
-    col = utils.choi_multiply(qt.to_choi(qt.to_super(k_1)), qt.to_choi(qt.to_super(k_2)), convension='col')
-    assert np.allclose(col.full(), qt.to_choi(qt.to_super(k_1 * k_2)).full(), atol=1e-12)
-    # row stacking: written out from the Kraus operators, without qutip
-    row_1 = utils.choi_conv_change(qt.to_choi(qt.to_super(k_1)))
-    row_2 = utils.choi_conv_change(qt.to_choi(qt.to_super(k_2)))
-    assert np.allclose(row_1.full(), _row_stacking_choi(k_1), atol=1e-12)
-    row = utils.choi_multiply(row_1, row_2, convension='row')
-    assert np.allclose(row.full(), _row_stacking_choi(k_1 * k_2), atol=1e-12)
-    assert np.allclose(utils.choi_multiply(row_1, row_2).full(), row.full())
-
-
 def test_clear_evolution_data_deletes_state_ideal_states_and_record():
-    """After clearing, a node holds neither its state, nor its ideal logical states, nor its measurement record, nor its encoded process; an excluded node keeps them."""
+    """After clearing, a node holds neither its state, nor its ideal logical states, nor its measurement record, nor its real_process_on_encoded; an excluded node keeps them."""
     tree = _small_tree()
     tree.clear_evolution_data(exclude=[tree.nodes[0]])
     for node in tree.nodes[1:]:
         for name in (
             "state", "_raw_ideal_logical_states", "meas_record",
-            "encoded_process",
+            "real_process_on_encoded",
         ):
             assert name not in vars(node)
-    assert "encoded_process" in vars(tree.nodes[0])
+    assert "real_process_on_encoded" in vars(tree.nodes[0])
+    # backward-compatible property alias remains accessible on the initial node
+    assert tree.nodes[0].encoded_process is tree.nodes[0].real_process_on_encoded
+    assert np.allclose(
+        tree.nodes[0].real_process().full(),
+        tree.nodes[0].full_process().full(),
+        atol=1e-14,
+    )
     assert tree.nodes[0].probability == pytest.approx(1.0)
     assert tree.nodes[0].meas_record == []
     # a node that holds only a part of the data is cleared without an error
@@ -467,3 +452,29 @@ def test_edge_fidelity_by_process_default_is_tr_s_over_d_squared():
     edge = _small_tree(loss).edges[0]
     expected = (1 + np.sqrt(1 - loss)) ** 2 / 4
     assert np.asarray(edge.fidelity_by_process()).ravel()[0] == pytest.approx(expected, abs=1e-12)
+
+
+def test_physical_and_logical_elm_traversals():
+    """physical_elm and logical_elm reproduce the full, projected, and SELM-composed maps."""
+    theta = 0.4
+    tree = _leak_and_return_tree(theta)
+    # Full physical ELM: step 2 undoes step 1, so the map is the identity
+    full_elm = tree.physical_elm()
+    assert np.allclose(full_elm.full(), qt.to_super(qt.qeye(2)).full(), atol=1e-12)
+    # Keeping only ("L", "L") after each step projects out the leaked amplitude
+    err_elm = tree.physical_elm(lambda step: (("L", "L"),))
+    selm_product = qt.to_super(qt.Qobj(np.diag([1.0, np.cos(theta) ** 2])))
+    assert np.allclose(err_elm.full(), selm_product.full(), atol=1e-12)
+    assert np.allclose(tree.logical_elm(transitions="all").full(), selm_product.full(), atol=1e-12)
+    assert np.allclose(tree.logical_elm(transitions="intended").full(), selm_product.full(), atol=1e-12)
+
+    # On the branching rotation tree, logical_elm with twirled=True/False matches process_fidelity_twirled_by_step
+    rot_tree = _branching_rotation_tree(0.2, 0.3)
+    logical = rot_tree.logical_evolution_tree()
+    for step in (1, 2):
+        f_g = qec_aeb.step_wise_success_probability(
+            rot_tree.logical_elm(transitions="intended", read_after_step=step))
+        f_tw = qec_aeb.step_wise_success_probability(
+            rot_tree.logical_elm(transitions="intended", twirled=True, read_after_step=step))
+        assert f_g == pytest.approx(logical.process_fidelity_by_step()[step], abs=1e-12)
+        assert f_tw == pytest.approx(logical.process_fidelity_twirled_by_step()[step], abs=1e-12)
